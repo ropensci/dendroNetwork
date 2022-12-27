@@ -9,7 +9,7 @@ t_value(r, n)
 \arguments{
 \item{r}{correlation value.}
 
-\item{n}{number over overlapping tree-rings/compared values.}
+\item{n}{number of overlapping tree-rings/compared values.}
 }
 \value{
 Students' t value as a numeric.
