@@ -2,7 +2,7 @@
 % Please edit documentation in R/t_value.R
 \name{t_value}
 \alias{t_value}
-\title{Function to determine the Students' t-value using the correlation and the number of compare values (tree-rings)}
+\title{Students' t value}
 \usage{
 t_value(r, n)
 }

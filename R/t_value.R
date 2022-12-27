@@ -1,3 +1,5 @@
+#' Students' t value
+#'
 #' Function to determine the Students' t-value using the correlation and the number of compare values (tree-rings)
 #'
 #' @param r correlation value.
