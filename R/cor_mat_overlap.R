@@ -1,6 +1,19 @@
-# pearson correlation with overlap
-# comparing rwl objects with same date range
-# about  2-3 times faster than cor.with.limit.R
+#' Pearson correlation matrix
+#'
+#' Function that creates a Pearson correlation matrix of two rwl objects compared. If the same rwl-object is passed to the function, the correlation between all series is calculated. In addition, the number of overlapping tree-rings is part of the output. The results can be used to calculate the Students' t value
+#'
+#' The function is an adaptation of the function cor.with.limit.R() from https://github.com/AndyBunn/dplR/blob/master/R/rwi.stats.running.R, but it is faster and also gives the overlap.
+#'
+#' @param x rwl object of tree-ring series
+#' @param y rwl object of tree-ring series
+#' @param minoverlap the correlation will only be calculated if the number of overlapping tree-rings is equal or larger than this value
+#'
+#' @returns a list with two matrices: one with the correlation values and one with the number of overlapping tree rings for each correlation value. The matrices have row names and column names of the compared tree-ring curves
+#' @examples
+#' cor_mat_overlap(rwl_object1, rwl_object2, 50)
+#' cor_mat_overlap(rwl_object1, rwl_object1, 50)
+#'
+
 cor_mat_overlap <- function(x, y, minoverlap) {
   nx <- ncol(x) # count series in x
   ny <- ncol(y) # count series in x
@@ -14,7 +27,7 @@ cor_mat_overlap <- function(x, y, minoverlap) {
       L <- (cur_x_notna) + (!is.na(cur_y))==2 # common overlap
       overlap <- sum(L==TRUE)
       if (overlap >= minoverlap) {
-        x2 <- cur_x[L] 
+        x2 <- cur_x[L]
         y2 <- cur_y[L]
         meanx <- mean(x2)
         meany <- mean(y2)

@@ -1,3 +1,16 @@
+#' Community detection using the Girvan-Newman algorithm
+#'
+#' Function to determine the communities in a network using the Girvan-Newman algorithm. This function uses the cluster_edge_betweenness() function from the iGraph package, but creates a more user-friendly output that includes the names of the nodes.
+#'
+#' References
+#' Girvan, M and Newman, MEJ. 2002 Community structure in social and biological networks. Proceedings of the National Academy of Sciences of the United States of America 99(12): 7821–7826. DOI: https://doi.org/10.1073/pnas.122653799.
+#'Newman, MEJ and Girvan, M. 2004 Finding and evaluating community structure in networks. Physical Review E 69(2): 026113. DOI: https://doi.org/10.1103/PhysRevE.69.026113.
+#'
+#' @param g input graph or network that is used for community detection
+#' @returns the names of the nodes in the various communities
+#' @examples
+#' gn_names(graph)
+
 gn_names <- function(g) {
   g_GN <- cluster_edge_betweenness(g, weights = E(g)$weight, directed = FALSE,
                                   edge.betweenness = TRUE, merges = TRUE, bridges = TRUE,
@@ -5,8 +18,8 @@ gn_names <- function(g) {
   com_all <- cbind(V(g)$name,g_GN$membership)
   colnames(com_all) <- c("node","com_id")
   com_all <- as.data.frame(com_all)  %>% mutate(com_name = paste0("GN_", formatC(com_id, width=2, flag="0")))
-  com_all <- com_all %>% select(node, com_name)  
-  com_all <- com_all %>% select(node, com_name)  
-  com_all <- com_all %>% arrange(com_name, node)  
-  
+  com_all <- com_all %>% select(node, com_name)
+  com_all <- com_all %>% select(node, com_name)
+  com_all <- com_all %>% arrange(com_name, node)
+
 }
