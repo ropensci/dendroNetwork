@@ -4,7 +4,7 @@
 \alias{sim_table}
 \title{Similarity table of tree-ring curves for the creation of a network}
 \usage{
-sim_table(trs1, trs2 = trs1, min_overlap = 50, last_digit_radius = FALSE)
+sim_table(trs1, trs2 = NULL, min_overlap = 50, last_digit_radius = FALSE)
 }
 \arguments{
 \item{trs1}{Rwl object with first tree-ring series to be compared with trs2}

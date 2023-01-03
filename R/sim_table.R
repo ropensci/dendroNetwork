@@ -16,14 +16,14 @@
 #'
 #'
 
-sim_table <- function(trs1, trs2=trs1, min_overlap=50, last_digit_radius=FALSE) {
+sim_table <- function(trs1, trs2=NULL, min_overlap=50, last_digit_radius=FALSE) {
   # nr of series in tree-ring series
   n1 <- dim(trs1)[2]
-  n2 <- dim(trs2)[2]
-
-  # if two different tree ring data sets, make daterange similar
-  if (treeringfile != treeringfile2) {
-    # determine min and max years
+  if (is.null(trs2)) {trs2_null = TRUE} else {trs2_null = FALSE}
+  if (!is.null(trs2)){
+    n2 <- dim(trs2)[2]
+    # make date range similar of the two tree-ring data sets
+    # first determine min and max years
     min_yr_1 <- min(as.numeric(rownames(trs1)))
     max_yr_1 <- max(as.numeric(rownames(trs1)))
     min_yr_2 <- min(as.numeric(rownames(trs2)))
@@ -38,15 +38,15 @@ sim_table <- function(trs1, trs2=trs1, min_overlap=50, last_digit_radius=FALSE) 
     trs1_nw[(min_yr_1-min_12+1):(length(daterange) - (max_12 - max_yr_1)),] <- trs1
     colnames(trs1_nw) <- colnames(trs1)
     trs1 <- trs1_nw
-    rm(trs1_nw)
     trs2_nw <- matrix(NA_real_, nrow = length(daterange), ncol = n2)
     trs2_nw <- as.rwl(trs2_nw)
     rownames(trs2_nw) <- daterange
     trs2_nw[(min_yr_2-min_12+1):(length(daterange) - (max_12 - max_yr_2)),] <- trs2
     colnames(trs2_nw) <- colnames(trs2)
     trs2 <- trs2_nw
-    rm(trs2_nw)
-    rm(min_yr_1,min_yr_2,max_yr_1,max_yr_2,min_12,max_12,daterange)
+  } else if (is.null(trs2)) {
+    trs2 <- trs1
+    n2 <- n1
   }
   # pre allocate matrices SGC, SSGC, Overlap
   SGC_mat <- matrix(NA_real_, nrow = n1, ncol = n2)
@@ -116,7 +116,7 @@ sim_table <- function(trs1, trs2=trs1, min_overlap=50, last_digit_radius=FALSE) 
   total <- merge(total,list_SSGC,by=c("Var1","Var2"))
   total <- merge(total,list_p,by=c("Var1","Var2"))
   total <- total[!(rowSums(is.na(total))==8),]
-  if (treeringfile == treeringfile2) {
+  if (trs2_null == TRUE) {
     total <- total[!(total$Var1 == total$Var2),] # remove self-comparisons
   }
 
