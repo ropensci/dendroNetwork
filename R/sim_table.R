@@ -2,15 +2,21 @@
 #'
 #' Function to calculate various similarity measures for the creation of dendrochronological networks as described by Visser (2022)....
 #'
-#' @param trs1
-#' @param trs2
-#' @param min_overlap
-#' @returns
+#' [check this a list] with all comparisons of the tree-ring series in trs1 (or between trs1 and trs2). This list includes the overlap, correlation (both with and without Hollstein-transformation), the t-value based on these correlations, the SGC, SSGC and the related probability of exceedence.
+#'
+#' @param trs1 Rwl object with first tree-ring series to be compared with trs2
+#' @param trs2 Optional second rwl object with second tree-ring series to be compared with trs1. Use this is you have to datasets that you want to compare.
+#' @param min_overlap If the overlap of the compared series is longer or equal than this minimal value, the similarities will be calculated for the comparison
+#' @param last_digit_radius Set this to TRUE if the last digit of a series name is the radius of the tree-ring series
+#' @returns a list with all comparisons of the tree-ring series in trs1 (or between trs1 and trs2). This list includes the overlap, correlation (both with and without Hollstein-transformation), the t-value based on these correlations, the SGC, SSGC and the related probability of exceedence.
 #' @examples
+#' data(anos1)
+#' sim_table(anos1)
+#' sim_table(anos1, min_overlap = 25)
 #'
 #'
 
-sim_table <- function(trs1, trs2, min_overlap=50) {
+sim_table <- function(trs1, trs2=trs1, min_overlap=50, last_digit_radius=FALSE) {
   # nr of series in tree-ring series
   n1 <- dim(trs1)[2]
   n2 <- dim(trs2)[2]
@@ -117,12 +123,13 @@ sim_table <- function(trs1, trs2, min_overlap=50) {
   # remove infinite good comparisons
   total <- total[!is.infinite(total$t),]
 
-  # naming of series; last character is radius, split name and radius letter/number
-  total <- cbind(str_sub(total[,1], 0, -2), str_sub(total[,1], -1),str_sub(total[,2], 0, -2), str_sub(total[,2], -1),total[,3:10])
-  colnames(total) <- c("series_a","radius_a","series_b","radius_b","overlap","r","r_hol","t","t_hol","sgc","ssgc","p")
-
-
-
-
-
+  if (last_digit_radius==TRUE){
+    # renaming of series; last character is radius, split name and radius letter/number
+    total <- cbind(str_sub(total[,1], 0, -2), str_sub(total[,1], -1),str_sub(total[,2], 0, -2), str_sub(total[,2], -1),total[,3:10])
+    colnames(total) <- c("series_a","radius_a","series_b","radius_b","overlap","r","r_hol","t","t_hol","sgc","ssgc","p")
+  }
+    else {
+      colnames(total) <- c("series_a","series_b","overlap","r","r_hol","t","t_hol","sgc","ssgc","p")
+    }
+  return(total)
 }
