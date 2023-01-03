@@ -1,22 +1,37 @@
 #' Similarity table of tree-ring curves for the creation of a network
 #'
-#' Function to calculate various similarity measures for the creation of dendrochronological networks as described by Visser (2022)....
+#' Function to calculate various similarity measures for the creation of dendrochronological networks as described by Visser (2021a). The function results in a list of all similarities of all comparisons between the tree-ring series in trs1 (or between trs1 and trs2). The resulting list includes the overlap, correlation (both with and without Hollstein-transformation), the t-value based on these correlations, Synchronous Growth Changes (SGC), Semi Synchronous Growth Changes (SSGC), and the related probability of exceedence (p).The last three (SGC, SSGC and p) are explained in Visser (2021b).
 #'
-#' [check this a list] with all comparisons of the tree-ring series in trs1 (or between trs1 and trs2). This list includes the overlap, correlation (both with and without Hollstein-transformation), the t-value based on these correlations, the SGC, SSGC and the related probability of exceedence.
+#' @usage
+#' sim_table(trs1,
+#'           trs2=NULL,
+#'           min_overlap=50,
+#'           last_digit_radius=FALSE)
 #'
 #' @param trs1 Rwl object with first tree-ring series to be compared with trs2
 #' @param trs2 Optional second rwl object with second tree-ring series to be compared with trs1. Use this is you have to datasets that you want to compare.
 #' @param min_overlap If the overlap of the compared series is longer or equal than this minimal value, the similarities will be calculated for the comparison
 #' @param last_digit_radius Set this to TRUE if the last digit of a series name is the radius of the tree-ring series
-#' @returns a list with all comparisons of the tree-ring series in trs1 (or between trs1 and trs2). This list includes the overlap, correlation (both with and without Hollstein-transformation), the t-value based on these correlations, the SGC, SSGC and the related probability of exceedence.
-#' @examples
-#' data(anos1)
-#' sim_table(anos1)
-#' sim_table(anos1, min_overlap = 25)
+#' @returns The resulting list includes the names of the compared series, overlap, correlation (both with and without Hollstein-transformation), t-value based on these correlations, SGC, SSGC and the related probability of exceedence.
 #'
+#' @references
+#' Visser, RM. 2021a Dendrochronological Provenance Patterns. Network Analysis of Tree-Ring Material Reveals Spatial and Economic Relations of Roman Timber in the Continental North-Western Provinces. Journal of Computer Applications in Archaeology 4(1): 230–253. DOI: https://doi.org/10.5334/jcaa.79.
+#'
+#' Visser, RM. 2021b On the similarity of tree-ring patterns: Assessing the influence of semi-synchronous growth changes on the Gleichläufigkeitskoeffizient for big tree-ring data sets. Archaeometry 63(1): 204–215. DOI: https://doi.org/10.1111/arcm.12600.
+#'
+#'
+#' @examples
+#' data(hol_rom)
+#' sim_table(hol_rom)
+#' sim_table(hol_rom, last_digit_radius = TRUE)
+#' sim_table(hol_rom, min_overlap = 25)
+#' sim_table(hol_rom, min_overlap = 100, last_digit_radius = TRUE)
 #'
 
-sim_table <- function(trs1, trs2=NULL, min_overlap=50, last_digit_radius=FALSE) {
+sim_table <- function(trs1,
+                      trs2=NULL,
+                      min_overlap=50,
+                      last_digit_radius=FALSE) {
   # nr of series in tree-ring series
   n1 <- dim(trs1)[2]
   if (is.null(trs2)) {trs2_null = TRUE} else {trs2_null = FALSE}

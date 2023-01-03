@@ -4,7 +4,10 @@
 \alias{sim_table}
 \title{Similarity table of tree-ring curves for the creation of a network}
 \usage{
-sim_table(trs1, trs2 = NULL, min_overlap = 50, last_digit_radius = FALSE)
+sim_table(trs1,
+          trs2=NULL,
+          min_overlap=50,
+          last_digit_radius=FALSE)
 }
 \arguments{
 \item{trs1}{Rwl object with first tree-ring series to be compared with trs2}
@@ -16,18 +19,21 @@ sim_table(trs1, trs2 = NULL, min_overlap = 50, last_digit_radius = FALSE)
 \item{last_digit_radius}{Set this to TRUE if the last digit of a series name is the radius of the tree-ring series}
 }
 \value{
-a list with all comparisons of the tree-ring series in trs1 (or between trs1 and trs2). This list includes the overlap, correlation (both with and without Hollstein-transformation), the t-value based on these correlations, the SGC, SSGC and the related probability of exceedence.
+The resulting list includes the names of the compared series, overlap, correlation (both with and without Hollstein-transformation), t-value based on these correlations, SGC, SSGC and the related probability of exceedence.
 }
 \description{
-Function to calculate various similarity measures for the creation of dendrochronological networks as described by Visser (2022)....
-}
-\details{
-[check this a list] with all comparisons of the tree-ring series in trs1 (or between trs1 and trs2). This list includes the overlap, correlation (both with and without Hollstein-transformation), the t-value based on these correlations, the SGC, SSGC and the related probability of exceedence.
+Function to calculate various similarity measures for the creation of dendrochronological networks as described by Visser (2021a). The function results in a list of all similarities of all comparisons between the tree-ring series in trs1 (or between trs1 and trs2). The resulting list includes the overlap, correlation (both with and without Hollstein-transformation), the t-value based on these correlations, Synchronous Growth Changes (SGC), Semi Synchronous Growth Changes (SSGC), and the related probability of exceedence (p).The last three (SGC, SSGC and p) are explained in Visser (2021b).
 }
 \examples{
-data(anos1)
-sim_table(anos1)
-sim_table(anos1, min_overlap = 25)
+data(hol_rom)
+sim_table(hol_rom)
+sim_table(hol_rom, last_digit_radius = TRUE)
+sim_table(hol_rom, min_overlap = 25)
+sim_table(hol_rom, min_overlap = 100, last_digit_radius = TRUE)
 
+}
+\references{
+Visser, RM. 2021a Dendrochronological Provenance Patterns. Network Analysis of Tree-Ring Material Reveals Spatial and Economic Relations of Roman Timber in the Continental North-Western Provinces. Journal of Computer Applications in Archaeology 4(1): 230–253. DOI: https://doi.org/10.5334/jcaa.79.
 
+Visser, RM. 2021b On the similarity of tree-ring patterns: Assessing the influence of semi-synchronous growth changes on the Gleichläufigkeitskoeffizient for big tree-ring data sets. Archaeometry 63(1): 204–215. DOI: https://doi.org/10.1111/arcm.12600.
 }
