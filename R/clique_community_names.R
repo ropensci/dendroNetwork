@@ -3,18 +3,21 @@
 #' Function to determine communities in a network using clique percolation method (Palla et al., 2005). Communities are created based on cliques. Cliques are subsets of a network that can be considered complete (sub)networks. The size of the cliques to be used to community detection is part of the input of the function.
 #'
 #' @param g network object (igraph)
-#' @param k clique size to be used
+#' @param k clique size to be used, default set to smallest possible size (3)
 #'
 #' @returns a dataframe with node names and community name (CPM_K[k]_number_of_community)
 #'
-#' @examples clique_community_names(graph_means, 3)
+#' @examples
+#' hol_sim <- sim_table(hol_rom)
+#' g_hol <- dendro_network(hol_sim)
+#' clique_community_names(g_hol, k=3)
 #'
 #' @references
 #' Palla, G., Derényi, I., Farkas, I., & Vicsek, T. (2005). Uncovering the overlapping community structure of complex networks in nature and society. Nature, 435(7043), 814-818.
 #' Code adapted from source: https://github.com/angelosalatino/CliquePercolationMethod-R
 #'
 
-clique_community_names <- function(g, k) {
+clique_community_names <- function(g, k=3) {
   clq <- cliques(g, min=k, max=k) %>% lapply(as.vector)
   # get node names
   node <- (V(g)$name)
@@ -50,5 +53,5 @@ clique_community_names <- function(g, k) {
   com_all <- com_all  %>% mutate(com_name = paste0("CPM_K", k, "_", formatC(com, width=2, flag="0")))
   com_all <- com_all %>% select(node, com_name)
   com_all <- com_all %>% arrange(com_name, node)
-
+  com_all
 }

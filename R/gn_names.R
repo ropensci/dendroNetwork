@@ -9,7 +9,9 @@
 #' @param g input graph or network that is used for community detection
 #' @returns the names of the nodes in the various communities
 #' @examples
-#' gn_names(graph)
+#' hol_sim <- sim_table(hol_rom)
+#' g_hol <- dendro_network(hol_sim)
+#' gn_names(g_hol)
 
 gn_names <- function(g) {
   g_GN <- cluster_edge_betweenness(g, weights = E(g)$weight, directed = FALSE,
@@ -21,5 +23,5 @@ gn_names <- function(g) {
   com_all <- com_all %>% select(node, com_name)
   com_all <- com_all %>% select(node, com_name)
   com_all <- com_all %>% arrange(com_name, node)
-
+  com_all
 }

@@ -21,5 +21,7 @@ Girvan, M and Newman, MEJ. 2002 Community structure in social and biological net
 Newman, MEJ and Girvan, M. 2004 Finding and evaluating community structure in networks. Physical Review E 69(2): 026113. DOI: https://doi.org/10.1103/PhysRevE.69.026113.
 }
 \examples{
-gn_names(graph)
+hol_sim <- sim_table(hol_rom)
+g_hol <- dendro_network(hol_sim)
+gn_names(g_hol)
 }
