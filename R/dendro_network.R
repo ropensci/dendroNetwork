@@ -9,6 +9,8 @@
 #'
 #' @returns A simplified network of tree-ring material with the edges defined by the similarity.
 #' @examples
+#' data(hol_rom)
+#' sim_table_hol <- sim_table(hol_rom)
 #' dendro_network(sim_table_hol)
 #' dendro_network(sim_table_hol, r_threshold = 0.4, sgc_threshold = 0.6)
 #'

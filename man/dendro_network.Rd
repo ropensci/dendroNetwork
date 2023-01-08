@@ -27,6 +27,8 @@ A simplified network of tree-ring material with the edges defined by the similar
 Function to create dendrochronological networks based on the similarity. The input for this function is a similarity table created with the sim_table() function. The thresholds are set to the defaults (Visser 2021).
 }
 \examples{
+data(hol_rom)
+sim_table_hol <- sim_table(hol_rom)
 dendro_network(sim_table_hol)
 dendro_network(sim_table_hol, r_threshold = 0.4, sgc_threshold = 0.6)
 
