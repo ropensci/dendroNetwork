@@ -8,7 +8,7 @@
 #' data(hol_rom)
 #' sim_table_hol <- sim_table(hol_rom)
 #' g_hol <- dendro_network(sim_table_hol)
-#' find_all_cpm_com(g_hol)
+#' hol_com_cpm_all <- find_all_cpm_com(g_hol)
 
 
 find_all_cpm_com <- function(graph_input){
