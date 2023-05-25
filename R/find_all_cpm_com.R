@@ -10,11 +10,13 @@
 #' g_hol <- dendro_network(sim_table_hol)
 #' hol_com_cpm_all <- find_all_cpm_com(g_hol)
 #'
-#'  @export find_all_cpm_com
+#' @export find_all_cpm_com
+#'
+#' @importFrom magrittr %>%
 
 
 find_all_cpm_com <- function(graph_input){
-  for (i in 3:clique_num(graph_input)) {
+  for (i in 3:igraph::clique_num(graph_input)) {
     com_cpm <- clique_community_names(graph_input,i)
     if (i==3) {
       com_cpm_all <- com_cpm}
@@ -22,6 +24,6 @@ find_all_cpm_com <- function(graph_input){
       com_cpm_all <- rbind(com_cpm_all,com_cpm)
     }
   }
-  com_cpm_all <- com_cpm_all %>% count(node, com_name) %>% spread(com_name, n)
+  com_cpm_all <- com_cpm_all %>% dplyr::count(node, com_name) %>% tidyr::spread(com_name, n)
   com_cpm_all
 }

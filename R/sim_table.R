@@ -49,13 +49,13 @@ sim_table <- function(trs1,
     daterange <- min_12:max_12
     # make daterange of both matrices similar
     trs1_nw <- matrix(NA_real_, nrow = length(daterange), ncol = n1)
-    trs1_nw <- as.rwl(trs1_nw)
+    trs1_nw <- dplR::as.rwl(trs1_nw)
     rownames(trs1_nw) <- daterange
     trs1_nw[(min_yr_1-min_12+1):(length(daterange) - (max_12 - max_yr_1)),] <- trs1
     colnames(trs1_nw) <- colnames(trs1)
     trs1 <- trs1_nw
     trs2_nw <- matrix(NA_real_, nrow = length(daterange), ncol = n2)
-    trs2_nw <- as.rwl(trs2_nw)
+    trs2_nw <- dplR::as.rwl(trs2_nw)
     rownames(trs2_nw) <- daterange
     trs2_nw[(min_yr_2-min_12+1):(length(daterange) - (max_12 - max_yr_2)),] <- trs2
     colnames(trs2_nw) <- colnames(trs2)
@@ -98,8 +98,8 @@ sim_table <- function(trs1,
   p_mat=2*(1-pnorm(z_mat,0,1))
 
   # correlation and T
-  trs1_wuchs <- as.rwl(apply(trs1, 2, wuchswerte))
-  trs2_wuchs <- as.rwl(apply(trs2, 2, wuchswerte))
+  trs1_wuchs <- dplR::as.rwl(apply(trs1, 2, wuchswerte))
+  trs2_wuchs <- dplR::as.rwl(apply(trs2, 2, wuchswerte))
   #r_list <- cor.with.limit(overlap,trs1,trs2,"pearson")
   r_list <- cor_mat_overlap(trs1,trs2,min_overlap)
   r_mat <- r_list[[1]]
@@ -114,15 +114,15 @@ sim_table <- function(trs1,
   thol_mat <- t_value(rhol_mat,rhol_ol_mat)
 
   #listing data
-  list_overlap <- subset(melt(SGC_ol_mat,value.name = "overlap"))
-  list_SGC <- subset(melt(SGC_mat), value.name = "SGC")
-  list_SSGC <- subset(melt(SSGC_mat), value.name = "SSGC")
-  list_p<- subset(melt(p_mat,value.name = "p"))
-  list_r <- subset(melt(r_mat,value.name = "r"))
-  list_r_ol <- subset(melt(r_ol_mat,value.name = "r_ol"))
-  list_rhol <- subset(melt(rhol_mat,value.name = "r_hol"))
-  list_t <- subset(melt(t_mat,value.name = "t"))
-  list_thol <- subset(melt(thol_mat,value.name = "t_hol"))
+  list_overlap <- subset(reshape2::melt(SGC_ol_mat,value.name = "overlap"))
+  list_SGC <- subset(reshape2::melt(SGC_mat), value.name = "SGC")
+  list_SSGC <- subset(reshape2::melt(SSGC_mat), value.name = "SSGC")
+  list_p<- subset(reshape2::melt(p_mat,value.name = "p"))
+  list_r <- subset(reshape2::melt(r_mat,value.name = "r"))
+  list_r_ol <- subset(reshape2::melt(r_ol_mat,value.name = "r_ol"))
+  list_rhol <- subset(reshape2::melt(rhol_mat,value.name = "r_hol"))
+  list_t <- subset(reshape2::melt(t_mat,value.name = "t"))
+  list_thol <- subset(reshape2::melt(thol_mat,value.name = "t_hol"))
 
   total <- merge(list_r_ol,list_r,by=c("Var1","Var2"))
   total <- merge(total,list_rhol,by=c("Var1","Var2"))

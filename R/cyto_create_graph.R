@@ -27,23 +27,30 @@ cyto_create_graph <- function(graph_input,
                               style_name="default",
                               CPM_table = NULL,
                               GN_table = NULL) {
-  if (length(cytoscapeVersionInfo())!=2){
+  if (length(RCy3::cytoscapeVersionInfo())!=2){
     message("Cytoscape is not running, please start Cytoscape first")
     stop()
   }
+  varnames <- all.vars(match.call())
+  for (v in varnames) {
+    if (!exists(v)) {
+      stop(paste0("Not all input parameters exist. ", v, " is missing or incorrectlty spelled."))
+      }
+  }
+
   # due to errors on first creation tryCatch added that does remove and create network again
-  tryCatch({createNetworkFromIgraph(graph_input, network_name, collection = collection_name, style.name=style_name)},
+  tryCatch({RCy3::createNetworkFromIgraph(graph_input, network_name, collection = collection_name, style.name=style_name)},
            error=function(cond){
-             deleteNetwork()
-             createNetworkFromIgraph(graph_input, network_name, collection = collection_name, style.name=style_name)
+             RCy3::deleteNetwork()
+             RCy3::createNetworkFromIgraph(graph_input, network_name, collection = collection_name, style.name=style_name)
            })
-  setVisualStyle(style_name)
+  RCy3::setVisualStyle(style_name)
   if (!is.null(CPM_table)){
-    loadTableData(CPM_table,data.key.column="node")
+      RCy3::loadTableData(CPM_table,data.key.column="node")
   }
   if (!is.null(GN_table)){
-    loadTableData(GN_table,data.key.column="node")
+      RCy3::loadTableData(GN_table,data.key.column="node")
   }
-  layoutNetwork(layout.name="kamada-kawai")
-  setNodeLabelMapping("id", style.name=style_name)
+  RCy3::layoutNetwork(layout.name="kamada-kawai")
+  RCy3::setNodeLabelMapping("id", style.name=style_name)
 }

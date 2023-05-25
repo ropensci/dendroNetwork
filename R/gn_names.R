@@ -14,16 +14,19 @@
 #' gn_names(g_hol)
 #'
 #' @export gn_names
+#'
+#' @importFrom magrittr %>%
 
 gn_names <- function(g) {
-  g_GN <- cluster_edge_betweenness(g, weights = E(g)$weight, directed = FALSE,
+  g_GN <- igraph::cluster_edge_betweenness(g, weights = igraph::E(g)$weight, directed = FALSE,
                                   edge.betweenness = TRUE, merges = TRUE, bridges = TRUE,
                                   modularity = TRUE, membership = TRUE)
-  com_all <- cbind(V(g)$name,g_GN$membership)
+  com_all <- cbind(igraph::V(g)$name,g_GN$membership)
   colnames(com_all) <- c("node","GN_com")
-  com_all <- as.data.frame(com_all)  %>% mutate(com_name = paste0("GN_", formatC(com_id, width=2, flag="0")))
-  com_all <- com_all %>% select(node, com_name)
-  com_all <- com_all %>% select(node, com_name)
-  com_all <- com_all %>% arrange(com_name, node)
+  leading_zeroes <- max(nchar(com_all[,2]))
+  com_all <- as.data.frame(com_all)  %>% dplyr::mutate(com_name = paste0("GN_", formatC(as.numeric(GN_com), width=leading_zeroes, flag="0")))
+  com_all <- com_all %>% dplyr::select(node, com_name)
+  com_all <- com_all %>% dplyr::select(node, com_name)
+  com_all <- com_all %>% dplyr::arrange(com_name, node)
   com_all
 }

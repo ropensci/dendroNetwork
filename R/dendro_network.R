@@ -18,15 +18,19 @@
 #' Visser, RM. 2021a Dendrochronological Provenance Patterns. Network Analysis of Tree-Ring Material Reveals Spatial and Economic Relations of Roman Timber in the Continental North-Western Provinces. Journal of Computer Applications in Archaeology 4(1): 230–253. DOI: https://doi.org/10.5334/jcaa.79.
 #'
 #'
+#' @export dendro_network
+#'
+#' @importFrom magrittr %>%
+#'
 dendro_network <- function(sim_table,
                       r_threshold = 0.5,
                       sgc_threshold = 0.7,
                       p_threshold = 0.0001) {
   netw_data <- sim_table %>%
-    filter(r>=r_threshold, sgc>=sgc_threshold, p<=p_threshold) %>%
-    select(series_a,series_b)
+    dplyr::filter(r>=r_threshold, sgc>=sgc_threshold, p<=p_threshold) %>%
+    dplyr::select(series_a,series_b)
   netw_data <- unique(netw_data)
-  graph_dendro <- graph.data.frame(netw_data, directed=FALSE)
+  graph_dendro <- igraph::graph.data.frame(netw_data, directed=FALSE)
   graph_dendro <- igraph::simplify(graph_dendro)
   graph_dendro
 }

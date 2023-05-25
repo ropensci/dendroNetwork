@@ -24,4 +24,5 @@ Newman, MEJ and Girvan, M. 2004 Finding and evaluating community structure in ne
 hol_sim <- sim_table(hol_rom)
 g_hol <- dendro_network(hol_sim)
 gn_names(g_hol)
+
 }

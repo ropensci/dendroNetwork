@@ -20,5 +20,5 @@ Published on pages 14-15 in Hollstein, E. 1980. Mitteleuropäische Eichenchronol
 }
 \examples{
 wuchswerte(trs)
-to convert a rwl object into wuchwerte use: as.rwl(apply(anos1, 2, wuchswerte))
+to convert a rwl object into wuchwerte use: dplR::as.rwl(apply(anos1, 2, wuchswerte))
 }

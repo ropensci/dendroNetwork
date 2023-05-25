@@ -8,7 +8,7 @@
 #' @returns tree-ring series normalized according to Hollstein (1980, 14-15)
 #' @examples
 #' wuchswerte(trs)
-#' to convert a rwl object into wuchwerte use: as.rwl(apply(anos1, 2, wuchswerte))
+#' to convert a rwl object into wuchwerte use: dplR::as.rwl(apply(anos1, 2, wuchswerte))
 #' @export wuchswerte
 
 wuchswerte <- function(x) {
