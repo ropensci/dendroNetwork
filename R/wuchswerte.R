@@ -9,6 +9,7 @@
 #' @examples
 #' wuchswerte(trs)
 #' to convert a rwl object into wuchwerte use: as.rwl(apply(anos1, 2, wuchswerte))
+#' @export wuchswerte
 
 wuchswerte <- function(x) {
   x2 <- c(NA,x[-length(x)])

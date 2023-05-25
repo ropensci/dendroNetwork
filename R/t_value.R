@@ -7,6 +7,7 @@
 #' @returns Students' t value as a numeric.
 #' @examples
 #' t_value(0.5, 100)
+#' @export t_value
 
 t_value <- function(r, n) {
   t_value <- (r * sqrt(n - 1)) / sqrt(1 - r^2)

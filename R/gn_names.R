@@ -12,6 +12,8 @@
 #' hol_sim <- sim_table(hol_rom)
 #' g_hol <- dendro_network(hol_sim)
 #' gn_names(g_hol)
+#'
+#' @export gn_names
 
 gn_names <- function(g) {
   g_GN <- cluster_edge_betweenness(g, weights = E(g)$weight, directed = FALSE,

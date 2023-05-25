@@ -27,6 +27,7 @@
 #' sim_table(hol_rom, min_overlap = 25)
 #' sim_table(hol_rom, min_overlap = 100, last_digit_radius = TRUE)
 #'
+#' @export sim_table
 
 sim_table <- function(trs1,
                       trs2=NULL,

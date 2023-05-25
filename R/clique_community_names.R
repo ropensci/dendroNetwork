@@ -16,6 +16,7 @@
 #' Palla, G., Derényi, I., Farkas, I., & Vicsek, T. (2005). Uncovering the overlapping community structure of complex networks in nature and society. Nature, 435(7043), 814-818.
 #' Code adapted from source: https://github.com/angelosalatino/CliquePercolationMethod-R
 #'
+#' @export clique_community_names
 
 clique_community_names <- function(g, k=3) {
   clq <- cliques(g, min=k, max=k) %>% lapply(as.vector)

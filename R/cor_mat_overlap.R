@@ -13,6 +13,7 @@
 #' cor_mat_overlap(rwl_object1, rwl_object2, 50)
 #' cor_mat_overlap(rwl_object1, rwl_object1, 50)
 #'
+#' @export cor_mat_overlap
 
 cor_mat_overlap <- function(x, y, minoverlap) {
   nx <- ncol(x) # count series in x
