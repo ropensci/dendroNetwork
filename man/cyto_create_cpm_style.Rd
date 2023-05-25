@@ -4,12 +4,12 @@
 \alias{cyto_create_cpm_style}
 \title{Create CPM style in Cytoscape}
 \usage{
-cyto_create_cpm_style(graph_input, k = "all", style_name = "auto")
+cyto_create_cpm_style(graph_input, k = 3, style_name = "auto")
 }
 \arguments{
 \item{graph_input}{the graph with the CPM communities}
 
-\item{k}{clique size for the visualisation. This can be an integer or if styles are to be generated for all possible clique sizes use "all"}
+\item{k}{clique size for the visualisation. This should be an integer with the value 3 or higher}
 
 \item{style_name}{name of the output style in Cytoscape. If set to "auto", the style is derived from the name of the network and value for k}
 

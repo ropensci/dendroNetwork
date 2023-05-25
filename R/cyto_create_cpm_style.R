@@ -7,7 +7,7 @@
 #'
 #' @param graph_input the graph with the CPM communities
 #' @param com_k CPM communities in graph_input. This is the result of find_all_cpm_com()
-#' @param k clique size for the visualisation. This can be an integer or if styles are to be generated for all possible clique sizes use "all"
+#' @param k clique size for the visualisation. This should be an integer with the value 3 or higher
 #' @param style_name name of the output style in Cytoscape. If set to "auto", the style is derived from the name of the network and value for k
 #' @returns The style applied in Cytoscape, no objects in R as return.
 #' @examples
@@ -20,28 +20,11 @@
 #'
 #' @export cyto_create_cpm_style
 
-cyto_create_cpm_style <- function(graph_input, k="all", style_name = "auto") {
+cyto_create_cpm_style <- function(graph_input, k=3, style_name = "auto") {
   if ("GreyNodesLabel" %in% RCy3::getVisualStyleNames() == FALSE) {
-    RCy3::importVisualStyles(filename = "cytoscape/NetworkStyles.xml")
+    RCy3::importVisualStyles(filename = system.file("extdata", "NetworkStyles.xml", package = "DendroNetwork"))
   }
-  colbrew <- RColorBrewer::brewer.pal(12,"Paired")
-  if (k=="all"){
-    for (i in 3:igraph::clique_num(graph_input)) {
-      if (style_name == "auto"){
-        style_name <- paste0(substitute(graph_input), "_CPM(k=", i, ")")
-      }
-      if (style_name %in% RCy3::getVisualStyleNames()) {
-        RCy3::deleteVisualStyle(style_name)
-      }
-      RCy3::copyVisualStyle("GreyNodesLabel", style_name)
-      com_k <- clique_community_names(graph_input, i)
-      RCy3::setNodeCustomPieChart(unique(com_k$com_name),
-                            colors = colbrew,
-                            style.name = style_name)
-      RCy3::setVisualStyle(style_name)
-      }
-  } else {
-    if(is.numeric(k)){
+  if(is.numeric(k)){
       if (style_name == "auto"){
         style_name <- paste0(substitute(graph_input), "_CPM(k=", k, ")")
       }
@@ -50,13 +33,19 @@ cyto_create_cpm_style <- function(graph_input, k="all", style_name = "auto") {
       }
       RCy3::copyVisualStyle("GreyNodesLabel", style_name)
       com_k <- clique_community_names(graph_input, k)
-      RCy3::setNodeCustomPieChart(unique(com_k$com_name),
-                            colors = colbrew,
-                            style.name = style_name)
+      if (length(unique(com_k$com_name))==1){
+        # RCy3::setNodeCustomPieChart does not work with a single column and therefore the nodes are coloured based on the single community
+        RCy3::setNodeColorMapping(unique(com_k$com_name), table.column.values = 1,
+                                    colors = RColorBrewer::brewer.pal(12,"Paired")[1],
+                                    style.name = style_name)
+      } else {
+        RCy3::setNodeCustomPieChart(unique(com_k$com_name),
+                                    colors = RColorBrewer::brewer.pal(12,"Paired"),
+                                    style.name = style_name)
+      }
       RCy3::setVisualStyle(style_name)
     } else {
-    message("k can only be a number or 'all' if all styles are to be generated")
+    message("k can only be a number")
     stop()
     }
-  }
 }

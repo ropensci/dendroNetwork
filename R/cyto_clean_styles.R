@@ -5,6 +5,8 @@
 #' cyto_clean_styles()
 #'
 #' @export cyto_clean_styles
+#'
+#' @importFrom magrittr %>%
 
 cyto_clean_styles <- function(){
   if (length(RCy3::cytoscapeVersionInfo())!=2){
@@ -12,28 +14,63 @@ cyto_clean_styles <- function(){
     stop()
   }
   # delete default styles
-  RCy3::deleteVisualStyle("Big Labels")
-  RCy3::deleteVisualStyle("BioPAX")
-  RCy3::deleteVisualStyle("BioPAX_SIF")
-  RCy3::deleteVisualStyle("Curved")
-  RCy3::deleteVisualStyle("default black")
-  RCy3::deleteVisualStyle("Directed")
-  RCy3::deleteVisualStyle("Gradient1")
-  RCy3::deleteVisualStyle("Marquee")
-  RCy3::deleteVisualStyle("Minimal")
-  RCy3::deleteVisualStyle("Nested Network Style")
-  RCy3::deleteVisualStyle("Ripple")
-  RCy3::deleteVisualStyle("Sample1")
-  RCy3::deleteVisualStyle("Sample2")
-  RCy3::deleteVisualStyle("Sample3")
-  RCy3::deleteVisualStyle("Solid")
-  RCy3::deleteVisualStyle("Universe")
-  RCy3::deleteVisualStyle("size_rank")
+  if ("Big Labels" %in% RCy3::getVisualStyleNames()) {
+    RCy3::deleteVisualStyle("Big Labels")
+  }
+  if ("BioPAX" %in% RCy3::getVisualStyleNames()) {
+    RCy3::deleteVisualStyle("BioPAX")
+  }
+  if ("BioPAX_SIF" %in% RCy3::getVisualStyleNames()) {
+    RCy3::deleteVisualStyle("BioPAX_SIF")
+  }
+  if ("Curved" %in% RCy3::getVisualStyleNames()) {
+    RCy3::deleteVisualStyle("Curved")
+  }
+  if ("default black" %in% RCy3::getVisualStyleNames()) {
+    RCy3::deleteVisualStyle("default black")
+  }
+  if ("Directed" %in% RCy3::getVisualStyleNames()) {
+    RCy3::deleteVisualStyle("Directed")
+  }
+  if ("Gradient1" %in% RCy3::getVisualStyleNames()) {
+    RCy3::deleteVisualStyle("Gradient1")
+  }
+  if ("Marquee" %in% RCy3::getVisualStyleNames()) {
+    RCy3::deleteVisualStyle("Marquee")
+  }
+  if ("Minimal" %in% RCy3::getVisualStyleNames()) {
+    RCy3::deleteVisualStyle("Minimal")
+  }
+  if ("Nested Network Style" %in% RCy3::getVisualStyleNames()) {
+    RCy3::deleteVisualStyle("Nested Network Style")
+  }
+  if ("Ripple" %in% RCy3::getVisualStyleNames()) {
+    RCy3::deleteVisualStyle("Ripple")
+  }
+  if ("Sample1" %in% RCy3::getVisualStyleNames()) {
+    RCy3::deleteVisualStyle("Sample1")
+  }
+  if ("Sample2" %in% RCy3::getVisualStyleNames()) {
+    RCy3::deleteVisualStyle("Sample2")
+  }
+  if ("Sample3" %in% RCy3::getVisualStyleNames()) {
+    RCy3::deleteVisualStyle("Sample3")
+  }
+  if ("Solid" %in% RCy3::getVisualStyleNames()) {
+    RCy3::deleteVisualStyle("Solid")
+  }
+  if ("Universe" %in% RCy3::getVisualStyleNames()) {
+    RCy3::deleteVisualStyle("Universe")
+  }
+  if ("size_rank" %in% RCy3::getVisualStyleNames()) {
+    RCy3::deleteVisualStyle("size_rank")
+  }
+
   # import style with grey nodes
   if ("GreyNodesLabel" %in% RCy3::getVisualStyleNames() == FALSE) {
-    RCy3::importVisualStyles(filename = "cytoscape/NetworkStyles.xml")
+    RCy3::importVisualStyles(filename = system.file("extdata", "NetworkStyles.xml", package = "DendroNetwork"))
   }
-  message("All defauls styles are removed and some new ones are added")
+  message("All default styles are removed and some new ones are added")
 
 }
 
