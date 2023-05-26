@@ -18,7 +18,7 @@ The style applied in Cytoscape, no objects in R as return.
 }
 \description{
 Function to create a style in Cytoscape to visualise the communities in a network using the Girvan-Newman method for community detection.
-Each node is filled with the colour of the community.
+Each node is filled with a separate colour for each community.
 Before starting this function, Cytoscape must be up and running!
 }
 \examples{

@@ -36,14 +36,16 @@ cyto_create_cpm_style <- function(graph_input, k=3, style_name = "auto") {
       }
       RCy3::copyVisualStyle("GreyNodesLabel", style_name)
       com_k <- clique_community_names(graph_input, k)
-      if (length(unique(com_k$com_name))==1){
+      com_count <- length(unique(com_k$com_name))
+      if (com_count==1){
         # RCy3::setNodeCustomPieChart does not work with a single column and therefore the nodes are coloured based on the single community
         RCy3::setNodeColorMapping(unique(com_k$com_name), table.column.values = 1,
                                     colors = RColorBrewer::brewer.pal(12,"Paired")[1],
                                     style.name = style_name)
       } else {
+        getPalette <- colorRampPalette(RColorBrewer::brewer.pal(12, "Paired"))
         RCy3::setNodeCustomPieChart(unique(com_k$com_name),
-                                    colors = RColorBrewer::brewer.pal(12,"Paired"),
+                                    colors = getPalette(com_count),
                                     style.name = style_name)
       }
       RCy3::setVisualStyle(style_name)

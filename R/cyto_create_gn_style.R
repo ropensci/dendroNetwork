@@ -1,7 +1,7 @@
 #' Create Girvan-Newman communities style in Cytoscape
 #'
 #' Function to create a style in Cytoscape to visualise the communities in a network using the Girvan-Newman method for community detection.
-#' Each node is filled with the colour of the community.
+#' Each node is filled with a separate colour for each community.
 #' Before starting this function, Cytoscape must be up and running!
 #'
 #' @param graph_input the graph with the CPM communities
@@ -28,15 +28,16 @@ cyto_create_gn_style <- function(graph_input, gn_coms = NULL, style_name = "auto
   if (style_name == "auto"){
     style_name <- paste0(substitute(graph_input), "_GN")
   }
-  copyVisualStyle("GreyNodesLabel", style_name)
+  RCy3::copyVisualStyle("GreyNodesLabel", style_name)
   if (is.null(gn_coms)) {
     gn_coms <- gn_names(graph_input)
   }
-  colourCount = length(unique(gn_coms$com_name))
-  setNodeColorMapping(table.column = "com_name",
+  com_count <- length(unique(gn_coms$com_name))
+  getPalette <- colorRampPalette(RColorBrewer::brewer.pal(12, "Paired"))
+  RCy3::setNodeColorMapping(table.column = "com_name",
                       table.column.values = unique(gn_coms$com_name),
-                      colors = RColorBrewer::brewer.pal(colourCount,"Paired"),
+                      colors = getPalette(com_count),
                       mapping.type = "d",
                       style.name=style_name)
-  setVisualStyle(style_name)
+  RCy3::setVisualStyle(style_name)
 }

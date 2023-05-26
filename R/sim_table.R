@@ -141,7 +141,7 @@ sim_table <- function(trs1,
 
   if (last_digit_radius==TRUE){
     # renaming of series; last character is radius, split name and radius letter/number
-    total <- cbind(str_sub(total[,1], 0, -2), str_sub(total[,1], -1),str_sub(total[,2], 0, -2), str_sub(total[,2], -1),total[,3:10])
+    total <- cbind(stringr::str_sub(total[,1], 0, -2), stringr::str_sub(total[,1], -1),stringr::str_sub(total[,2], 0, -2), stringr::str_sub(total[,2], -1),total[,3:10])
     colnames(total) <- c("series_a","radius_a","series_b","radius_b","overlap","r","r_hol","t","t_hol","sgc","ssgc","p")
   }
     else {
