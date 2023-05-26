@@ -12,8 +12,6 @@ cyto_create_cpm_style(graph_input, k = 3, style_name = "auto")
 \item{k}{clique size for the visualisation. This should be an integer with the value 3 or higher}
 
 \item{style_name}{name of the output style in Cytoscape. If set to "auto", the style is derived from the name of the network and value for k}
-
-\item{com_k}{CPM communities in graph_input. This is the result of find_all_cpm_com()}
 }
 \value{
 The style applied in Cytoscape, no objects in R as return.
@@ -22,7 +20,7 @@ The style applied in Cytoscape, no objects in R as return.
 Function to create a style in Cytoscape to visualise the communities in a network using clique percolation method (CPM: Palla et al., 2005). See also: find_all_cpm_com()
 Each node is filled with the colour of the community. If a node is part of several communities a pie chart is used to show the various community colours.
 The function uses a graph as input and the number of cliques (default = 3). The style can be specified or automatically named based on the name of the network an the number of cliques.
-Before starting this funtion, Cytoscape must be up and running!
+Before starting this function, Cytoscape must be up and running!
 }
 \examples{
 data(hol_rom)
