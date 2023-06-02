@@ -3,8 +3,15 @@ Type: Package
 Title: What the Package Does (Title Case)
 Version: 0.1.0
 Authors@R: 
-    person("Ronald", "Visser", , "r.m.visser@saxion.nl", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0001-6966-1729"))
+    c(person(given ="Ronald", 
+            family = "Visser", 
+            email = "r.m.visser@saxion.nl", 
+            role = c("aut", "cre"),
+            comment = c(ORCID = "0000-0001-6966-1729")),
+    person(given = "Angelino", 
+            family ="Salentino",
+            role = "ctb",
+            comment = c(ORCID = "0000-0002-4763-3943")))
 Maintainer: Ronald Visser <r.m.visser@saxion.nl>
 Depends: R (>= 3.5.0)
 Imports: dplR (>= 1.7.2), igraph, stringr, reshape2, RCy3, dplyr, RColorBrewer, tidyr
