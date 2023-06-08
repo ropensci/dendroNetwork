@@ -7,15 +7,15 @@
 #'
 #' @param graph_input the graph with the CPM communities
 #' @param k clique size for the visualisation. This should be an integer with the value 3 or higher
+#' @param com_k data_frame with the communities for the specific clique size
 #' @param style_name name of the output style in Cytoscape. If set to "auto", the style is derived from the name of the network and value for k
 #' @returns The style applied in Cytoscape, no objects in R as return.
 #' @examples
 #' data(hol_rom)
 #' sim_table_hol <- sim_table(hol_rom)
 #' g_hol <- dendro_network(sim_table_hol)
-#' hol_com_cpm_all <- find_all_cpm_com(g_hol)
-#' cyto_create_cpm_style(g_hol, hol_com_cpm_all, k=3)
-#' cyto_create_cpm_style(g_hol, hol_com_cpm_all, k="all")
+#' hol_com_cpm_k3 <- clique_community_names(g_hol, k=3)
+#' cyto_create_cpm_style(g_hol, hol_com_cpm_k3, k=3)
 #'
 #' @export cyto_create_cpm_style
 
@@ -35,7 +35,7 @@ cyto_create_cpm_style <- function(graph_input, k=3, style_name = "auto") {
         RCy3::deleteVisualStyle(style_name)
       }
       RCy3::copyVisualStyle("GreyNodesLabel", style_name)
-      com_k <- clique_community_names(graph_input, k)
+      #com_k <- clique_community_names(graph_input, k)
       com_count <- length(unique(com_k$com_name))
       if (com_count==1){
         # RCy3::setNodeCustomPieChart does not work with a single column and therefore the nodes are coloured based on the single community

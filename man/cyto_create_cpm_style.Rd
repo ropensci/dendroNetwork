@@ -12,6 +12,8 @@ cyto_create_cpm_style(graph_input, k = 3, style_name = "auto")
 \item{k}{clique size for the visualisation. This should be an integer with the value 3 or higher}
 
 \item{style_name}{name of the output style in Cytoscape. If set to "auto", the style is derived from the name of the network and value for k}
+
+\item{com_k}{data_frame with the communities for the specific clique size}
 }
 \value{
 The style applied in Cytoscape, no objects in R as return.
@@ -26,8 +28,7 @@ Before starting this function, Cytoscape must be up and running!
 data(hol_rom)
 sim_table_hol <- sim_table(hol_rom)
 g_hol <- dendro_network(sim_table_hol)
-hol_com_cpm_all <- find_all_cpm_com(g_hol)
-cyto_create_cpm_style(g_hol, hol_com_cpm_all, k=3)
-cyto_create_cpm_style(g_hol, hol_com_cpm_all, k="all")
+hol_com_cpm_k3 <- clique_community_names(g_hol, k=3)
+cyto_create_cpm_style(g_hol, hol_com_cpm_k3, k=3)
 
 }

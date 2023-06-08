@@ -4,10 +4,12 @@
 \alias{find_all_cpm_com}
 \title{Finding all CPM communities in a network/graph}
 \usage{
-find_all_cpm_com(graph_input)
+find_all_cpm_com(graph_input, n_core = 0)
 }
 \arguments{
 \item{graph_input}{the graph for find all CPM communities in}
+
+\item{n_core}{this defaults to 0, if a number larger than 1 is given the community detection is performed using parallel computing}
 }
 \value{
 data frame with at least two columns. The first column are the node names and the further columns represent the CPM-communities, with 1 denoting the membership in a community.
