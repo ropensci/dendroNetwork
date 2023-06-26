@@ -22,7 +22,7 @@ cyto_create_graph(
 
 \item{style_name}{name of the style in Cytoscape (default = default)}
 
-\item{CPM_table}{table with the name of the nodes in the first column and the CPM-communities in other columns}
+\item{CPM_table}{table with the name of the nodes in the first column and the CPM-communities in other columns. This is the result of find_all_cpm_com()}
 
 \item{GN_table}{two column table with the name of the nodes in the first column and the Girvan-Newman-communities in other columns}
 }

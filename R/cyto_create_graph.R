@@ -7,7 +7,7 @@
 #' @param network_name name of the network in Cytoscape, defaults to the name of variable that is the network in R
 #' @param collection_name name of the collection in Cytoscape (default = default)
 #' @param style_name name of the style in Cytoscape (default = default)
-#' @param CPM_table table with the name of the nodes in the first column and the CPM-communities in other columns
+#' @param CPM_table table with the name of the nodes in the first column and the CPM-communities in other columns. This is the result of find_all_cpm_com()
 #' @param GN_table two column table with the name of the nodes in the first column and the Girvan-Newman-communities in other columns
 #'
 #' @returns a graph in Cytoscape

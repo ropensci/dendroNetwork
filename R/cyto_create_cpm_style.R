@@ -7,7 +7,7 @@
 #'
 #' @param graph_input the graph with the CPM communities
 #' @param k clique size for the visualisation. This should be an integer with the value 3 or higher
-#' @param com_k data_frame with the communities for the specific clique size
+#' @param com_k data_frame with the communities for the specific clique size (two columns: node and com_name). This is the result of clique_community_names_par() or clique_community_names()
 #' @param style_name name of the output style in Cytoscape. If set to "auto", the style is derived from the name of the network and value for k
 #' @returns The style applied in Cytoscape, no objects in R as return.
 #' @examples
@@ -15,11 +15,11 @@
 #' sim_table_hol <- sim_table(hol_rom)
 #' g_hol <- dendro_network(sim_table_hol)
 #' hol_com_cpm_k3 <- clique_community_names(g_hol, k=3)
-#' cyto_create_cpm_style(g_hol, hol_com_cpm_k3, k=3)
+#' cyto_create_cpm_style(g_hol, k=3, com_k = hol_com_cpm_k3)
 #'
 #' @export cyto_create_cpm_style
 
-cyto_create_cpm_style <- function(graph_input, k=3, style_name = "auto") {
+cyto_create_cpm_style <- function(graph_input, k=3, com_k = NULL, style_name = "auto") {
   if (length(RCy3::cytoscapeVersionInfo())!=2){
     message("Cytoscape is not running, please start Cytoscape first")
     stop()
