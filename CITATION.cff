@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-meassage: "If you use this software, please cite it as below"
+message: "If you use this software, please cite it as below"
 abstract: "DendroNetwork: a R-package to create dendrochronological provenance networks."
 authors:
   - family-names: Visser
