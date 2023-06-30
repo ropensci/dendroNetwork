@@ -1,0 +1,28 @@
+---
+title: "DendroNetwork: a R-package to create dendrochronological provenance networks"
+authors: 
+  - Name: Ronald Visser
+  - orcid: 0000-0001-6966-1729
+  - affiliation: 1
+affiliations:
+   - name: Saxion University of Applied Sciences
+   - index: 1
+date: "`r Sys.Date()`"
+bibliography: paper.bib
+output: html_document
+---
+
+# Summary
+
+(Begin your paper with a summary of the high-level functionality of your software for a non-specialist reader. Avoid jargon in this section)
+check: <https://joss.readthedocs.io/en/latest/submitting.html>
+
+# Introduction
+
+Test [@visser2021; @visser2022].
+
+# Statement of need
+
+# Acknowledgements
+
+# References
