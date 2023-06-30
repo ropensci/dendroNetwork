@@ -4,7 +4,7 @@ authors:
   - family-names: Visser
     given-names: Ronald
     orcid: "https://orcid.org/0000-0001-6966-1729"
-title: "DendroNetwork"DendroNetwork: a R-package to create dendrochronological provenance networks"
+title: "DendroNetwork: a R-package to create dendrochronological provenance networks"
 version: 0.2.0
 doi: 10.5281/zenodo.1234
 date-released: 2023-06-30
