@@ -34,7 +34,7 @@ cyto_create_cpm_style <- function(graph_input, k=3, com_k = NULL, style_name = "
       if (style_name %in% RCy3::getVisualStyleNames()) {
         RCy3::deleteVisualStyle(style_name)
       }
-      RCy3::copyVisualStyle("GreyNodesLabel", style_name)
+      RCy3::copyVisualStyle("WhiteNodesLabel", style_name)
       #com_k <- clique_community_names(graph_input, k)
       com_count <- length(unique(com_k$com_name))
       if (com_count==1){

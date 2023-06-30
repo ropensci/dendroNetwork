@@ -6,6 +6,6 @@ authors:
     orcid: "https://orcid.org/0000-0001-6966-1729"
 title: "DendroNetwork: a R-package to create dendrochronological provenance networks"
 version: 0.2.0
-doi: 10.5281/zenodo.1234
+doi: xxx
 date-released: 2023-06-30
 url: "https://github.com/RonaldVisser/DendroNetwork"

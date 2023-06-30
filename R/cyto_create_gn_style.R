@@ -28,7 +28,7 @@ cyto_create_gn_style <- function(graph_input, gn_coms = NULL, style_name = "auto
   if (style_name == "auto"){
     style_name <- paste0(substitute(graph_input), "_GN")
   }
-  RCy3::copyVisualStyle("GreyNodesLabel", style_name)
+  RCy3::copyVisualStyle("WhiteNodesLabel", style_name)
   if (is.null(gn_coms)) {
     gn_coms <- gn_names(graph_input)
   }

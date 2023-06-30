@@ -61,10 +61,10 @@ network can now be loaded in Cytoscape for further visualisation:
 comes with a lot of default styles that can be confusing. Therefore it
 is recommended to use: `cyto_clean_styles()` once in a session. 3. To
 visualize the styles for CPM with only k=3:
-`cyto_create_cpm_style(g_hol, k=3)` - This can be repeated for all
-possible clique sizes. To find the maximum clique size in a network, it
-is possible to use: `igraph::clique_num(g_hol)`. 4. To visualize the
-styles using the Girvan-Newman algorithm (GN):
+`cyto_create_cpm_style(g_hol, k=3, com_k = g_hol_cpm)` - This can be
+repeated for all possible clique sizes. To find the maximum clique size
+in a network, please use: `igraph::clique_num(g_hol)`. 4. To visualize
+the styles using the Girvan-Newman algorithm (GN):
 `cyto_create_gn_style(g_hol)` This would look something like this in
 Cytoscape: ![The network of Roman sitechronologies with the
 Girvan-Newman communities visualized.](README_files/g_hol_GN.png)
@@ -103,6 +103,10 @@ The workflow is similar as above, but with minor changes:
     [section](#usage_cytoscape)
 
 ## Citation
+
+Visser, R. (2023). DendroNetwork: a R-package to create
+dendrochronological provenance networks (Version 0.2.0) \[Computer
+software\]. <https://doi.org/xxx>
 
 ## References
 
