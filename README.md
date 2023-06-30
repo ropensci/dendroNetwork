@@ -52,10 +52,13 @@ plot(g_hol)  # plotting the graph in R
 ```
 
 ![](README_files/figure-gfm/of%20building%20a%20network%20with%20Hollstein%20(1980%20data)-1.png)<!-- -->
-\### Vizualisation in Cytoscape {#usage_cytoscape} After creating the
-network in R, it is possible to visualize the network using Cytoscape.
-For this purpose we need to start Cytoscape on our computer. 1. The
-network can now be loaded in Cytoscape for further visualisation:
+
+### Visualization in Cytoscape
+
+After creating the network in R, it is possible to visualize the network
+using Cytoscape. For this purpose we need to start Cytoscape on our
+computer. 1. The network can now be loaded in Cytoscape for further
+visualisation:
 `cyto_create_graph(g_hol, CPM_table = hol_com_cpm_all, GN_table = g_hol_gn)`
 2. Styles for visualisation can now be generated. However, Cytoscape
 comes with a lot of default styles that can be confusing. Therefore it
@@ -100,9 +103,11 @@ The workflow is similar as above, but with minor changes:
     `com_cpm_all <- com_cpm_all %>% dplyr::count(node, com_name) %>% tidyr::spread(com_name, n)`
 
 7.  Continue with the visualisation in Cytoscape, see the previous
-    [section](#usage_cytoscape)
+    [section on visualization in Cytoscape](#visualization_cytoscape)
 
 ## Citation
+
+If you use this software, please cite this using:
 
 Visser, R. (2023). DendroNetwork: a R-package to create
 dendrochronological provenance networks (Version 0.2.0) \[Computer
