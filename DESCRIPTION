@@ -1,7 +1,7 @@
 Package: DendroNetwork
 Type: Package
 Title: What the Package Does (Title Case)
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: 
     c(person(given ="Ronald", 
             family = "Visser", 
@@ -11,7 +11,11 @@ Authors@R:
     person(given = "Angelino", 
             family ="Salentino",
             role = "ctb",
-            comment = c(ORCID = "0000-0002-4763-3943")))
+            comment = c(ORCID = "0000-0002-4763-3943")),
+   person(given = "Andy", 
+            family ="Bunn",
+            role = "ctb",
+            comment = c(ORCID = "0000-0001-9027-2162")))
 Maintainer: Ronald Visser <r.m.visser@saxion.nl>
 Depends: R (>= 3.5.0)
 Imports: dplR (>= 1.7.2), igraph, stringr, reshape2, RCy3, dplyr, RColorBrewer, tidyr, foreach, magrittr, doParallel

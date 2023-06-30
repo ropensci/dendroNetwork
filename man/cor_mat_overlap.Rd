@@ -27,3 +27,8 @@ cor_mat_overlap(rwl_object1, rwl_object2, 50)
 cor_mat_overlap(rwl_object1, rwl_object1, 50)
 
 }
+\author{
+Andy Bunn
+
+Ronald Visser
+}
