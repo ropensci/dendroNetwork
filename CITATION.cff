@@ -9,12 +9,6 @@ title: "DendroNetwork"DendroNetwork: a R-package to create dendrochronological p
 version: 0.2.0
 doi:
 url: "https://github.com/RonaldVisser/DendroNetwork"
-keywords:
-  - research
-  - dendrochronology
-  - archaeology
-  - "network analysis"
-  - dendroprovenance
 license: GPL-3.0
 
 
