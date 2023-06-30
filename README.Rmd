@@ -1,5 +1,7 @@
 ---
 output: github_document
+bibliography: references.bib
+csl: journal-of-computer-applications-in-archaeology.csl
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -10,7 +12,7 @@ output: github_document
 
 <!-- badges: end -->
 
-DendroNetwork is package to create dendrochronological networks for gaining insight into provenance or other patterns based on the statistical relations between tree ring curves. The code and the functions are based on several published papers (Visser 2021a; 2021b; Visser & Vorst (2022)).
+DendroNetwork is package to create dendrochronological networks for gaining insight into provenance or other patterns based on the statistical relations between tree ring curves. The code and the functions are based on several published papers [@visser2021a; @visser2021b; @visser2022]
 
 ## Installation
 
@@ -23,15 +25,15 @@ devtools::install_github("RonaldVisser/DendroNetwork")
 
 ## Usage
 
-The package aims to make the creation of dendrochronological (provenance) networks as easy as possible. To be able to make use of all options, it is assumed that Cytoscape is installed (<https://cytoscape.org/>). Some data is included in this package, namely the Roman data from Hollstein (1980).
+The package aims to make the creation of dendrochronological (provenance) networks as easy as possible. To be able to make use of all options, it is assumed that Cytoscape is installed (<https://cytoscape.org/>). Some data is included in this package, namely the Roman data published by Hollstein [@hollstein1980].
 
 The first steps are
 
 1.  Load data;
 2.  Create similarity table;
 3.  Create network using default settings;
-4.  Detect communities using the Girvan-Newman (2002) algorithm;
-5.  Detect all communities using the Clique Percolation Method (Palla, et al. 2005) for all clique sizes.
+4.  Detect communities using the Girvan-Newman algorithm [@girvan2002];
+5.  Detect all communities using the Clique Percolation Method [@palla2005] for all clique sizes.
 
 ```{r of building a network with Hollstein (1980 data)}
 library(DendroNetwork)
@@ -77,3 +79,5 @@ The workflow would in this case be:
 5.  merge these into a single `data frame` by `com_cpm_all <- rbind(com_cpm_k3,com_cpm_k4, com_cpm_k5,... )`
 
 6.  create table for use in cytoscape with all communities: `com_cpm_all <- com_cpm_all %>% dplyr::count(node, com_name) %>% tidyr::spread(com_name, n)`
+
+## References

@@ -9,8 +9,8 @@
 DendroNetwork is package to create dendrochronological networks for
 gaining insight into provenance or other patterns based on the
 statistical relations between tree ring curves. The code and the
-functions are based on several published papers (Visser 2021a; 2021b;
-Visser & Vorst (2022)).
+functions are based on several published papers (Visser 2021b, 2021a;
+Visser and Vorst 2022)
 
 ## Installation
 
@@ -28,16 +28,17 @@ The package aims to make the creation of dendrochronological
 (provenance) networks as easy as possible. To be able to make use of all
 options, it is assumed that Cytoscape is installed
 (<https://cytoscape.org/>). Some data is included in this package,
-namely the Roman data from Hollstein (1980).
+namely the Roman data published by Hollstein (Hollstein 1980).
 
 The first steps are
 
 1.  Load data;
 2.  Create similarity table;
 3.  Create network using default settings;
-4.  Detect communities using the Girvan-Newman (2002) algorithm;
-5.  Detect all communities using the Clique Percolation Method (Palla,
-    et al. 2005) for all clique sizes.
+4.  Detect communities using the Girvan-Newman algorithm (Girvan and
+    Newman 2002);
+5.  Detect all communities using the Clique Percolation Method (Palla et
+    al. 2005) for all clique sizes.
 
 ``` r
 library(DendroNetwork)
@@ -100,3 +101,68 @@ The workflow would in this case be:
 
 6.  create table for use in cytoscape with all communities:
     `com_cpm_all <- com_cpm_all %>% dplyr::count(node, com_name) %>% tidyr::spread(com_name, n)`
+
+## References
+
+<div id="refs" class="references csl-bib-body hanging-indent"
+line-spacing="2">
+
+<div id="ref-girvan2002" class="csl-entry">
+
+Girvan, M and Newman, MEJ. 2002 Community structure in social and
+biological networks. *Proceedings of the National Academy of Sciences of
+the United States of America* 99(12): 7821–7826. DOI:
+https://doi.org/[10.1073/pnas.122653799](https://doi.org/10.1073/pnas.122653799).
+
+</div>
+
+<div id="ref-hollstein1980" class="csl-entry">
+
+Hollstein, E. 1980. *Mitteleuropäische eichenchronologie. Trierer
+dendrochronologische forschungen zur archäologie und kunstgeschichte.*
+Trierer grabungen und forschungen 11. Mainz am Rhein: Verlag Philipp von
+Zabern.
+
+</div>
+
+<div id="ref-palla2005" class="csl-entry">
+
+Palla, G, Derenyi, I, Farkas, I and Vicsek, T. 2005 Uncovering the
+overlapping community structure of complex networks in nature and
+society. *Nature* 435(7043): 814–818. DOI:
+https://doi.org/[10.1038/nature03607](https://doi.org/10.1038/nature03607).
+
+</div>
+
+<div id="ref-visser2021b" class="csl-entry">
+
+Visser, RM. 2021a Dendrochronological Provenance Patterns. Network
+Analysis of Tree-Ring Material Reveals Spatial and Economic Relations of
+Roman Timber in the Continental North-Western Provinces. *Journal of
+Computer Applications in Archaeology* 4(1): 230253. DOI:
+https://doi.org/[10.5334/jcaa.79](https://doi.org/10.5334/jcaa.79).
+
+</div>
+
+<div id="ref-visser2021a" class="csl-entry">
+
+Visser, RM. 2021b On the similarity of tree-ring patterns: Assessing the
+influence of semi-synchronous growth changes on the
+Gleichläufigkeitskoeffizient for big tree-ring data sets. *Archaeometry*
+63(1): 204–215. DOI:
+https://doi.org/<https://doi.org/10.1111/arcm.12600>.
+
+</div>
+
+<div id="ref-visser2022" class="csl-entry">
+
+Visser, RM and Vorst, Y. 2022 Connecting Ships: Using
+Dendrochronological Network Analysis to Determine the Wood Provenance of
+Roman-Period River Barges Found in the Lower Rhine Region and Visualise
+Wood Use Patterns. *International Journal of Wood Culture* 3(1-3):
+123–151. DOI:
+https://doi.org/[10.1163/27723194-bja10014](https://doi.org/10.1163/27723194-bja10014).
+
+</div>
+
+</div>
