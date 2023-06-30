@@ -1,14 +1,11 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below"
-abstract: "DendroNetwork: a R-package to create dendrochronological provenance networks."
+message: "If you use this software, please cite it as below."
 authors:
   - family-names: Visser
     given-names: Ronald
     orcid: "https://orcid.org/0000-0001-6966-1729"
 title: "DendroNetwork"DendroNetwork: a R-package to create dendrochronological provenance networks"
 version: 0.2.0
-doi:
+doi: 10.5281/zenodo.1234
+date-released: 2023-06-30
 url: "https://github.com/RonaldVisser/DendroNetwork"
-license: GPL-3.0
-
-
