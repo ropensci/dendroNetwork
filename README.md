@@ -1,10 +1,7 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 # DendroNetwork
 
-<!-- badges: start -->
-<!-- badges: end -->
+<img src="inst/figures/DendroNetwork_hexsticker.png" width="186" />
 
 DendroNetwork is package to create dendrochronological networks for
 gaining insight into provenance or other patterns based on the
