@@ -50,24 +50,45 @@ plot(g_hol)  # plotting the graph in R
 
 ![](README_files/figure-gfm/of%20building%20a%20network%20with%20Hollstein%20(1980%20data)-1.png)<!-- -->
 
+``` r
+plot(g_hol, vertex.color="blue", vertex.size=15, vertex.frame.color="gray",
+     vertex.label.color="black", vertex.label.cex=0.8, vertex.label.dist=2) # better readable version
+```
+
+![](README_files/figure-gfm/of%20building%20a%20network%20with%20Hollstein%20(1980%20data)-2.png)<!-- -->
+
 ### Visualization in Cytoscape
 
 After creating the network in R, it is possible to visualize the network
-using Cytoscape. For this purpose we need to start Cytoscape on our
-computer. 1. The network can now be loaded in Cytoscape for further
-visualisation:
-`cyto_create_graph(g_hol, CPM_table = hol_com_cpm_all, GN_table = g_hol_gn)`
-2. Styles for visualisation can now be generated. However, Cytoscape
-comes with a lot of default styles that can be confusing. Therefore it
-is recommended to use: `cyto_clean_styles()` once in a session. 3. To
-visualize the styles for CPM with only k=3:
-`cyto_create_cpm_style(g_hol, k=3, com_k = g_hol_cpm)` - This can be
-repeated for all possible clique sizes. To find the maximum clique size
-in a network, please use: `igraph::clique_num(g_hol)`. 4. To visualize
-the styles using the Girvan-Newman algorithm (GN):
-`cyto_create_gn_style(g_hol)` This would look something like this in
-Cytoscape: ![The network of Roman sitechronologies with the
-Girvan-Newman communities visualized.](README_files/g_hol_GN.png)
+using Cytoscape. The main advantage is that visualisation in Cytoscape
+is more easy, intuitive and visual. In addition, it is very easy to
+automate workflows in Cytoscape with R (using
+[RCy3](https://bioconductor.org/packages/release/bioc/html/RCy3.html)).
+For this purpose we need to start Cytoscape on our computer.
+
+1.  The network can now be loaded in Cytoscape for further
+    visualisation:
+    `cyto_create_graph(g_hol, CPM_table = hol_com_cpm_all, GN_table = g_hol_gn)`
+2.  Styles for visualisation can now be generated. However, Cytoscape
+    comes with a lot of default styles that can be confusing. Therefore
+    it is recommended to use: `cyto_clean_styles()` once in a session.
+3.  To visualize the styles for CPM with only k=3:
+    `cyto_create_cpm_style(g_hol, k=3, com_k = g_hol_cpm)`
+    - This can be repeated for all possible clique sizes. To find the
+      maximum clique size in a network, please use:
+      `igraph::clique_num(g_hol)`.
+    - To automate this:
+      `for (i in 3:igraph::clique_num(g_hol)) { cyto_create_cpm_style(g_hol, k=i, com_k = g_hol_cpm)}`.
+4.  To visualize the styles using the Girvan-Newman algorithm (GN):
+    `cyto_create_gn_style(g_hol)` This would look something like this in
+    Cytoscape:
+
+<figure>
+<img src="README_files/g_hol_GN.png"
+alt="The network of Roman sitechronologies with the Girvan-Newman communities visualized." />
+<figcaption aria-hidden="true">The network of Roman sitechronologies
+with the Girvan-Newman communities visualized.</figcaption>
+</figure>
 
 ## Usage for large datasets
 

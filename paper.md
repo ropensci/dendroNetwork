@@ -7,7 +7,7 @@ authors:
 affiliations:
    - name: Saxion University of Applied Sciences
    - index: 1
-date: "`r Sys.Date()`"
+date: "2023-07-05"
 bibliography: paper.bib
 output: 
   html_document:
@@ -28,15 +28,14 @@ tags:
 
 # Introduction
 
-Dendrochronological analyses 
-
 Test [@visser2021; @visser2022].
 
 # Statement of need
 
 There are several packages available in R for dendrochronological research [@guiterman2020; @jevsenak2018; @campelo2012; @bunn2008; @shi2019; @vandermaaten-theunissen2015; @reynolds2021; @altman2014; @rademacher; @campelo2019]. An overview with links can be found here (<https://github.com/RonaldVisser/Dendro_R>). All these packages all fill different needs, but the nice thing is that these are all interconnected in some way in depending on each other, or that they build further into different avenues. Apart from depending on dendrochronological packages, various packages from the Tidyverse [@wickham2019] are often also needed. The various relations can easily be visualised using a network, with the edges based on the dependency of two packages on each other, and and arrow indicating the direction of the dependency.
 
-```{r creating a network of depending packages in R}
+
+```r
 g_dendro_packages <- igraph::graph( c("dplR", "dfoliatR", "tidyverse", "dfoliatR",
                      "dplR", "dendroTools", "tidyverse", "dendroTools",
                      "dplR", "detrendeR", "tidyverse", "dplR",
@@ -50,13 +49,23 @@ g_dendro_packages <- igraph::graph( c("dplR", "dfoliatR", "tidyverse", "dfoliatR
 plot(g_dendro_packages, edge.arrow.size=.5, vertex.color="blue", vertex.size=15, vertex.frame.color="gray", vertex.label.color="black", vertex.label.cex=0.8, vertex.label.dist=2)
 ```
 
-The network shows that nearly all packages depend on dplR [@bunn2008]. The newly created package DendroNetwork fits in this ecosystem of depending packages, since it is depended on both dplR and the Tidyverse. However, it also adds a whole new world by adding network analyses through igraph [@csardi2006] to the ecosystem of dendrochronological packages. The igraph library has close connections to the tidyverse, creating a full circle and filling a hole. 
+![](paper_files/figure-html/creating a network of depending packages in R-1.png)<!-- -->
 
-```{r creating a network of the dependencies the DendroNetwork packages}
+The network shows that nearly all packages depend on dplR [@bunn2008]. The newly created package DendroNetwork fits in this ecosystem of depending packages, since it is depended on both dplR and the Tidyverse. However, it also adds a whole new world by adding network analyses through igraph [@csardi2006] to the ecosystem of dendrochronological packages. The igraph library has close connections to the tidyverse, creating a full circle. 
+
+
+```r
 g_DendroNetwork <- igraph::graph( c("dplR", "DendroNetwork", "tidyverse", "DendroNetwork", "igraph", "DendroNetwork", "igraph", "tidyverse", "tidyverse", "igraph"))
 plot(g_DendroNetwork, edge.arrow.size=.5, vertex.color="blue", vertex.size=15, vertex.frame.color="gray", vertex.label.color="black", vertex.label.cex=0.8, vertex.label.dist=2)
+```
+
+![](paper_files/figure-html/creating a network of the dependencies the DendroNetwork packages-1.png)<!-- -->
+
+```r
 plot(g_DendroNetwork+g_dendro_packages, edge.arrow.size=.5, vertex.color="blue", vertex.size=15, vertex.frame.color="gray", vertex.label.color="black", vertex.label.cex=0.8, vertex.label.dist=2)
 ```
+
+![](paper_files/figure-html/creating a network of the dependencies the DendroNetwork packages-2.png)<!-- -->
 
 
 
