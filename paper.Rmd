@@ -32,6 +32,9 @@ Dendrochronological analyses
 
 Test [@visser2021; @visser2022].
 
+dendrochronology -> similarity relations -> network, patterns visualisation -> provenance, also wood use (papers jcaa and ijwc)
+
+
 # Statement of need
 
 There are several packages available in R for dendrochronological research [@guiterman2020; @jevsenak2018; @campelo2012; @bunn2008; @shi2019; @vandermaaten-theunissen2015; @reynolds2021; @altman2014; @rademacher; @campelo2019]. An overview with links can be found here (<https://github.com/RonaldVisser/Dendro_R>). All these packages all fill different needs, but the nice thing is that these are all interconnected in some way in depending on each other, or that they build further into different avenues. Apart from depending on dendrochronological packages, various packages from the Tidyverse [@wickham2019] are often also needed. The various relations can easily be visualised using a network, with the edges based on the dependency of two packages on each other, and and arrow indicating the direction of the dependency.
