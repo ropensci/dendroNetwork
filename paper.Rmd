@@ -34,6 +34,8 @@ Test [@visser2021; @visser2022].
 
 dendrochronology -> similarity relations -> network, patterns visualisation -> provenance, also wood use (papers jcaa and ijwc)
 
+To try the network approach on dendrochronological data can be overwhelming an seemingly difficult. To make this more easy and accessible a new package for R has been designed to help users to apply this method to their data.
+
 
 # Statement of need
 

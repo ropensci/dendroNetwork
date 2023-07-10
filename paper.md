@@ -7,7 +7,7 @@ authors:
 affiliations:
    - name: Saxion University of Applied Sciences
    - index: 1
-date: "2023-07-05"
+date: "2023-07-10"
 bibliography: paper.bib
 output: 
   html_document:
@@ -28,7 +28,14 @@ tags:
 
 # Introduction
 
+Dendrochronological analyses 
+
 Test [@visser2021; @visser2022].
+
+dendrochronology -> similarity relations -> network, patterns visualisation -> provenance, also wood use (papers jcaa and ijwc)
+
+To try the network approach on dendrochronological data can be overwhelming an seemingly difficult. To make this more easy and accessible a new package for R has been designed to help users to apply this method to their data.
+
 
 # Statement of need
 
@@ -51,7 +58,7 @@ plot(g_dendro_packages, edge.arrow.size=.5, vertex.color="blue", vertex.size=15,
 
 ![](paper_files/figure-html/creating a network of depending packages in R-1.png)<!-- -->
 
-The network shows that nearly all packages depend on dplR [@bunn2008]. The newly created package DendroNetwork fits in this ecosystem of depending packages, since it is depended on both dplR and the Tidyverse. However, it also adds a whole new world by adding network analyses through igraph [@csardi2006] to the ecosystem of dendrochronological packages. The igraph library has close connections to the tidyverse, creating a full circle. 
+The network shows that nearly all packages depend on dplR [@bunn2008]. The newly created package DendroNetwork fits in this ecosystem of depending packages, since it is depended on both dplR and the Tidyverse. However, it also adds a whole new world by adding network analyses through igraph [@csardi2006] to the ecosystem of dendrochronological packages. The igraph library has close connections to the tidyverse, creating a full circle and filling a hole. 
 
 
 ```r
