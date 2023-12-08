@@ -23,19 +23,16 @@ devtools::install_github("RonaldVisser/DendroNetwork")
 
 The package aims to make the creation of dendrochronological
 (provenance) networks as easy as possible. To be able to make use of all
-options, it is assumed that Cytoscape is installed
+options, it is assumed that Cytoscape (Shannon et al. 2003)is installed
 (<https://cytoscape.org/>). Some data is included in this package,
 namely the Roman data published by Hollstein (Hollstein 1980).
 
-The first steps are
+The first steps are visualized in the flowchart below, including
+community detection using either (or both) the Girvan-Newman algorithm
+(Girvan and Newman 2002) and Clique Percolation Method (Palla et al.
+2005) for all clique sizes.
 
-1.  Load data;
-2.  Create similarity table;
-3.  Create network using default settings;
-4.  Detect communities using the Girvan-Newman algorithm (Girvan and
-    Newman 2002);
-5.  Detect all communities using the Clique Percolation Method (Palla et
-    al. 2005) for all clique sizes.
+![](README_files/figure-gfm/flowchart%20of%20workflow-1.png)<!-- -->
 
 ``` r
 library(DendroNetwork)
@@ -48,14 +45,14 @@ hol_com_cpm_all <- find_all_cpm_com(g_hol) # 5
 plot(g_hol)  # plotting the graph in R
 ```
 
-![](README_files/figure-gfm/of%20building%20a%20network%20with%20Hollstein%20(1980%20data)-1.png)<!-- -->
+![](README_files/figure-gfm/building%20a%20network%20with%20Hollstein%20(1980%20data)-1.png)<!-- -->
 
 ``` r
 plot(g_hol, vertex.color="blue", vertex.size=15, vertex.frame.color="gray",
      vertex.label.color="black", vertex.label.cex=0.8, vertex.label.dist=2) # better readable version
 ```
 
-![](README_files/figure-gfm/of%20building%20a%20network%20with%20Hollstein%20(1980%20data)-2.png)<!-- -->
+![](README_files/figure-gfm/building%20a%20network%20with%20Hollstein%20(1980%20data)-2.png)<!-- -->
 
 ### Visualization in Cytoscape
 
@@ -64,7 +61,8 @@ using Cytoscape. The main advantage is that visualisation in Cytoscape
 is more easy, intuitive and visual. In addition, it is very easy to
 automate workflows in Cytoscape with R (using
 [RCy3](https://bioconductor.org/packages/release/bioc/html/RCy3.html)).
-For this purpose we need to start Cytoscape on our computer.
+For this purpose we need to start Cytoscape firstly. After Cytoscape has
+completely loaded, the next steps can be taken.
 
 1.  The network can now be loaded in Cytoscape for further
     visualisation:
@@ -160,6 +158,16 @@ Palla, G, Derenyi, I, Farkas, I and Vicsek, T. 2005 Uncovering the
 overlapping community structure of complex networks in nature and
 society. *Nature* 435(7043): 814–818. DOI:
 https://doi.org/[10.1038/nature03607](https://doi.org/10.1038/nature03607).
+
+</div>
+
+<div id="ref-shannon2003" class="csl-entry">
+
+Shannon, P, Markiel, A, Ozier, O, Baliga, NS, Wang, JT, Ramage, D, Amin,
+N, Schwikowski, B and Ideker, T. 2003 Cytoscape: A software environment
+for integrated models of biomolecular interaction networks. *Genome
+Research* 13(11): 2498–2504. DOI:
+https://doi.org/[10.1101/gr.1239303](https://doi.org/10.1101/gr.1239303).
 
 </div>
 

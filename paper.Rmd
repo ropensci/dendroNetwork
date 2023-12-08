@@ -21,27 +21,19 @@ tags:
 - tree ring
 ---
 
-
 # Summary
 
 (Begin your paper with a summary of the high-level functionality of your software for a non-specialist reader. Avoid jargon in this section) check: <https://joss.readthedocs.io/en/latest/submitting.html>
 
 # Introduction
 
-Dendrochronological analyses 
-
-Test [@visser2021; @visser2022].
-
-dendrochronology -> similarity relations -> network, patterns visualisation -> provenance, also wood use (papers jcaa and ijwc)
-
-To try the network approach on dendrochronological data can be overwhelming an seemingly difficult. To make this more easy and accessible a new package for R has been designed to help users to apply this method to their data.
-
+Dendrochronological analyses are often based on the comparison of tree-ring series with other tree-ring series. These comparions are often visualised as tabular data. However, to analyse the complex system of relations between tree-ring curves other methods are necessary. The author has developed a method to analyse patterns of similarity between tree-ring series using network analysis [@visser2021; @visser2022]. The analyses of these papers was mostly based on scripts that are shared with the papers [@visser; @visser]. For others to apply the developed method with these scripts is possible, but cumbersome and various things need to be changed. In addition, to try the network approach on dendrochronological data for the first time can be overwhelming an seemingly difficult. To make this more easy and accessible a new package for R has been designed to help users to apply this method to their data. The package DendroNetwork enables researchers to create tables with the similarity using various measures and visualize these using R [@rcoreteam2022] and Cytoscape [@otasek2019; @shannon2003a].
 
 # Statement of need
 
-There are several packages available in R for dendrochronological research [@guiterman2020; @jevsenak2018; @campelo2012; @bunn2008; @shi2019; @vandermaaten-theunissen2015; @reynolds2021; @altman2014; @rademacher; @campelo2019]. An overview with links can be found here (<https://github.com/RonaldVisser/Dendro_R>). All these packages all fill different needs, but the nice thing is that these are all interconnected in some way in depending on each other, or that they build further into different avenues. Apart from depending on dendrochronological packages, various packages from the Tidyverse [@wickham2019] are often also needed. The various relations can easily be visualised using a network, with the edges based on the dependency of two packages on each other, and and arrow indicating the direction of the dependency.
+There are several packages available in R for dendrochronological research [@guiterman2020; @jevsenak2018; @campelo2012; @bunn2008; @shi2019; @vandermaaten-theunissen2015; @reynolds2021; @altman2014; @rademacher; @campelo2019]. An overview with links can be found online (<https://github.com/RonaldVisser/Dendro_R>). All these packages all fill different needs, but the nice thing is that these are all interconnected in some way in depending on each other, or that they build further into different avenues. Apart from depending on dendrochronological packages, various packages from the Tidyverse [@wickham2019] are often also needed. The various relations can easily be visualised using a network, with the edges based on the dependency of two packages on each other, and and arrow indicating the direction of the dependency.
 
-```{r creating a network of depending packages in R}
+```{r creating a network of depending packages in R, echo=FALSE}
 g_dendro_packages <- igraph::graph( c("dplR", "dfoliatR", "tidyverse", "dfoliatR",
                      "dplR", "dendroTools", "tidyverse", "dendroTools",
                      "dplR", "detrendeR", "tidyverse", "dplR",
@@ -55,13 +47,46 @@ g_dendro_packages <- igraph::graph( c("dplR", "dfoliatR", "tidyverse", "dfoliatR
 plot(g_dendro_packages, edge.arrow.size=.5, vertex.color="blue", vertex.size=15, vertex.frame.color="gray", vertex.label.color="black", vertex.label.cex=0.8, vertex.label.dist=2)
 ```
 
-The network shows that nearly all packages depend on dplR [@bunn2008]. The newly created package DendroNetwork fits in this ecosystem of depending packages, since it is depended on both dplR and the Tidyverse. However, it also adds a whole new world by adding network analyses through igraph [@csardi2006] to the ecosystem of dendrochronological packages. The igraph library has close connections to the tidyverse, creating a full circle and filling a hole. 
+The network shows that nearly all packages depend on dplR [@bunn2008]. The newly created package DendroNetwork fits in this ecosystem of depending packages, since it depends on both dplR and the Tidyverse. In additions, it adds a whole new world by adding network analyses through igraph [@csardi2006] to the ecosystem of dendrochronological packages. The igraph library has close connections to the tidyverse, creating a full circle and filling a hole as shown in the networks below.
 
-```{r creating a network of the dependencies the DendroNetwork packages}
+```{r creating a network of the dependencies the DendroNetwork packages, fig.show="hold", out.width="50%", echo=FALSE}
 g_DendroNetwork <- igraph::graph( c("dplR", "DendroNetwork", "tidyverse", "DendroNetwork", "igraph", "DendroNetwork", "igraph", "tidyverse", "tidyverse", "igraph"))
 plot(g_DendroNetwork, edge.arrow.size=.5, vertex.color="blue", vertex.size=15, vertex.frame.color="gray", vertex.label.color="black", vertex.label.cex=0.8, vertex.label.dist=2)
 plot(g_DendroNetwork+g_dendro_packages, edge.arrow.size=.5, vertex.color="blue", vertex.size=15, vertex.frame.color="gray", vertex.label.color="black", vertex.label.cex=0.8, vertex.label.dist=2)
 ```
+
+<div style= "float:right;position: relative; right: ; top: -80px;">
+```{r flowchart of a typical workflow, echo=FALSE, fig.width=4}
+DiagrammeR::grViz("
+digraph {
+  # graph attributes
+  graph [overlap = true]
+  # node attributes
+  node [shape = box,
+        fontname = Helvetica,
+        color = gray]
+  # edge attributes
+  edge [color = black]
+  # node statements
+  1 [label = 'Load data']
+  2 [label = 'Create similarity table']
+  3 [label = 'Create network using default settings']
+  4 [label = 'Detect communities using the \n Girvan-Newman algorithm']
+  5 [label = 'Detect communities using the \n Clique Percolation Method']
+  6 [label = 'Visualization in Cytoscape']
+  # edge statements
+  1 ->  2
+  2 -> 3
+  3 -> 4
+  3 -> 5
+  4 -> 6
+  5 -> 6
+  }
+")
+```
+</div>
+
+The typical workflow when using the package would be to start with loading the dendrochronological data into R using dplR. The next step would involve calculating the similarities between each tree-ring series in the dataset. In the next step edges of the network are created based on the similarity. Each similarity between two curves above certain threshold settings will result in an edge in the network. The default settings are 0.5 for the correlation, 0.7 for the Synchronous Growth Changes or sgc [@visser2021a] with a probability of exceedence below 0.0001. The next steps will be to find communities using either the Girvan-Newman algorithm [@girvan2002] or clique percolation method [@palla2005] , or both. The next step is to visualize and explore the networks using Cytoscape. Various functions are available to create visual styles for the communities in Cytoscape from R.
 
 
 

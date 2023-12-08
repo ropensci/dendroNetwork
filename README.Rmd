@@ -21,17 +21,37 @@ devtools::install_github("RonaldVisser/DendroNetwork")
 
 ## Usage {#usage}
 
-The package aims to make the creation of dendrochronological (provenance) networks as easy as possible. To be able to make use of all options, it is assumed that Cytoscape is installed (<https://cytoscape.org/>). Some data is included in this package, namely the Roman data published by Hollstein [@hollstein1980].
+The package aims to make the creation of dendrochronological (provenance) networks as easy as possible. To be able to make use of all options, it is assumed that Cytoscape [@shannon2003]is installed (<https://cytoscape.org/>). Some data is included in this package, namely the Roman data published by Hollstein [@hollstein1980].
 
-The first steps are
+The first steps are visualized in the flowchart below, including community detection using either (or both) the Girvan-Newman algorithm [@girvan2002] and Clique Percolation Method [@palla2005] for all clique sizes.
 
-1.  Load data;
-2.  Create similarity table;
-3.  Create network using default settings;
-4.  Detect communities using the Girvan-Newman algorithm [@girvan2002];
-5.  Detect all communities using the Clique Percolation Method [@palla2005] for all clique sizes.
+```{r flowchart of workflow, echo=FALSE, fig.width=15}
+DiagrammeR::grViz("
+digraph {
+  # graph attributes
+  graph [overlap = true]
+  # node attributes
+  node [shape = box,
+        fontname = Helvetica,
+        color = gray]
+  # edge attributes
+  edge [color = black]
+  # node statements
+  1 [label = 'Load data']
+  2 [label = 'Create similarity table']
+  3 [label = 'Create network using default settings']
+  4 [label = 'Detect communities using the \n Girvan-Newman algorithm']
+  5 [label = 'Detect communities using the \n Clique Percolation Method']
+  # edge statements
+  1 ->  2
+  2 -> 3
+  3 -> 4
+  3 -> 5
+  }
+")
+```
 
-```{r of building a network with Hollstein (1980 data)}
+```{r building a network with Hollstein (1980 data)}
 library(DendroNetwork)
 data(hol_rom) # 1
 sim_table_hol <- sim_table(hol_rom) # 2
@@ -46,7 +66,7 @@ plot(g_hol, vertex.color="blue", vertex.size=15, vertex.frame.color="gray",
 
 ### Visualization in Cytoscape {#visualization_cytoscape}
 
-After creating the network in R, it is possible to visualize the network using Cytoscape. The main advantage is that visualisation in Cytoscape is more easy, intuitive and visual. In addition, it is very easy to automate workflows in Cytoscape with R (using [RCy3](https://bioconductor.org/packages/release/bioc/html/RCy3.html)). For this purpose we need to start Cytoscape on our computer.
+After creating the network in R, it is possible to visualize the network using Cytoscape. The main advantage is that visualisation in Cytoscape is more easy, intuitive and visual. In addition, it is very easy to automate workflows in Cytoscape with R (using [RCy3](https://bioconductor.org/packages/release/bioc/html/RCy3.html)). For this purpose we need to start Cytoscape firstly. After Cytoscape has completely loaded, the next steps can be taken.
 
 1.  The network can now be loaded in Cytoscape for further visualisation: `cyto_create_graph(g_hol, CPM_table = hol_com_cpm_all, GN_table = g_hol_gn)`
 2.  Styles for visualisation can now be generated. However, Cytoscape comes with a lot of default styles that can be confusing. Therefore it is recommended to use: `cyto_clean_styles()` once in a session.
