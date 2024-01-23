@@ -16,26 +16,28 @@
 #' @importFrom magrittr %>%
 
 
-find_all_cpm_com <- function(graph_input, n_core = 0){
+find_all_cpm_com <- function(graph_input, n_core = 0) {
   if (n_core > 1) {
     for (i in 3:igraph::clique_num(graph_input)) {
-      com_cpm <- clique_community_names_par(graph_input,i, n_core)
-      if (i==3) {
-        com_cpm_all <- com_cpm}
-      else {
-        com_cpm_all <- rbind(com_cpm_all,com_cpm)
+      com_cpm <- clique_community_names_par(graph_input, i, n_core)
+      if (i == 3) {
+        com_cpm_all <- com_cpm
+      } else {
+        com_cpm_all <- rbind(com_cpm_all, com_cpm)
       }
     }
-  } else{
+  } else {
     for (i in 3:igraph::clique_num(graph_input)) {
-      com_cpm <- clique_community_names(graph_input,i)
-      if (i==3) {
-        com_cpm_all <- com_cpm}
-      else {
-        com_cpm_all <- rbind(com_cpm_all,com_cpm)
+      com_cpm <- clique_community_names(graph_input, i)
+      if (i == 3) {
+        com_cpm_all <- com_cpm
+      } else {
+        com_cpm_all <- rbind(com_cpm_all, com_cpm)
       }
     }
   }
-  com_cpm_all <- com_cpm_all %>% dplyr::count(node, com_name) %>% tidyr::spread(com_name, n)
+  com_cpm_all <- com_cpm_all %>%
+    dplyr::count(node, com_name) %>%
+    tidyr::spread(com_name, n)
   com_cpm_all
 }

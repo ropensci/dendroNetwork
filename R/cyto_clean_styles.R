@@ -8,8 +8,8 @@
 #'
 #' @importFrom magrittr %>%
 
-cyto_clean_styles <- function(){
-  if (length(RCy3::cytoscapeVersionInfo())!=2){
+cyto_clean_styles <- function() {
+  if (length(RCy3::cytoscapeVersionInfo()) != 2) {
     message("Cytoscape is not running, please start Cytoscape first")
     stop()
   }
@@ -71,6 +71,4 @@ cyto_clean_styles <- function(){
     RCy3::importVisualStyles(filename = system.file("extdata", "NetworkStyles.xml", package = "DendroNetwork"))
   }
   message("All default styles are removed and some new ones are added")
-
 }
-

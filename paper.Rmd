@@ -55,7 +55,7 @@ plot(g_DendroNetwork, edge.arrow.size=.5, vertex.color="blue", vertex.size=15, v
 plot(g_DendroNetwork+g_dendro_packages, edge.arrow.size=.5, vertex.color="blue", vertex.size=15, vertex.frame.color="gray", vertex.label.color="black", vertex.label.cex=0.8, vertex.label.dist=2)
 ```
 
-<div style= "float:right;position: relative; right: ; top: -80px;">
+::: {style="float:right;position: relative; right: ; top: -80px;"}
 ```{r flowchart of a typical workflow, echo=FALSE, fig.width=4}
 DiagrammeR::grViz("
 digraph {
@@ -84,11 +84,9 @@ digraph {
   }
 ")
 ```
-</div>
+:::
 
 The typical workflow when using the package would be to start with loading the dendrochronological data into R using dplR. The next step would involve calculating the similarities between each tree-ring series in the dataset. In the next step edges of the network are created based on the similarity. Each similarity between two curves above certain threshold settings will result in an edge in the network. The default settings are 0.5 for the correlation, 0.7 for the Synchronous Growth Changes or sgc [@visser2021a] with a probability of exceedence below 0.0001. The next steps will be to find communities using either the Girvan-Newman algorithm [@girvan2002] or clique percolation method [@palla2005] , or both. The next step is to visualize and explore the networks using Cytoscape. Various functions are available to create visual styles for the communities in Cytoscape from R.
-
-
 
 # Acknowledgements
 

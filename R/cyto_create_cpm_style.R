@@ -14,43 +14,46 @@
 #' data(hol_rom)
 #' sim_table_hol <- sim_table(hol_rom)
 #' g_hol <- dendro_network(sim_table_hol)
-#' hol_com_cpm_k3 <- clique_community_names(g_hol, k=3)
-#' cyto_create_cpm_style(g_hol, k=3, com_k = hol_com_cpm_k3)
+#' hol_com_cpm_k3 <- clique_community_names(g_hol, k = 3)
+#' cyto_create_cpm_style(g_hol, k = 3, com_k = hol_com_cpm_k3)
 #'
 #' @export cyto_create_cpm_style
 
-cyto_create_cpm_style <- function(graph_input, k=3, com_k = NULL, style_name = "auto") {
-  if (length(RCy3::cytoscapeVersionInfo())!=2){
+cyto_create_cpm_style <- function(graph_input, k = 3, com_k = NULL, style_name = "auto") {
+  if (length(RCy3::cytoscapeVersionInfo()) != 2) {
     message("Cytoscape is not running, please start Cytoscape first")
     stop()
   }
   if ("GreyNodesLabel" %in% RCy3::getVisualStyleNames() == FALSE) {
     RCy3::importVisualStyles(filename = system.file("extdata", "NetworkStyles.xml", package = "DendroNetwork"))
   }
-  if(is.numeric(k)){
-      if (style_name == "auto"){
-        style_name <- paste0(substitute(graph_input), "_CPM(k=", k, ")")
-      }
-      if (style_name %in% RCy3::getVisualStyleNames()) {
-        RCy3::deleteVisualStyle(style_name)
-      }
-      RCy3::copyVisualStyle("WhiteNodesLabel", style_name)
-      #com_k <- clique_community_names(graph_input, k)
-      com_count <- length(unique(com_k$com_name))
-      if (com_count==1){
-        # RCy3::setNodeCustomPieChart does not work with a single column and therefore the nodes are coloured based on the single community
-        RCy3::setNodeColorMapping(unique(com_k$com_name), table.column.values = 1,
-                                    colors = RColorBrewer::brewer.pal(12,"Paired")[1],
-                                    style.name = style_name)
-      } else {
-        getPalette <- colorRampPalette(RColorBrewer::brewer.pal(12, "Paired"))
-        RCy3::setNodeCustomPieChart(unique(com_k$com_name),
-                                    colors = getPalette(com_count),
-                                    style.name = style_name)
-      }
-      RCy3::setVisualStyle(style_name)
+  if (is.numeric(k)) {
+    if (style_name == "auto") {
+      style_name <- paste0(substitute(graph_input), "_CPM(k=", k, ")")
+    }
+    if (style_name %in% RCy3::getVisualStyleNames()) {
+      RCy3::deleteVisualStyle(style_name)
+    }
+    RCy3::copyVisualStyle("WhiteNodesLabel", style_name)
+    # com_k <- clique_community_names(graph_input, k)
+    com_count <- length(unique(com_k$com_name))
+    if (com_count == 1) {
+      # RCy3::setNodeCustomPieChart does not work with a single column and therefore the nodes are coloured based on the single community
+      RCy3::setNodeColorMapping(unique(com_k$com_name),
+        table.column.values = 1,
+        colors = RColorBrewer::brewer.pal(12, "Paired")[1],
+        style.name = style_name
+      )
     } else {
+      getPalette <- colorRampPalette(RColorBrewer::brewer.pal(12, "Paired"))
+      RCy3::setNodeCustomPieChart(unique(com_k$com_name),
+        colors = getPalette(com_count),
+        style.name = style_name
+      )
+    }
+    RCy3::setVisualStyle(style_name)
+  } else {
     message("k can only be a number")
     stop()
-    }
+  }
 }

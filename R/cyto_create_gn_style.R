@@ -18,14 +18,14 @@
 #' @export cyto_create_gn_style
 
 cyto_create_gn_style <- function(graph_input, gn_coms = NULL, style_name = "auto") {
-  if (length(RCy3::cytoscapeVersionInfo())!=2){
+  if (length(RCy3::cytoscapeVersionInfo()) != 2) {
     message("Cytoscape is not running, please start Cytoscape first")
     stop()
   }
   if ("GreyNodesLabel" %in% RCy3::getVisualStyleNames() == FALSE) {
     RCy3::importVisualStyles(filename = system.file("extdata", "NetworkStyles.xml", package = "DendroNetwork"))
   }
-  if (style_name == "auto"){
+  if (style_name == "auto") {
     style_name <- paste0(substitute(graph_input), "_GN")
   }
   RCy3::copyVisualStyle("WhiteNodesLabel", style_name)
@@ -34,10 +34,12 @@ cyto_create_gn_style <- function(graph_input, gn_coms = NULL, style_name = "auto
   }
   com_count <- length(unique(gn_coms$com_name))
   getPalette <- colorRampPalette(RColorBrewer::brewer.pal(12, "Paired"))
-  RCy3::setNodeColorMapping(table.column = "com_name",
-                      table.column.values = unique(gn_coms$com_name),
-                      colors = getPalette(com_count),
-                      mapping.type = "d",
-                      style.name=style_name)
+  RCy3::setNodeColorMapping(
+    table.column = "com_name",
+    table.column.values = unique(gn_coms$com_name),
+    colors = getPalette(com_count),
+    mapping.type = "d",
+    style.name = style_name
+  )
   RCy3::setVisualStyle(style_name)
 }

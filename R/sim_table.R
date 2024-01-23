@@ -30,13 +30,17 @@
 #' @export sim_table
 
 sim_table <- function(trs1,
-                      trs2=NULL,
-                      min_overlap=50,
-                      last_digit_radius=FALSE) {
+                      trs2 = NULL,
+                      min_overlap = 50,
+                      last_digit_radius = FALSE) {
   # nr of series in tree-ring series
   n1 <- dim(trs1)[2]
-  if (is.null(trs2)) {trs2_null = TRUE} else {trs2_null = FALSE}
-  if (!is.null(trs2)){
+  if (is.null(trs2)) {
+    trs2_null <- TRUE
+  } else {
+    trs2_null <- FALSE
+  }
+  if (!is.null(trs2)) {
     n2 <- dim(trs2)[2]
     # make date range similar of the two tree-ring data sets
     # first determine min and max years
@@ -44,20 +48,20 @@ sim_table <- function(trs1,
     max_yr_1 <- max(as.numeric(rownames(trs1)))
     min_yr_2 <- min(as.numeric(rownames(trs2)))
     max_yr_2 <- max(as.numeric(rownames(trs2)))
-    min_12 <- min(min_yr_1,min_yr_2)
-    max_12 <- max(max_yr_1,max_yr_2)
+    min_12 <- min(min_yr_1, min_yr_2)
+    max_12 <- max(max_yr_1, max_yr_2)
     daterange <- min_12:max_12
     # make daterange of both matrices similar
     trs1_nw <- matrix(NA_real_, nrow = length(daterange), ncol = n1)
     trs1_nw <- dplR::as.rwl(trs1_nw)
     rownames(trs1_nw) <- daterange
-    trs1_nw[(min_yr_1-min_12+1):(length(daterange) - (max_12 - max_yr_1)),] <- trs1
+    trs1_nw[(min_yr_1 - min_12 + 1):(length(daterange) - (max_12 - max_yr_1)), ] <- trs1
     colnames(trs1_nw) <- colnames(trs1)
     trs1 <- trs1_nw
     trs2_nw <- matrix(NA_real_, nrow = length(daterange), ncol = n2)
     trs2_nw <- dplR::as.rwl(trs2_nw)
     rownames(trs2_nw) <- daterange
-    trs2_nw[(min_yr_2-min_12+1):(length(daterange) - (max_12 - max_yr_2)),] <- trs2
+    trs2_nw[(min_yr_2 - min_12 + 1):(length(daterange) - (max_12 - max_yr_2)), ] <- trs2
     colnames(trs2_nw) <- colnames(trs2)
     trs2 <- trs2_nw
   } else if (is.null(trs2)) {
@@ -76,76 +80,75 @@ sim_table <- function(trs1,
   treering_sign_2 <- apply(trs2, 2, diff)
   treering_sign_2 <- sign(treering_sign_2)
   for (i in 1:n1) {
-    treering_GC <- abs(treering_sign_1[,i]-treering_sign_2)
+    treering_GC <- abs(treering_sign_1[, i] - treering_sign_2)
     # overlap is the number of overlapping growth changes
     treering_GCol <- colSums(!is.na(treering_GC))
-    treering_GCol[treering_GCol==0] <- NA
-    treering_GCol[treering_GCol<min_overlap] <- NA
+    treering_GCol[treering_GCol == 0] <- NA
+    treering_GCol[treering_GCol < min_overlap] <- NA
     # semi synchronous growth changes
-    treering_GC1 <- colSums(treering_GC==1,na.rm=TRUE)
+    treering_GC1 <- colSums(treering_GC == 1, na.rm = TRUE)
     # synchronous growth changes
-    treering_GC0 <- colSums(treering_GC==0,na.rm=TRUE)
+    treering_GC0 <- colSums(treering_GC == 0, na.rm = TRUE)
     SGC_values <- treering_GC0 / treering_GCol
     SSGC_values <- treering_GC1 / treering_GCol
-    SGC_mat[i,] <- SGC_values
-    SSGC_mat[i,] <- SSGC_values
-    SGC_ol_mat[i,] <- treering_GCol
+    SGC_mat[i, ] <- SGC_values
+    SSGC_mat[i, ] <- SSGC_values
+    SGC_ol_mat[i, ] <- treering_GCol
   }
   # calculate p-value
   size_ol <- dim(SGC_ol_mat)
-  s_mat= 1 /(2*sqrt(SGC_ol_mat))
-  z_mat=(SGC_mat-0.5)/s_mat
-  p_mat=2*(1-pnorm(z_mat,0,1))
+  s_mat <- 1 / (2 * sqrt(SGC_ol_mat))
+  z_mat <- (SGC_mat - 0.5) / s_mat
+  p_mat <- 2 * (1 - pnorm(z_mat, 0, 1))
 
   # correlation and T
   trs1_wuchs <- dplR::as.rwl(apply(trs1, 2, wuchswerte))
   trs2_wuchs <- dplR::as.rwl(apply(trs2, 2, wuchswerte))
-  #r_list <- cor.with.limit(overlap,trs1,trs2,"pearson")
-  r_list <- cor_mat_overlap(trs1,trs2,min_overlap)
+  # r_list <- cor.with.limit(overlap,trs1,trs2,"pearson")
+  r_list <- cor_mat_overlap(trs1, trs2, min_overlap)
   r_mat <- r_list[[1]]
   r_ol_mat <- r_list[[2]]
   rm(r_list)
-  rhol_list <- cor_mat_overlap(trs1_wuchs,trs2_wuchs,min_overlap)
+  rhol_list <- cor_mat_overlap(trs1_wuchs, trs2_wuchs, min_overlap)
   rhol_mat <- rhol_list[[1]]
   rhol_ol_mat <- rhol_list[[2]]
   rm(rhol_list)
   # students t
-  t_mat <- t_value(r_mat,r_ol_mat)
-  thol_mat <- t_value(rhol_mat,rhol_ol_mat)
+  t_mat <- t_value(r_mat, r_ol_mat)
+  thol_mat <- t_value(rhol_mat, rhol_ol_mat)
 
-  #listing data
-  list_overlap <- subset(reshape2::melt(SGC_ol_mat,value.name = "overlap"))
+  # listing data
+  list_overlap <- subset(reshape2::melt(SGC_ol_mat, value.name = "overlap"))
   list_SGC <- subset(reshape2::melt(SGC_mat), value.name = "SGC")
   list_SSGC <- subset(reshape2::melt(SSGC_mat), value.name = "SSGC")
-  list_p<- subset(reshape2::melt(p_mat,value.name = "p"))
-  list_r <- subset(reshape2::melt(r_mat,value.name = "r"))
-  list_r_ol <- subset(reshape2::melt(r_ol_mat,value.name = "r_ol"))
-  list_rhol <- subset(reshape2::melt(rhol_mat,value.name = "r_hol"))
-  list_t <- subset(reshape2::melt(t_mat,value.name = "t"))
-  list_thol <- subset(reshape2::melt(thol_mat,value.name = "t_hol"))
+  list_p <- subset(reshape2::melt(p_mat, value.name = "p"))
+  list_r <- subset(reshape2::melt(r_mat, value.name = "r"))
+  list_r_ol <- subset(reshape2::melt(r_ol_mat, value.name = "r_ol"))
+  list_rhol <- subset(reshape2::melt(rhol_mat, value.name = "r_hol"))
+  list_t <- subset(reshape2::melt(t_mat, value.name = "t"))
+  list_thol <- subset(reshape2::melt(thol_mat, value.name = "t_hol"))
 
-  total <- merge(list_r_ol,list_r,by=c("Var1","Var2"))
-  total <- merge(total,list_rhol,by=c("Var1","Var2"))
-  total <- merge(total,list_t,by=c("Var1","Var2"))
-  total <- merge(total,list_thol,by=c("Var1","Var2"))
-  total <- merge(total,list_SGC,by=c("Var1","Var2"))
-  total <- merge(total,list_SSGC,by=c("Var1","Var2"))
-  total <- merge(total,list_p,by=c("Var1","Var2"))
-  total <- total[!(rowSums(is.na(total))==8),]
+  total <- merge(list_r_ol, list_r, by = c("Var1", "Var2"))
+  total <- merge(total, list_rhol, by = c("Var1", "Var2"))
+  total <- merge(total, list_t, by = c("Var1", "Var2"))
+  total <- merge(total, list_thol, by = c("Var1", "Var2"))
+  total <- merge(total, list_SGC, by = c("Var1", "Var2"))
+  total <- merge(total, list_SSGC, by = c("Var1", "Var2"))
+  total <- merge(total, list_p, by = c("Var1", "Var2"))
+  total <- total[!(rowSums(is.na(total)) == 8), ]
   if (trs2_null == TRUE) {
-    total <- total[!(total$Var1 == total$Var2),] # remove self-comparisons
+    total <- total[!(total$Var1 == total$Var2), ] # remove self-comparisons
   }
 
   # remove infinite good comparisons
-  total <- total[!is.infinite(total$t),]
+  total <- total[!is.infinite(total$t), ]
 
-  if (last_digit_radius==TRUE){
+  if (last_digit_radius == TRUE) {
     # renaming of series; last character is radius, split name and radius letter/number
-    total <- cbind(stringr::str_sub(total[,1], 0, -2), stringr::str_sub(total[,1], -1),stringr::str_sub(total[,2], 0, -2), stringr::str_sub(total[,2], -1),total[,3:10])
-    colnames(total) <- c("series_a","radius_a","series_b","radius_b","overlap","r","r_hol","t","t_hol","sgc","ssgc","p")
+    total <- cbind(stringr::str_sub(total[, 1], 0, -2), stringr::str_sub(total[, 1], -1), stringr::str_sub(total[, 2], 0, -2), stringr::str_sub(total[, 2], -1), total[, 3:10])
+    colnames(total) <- c("series_a", "radius_a", "series_b", "radius_b", "overlap", "r", "r_hol", "t", "t_hol", "sgc", "ssgc", "p")
+  } else {
+    colnames(total) <- c("series_a", "series_b", "overlap", "r", "r_hol", "t", "t_hol", "sgc", "ssgc", "p")
   }
-    else {
-      colnames(total) <- c("series_a","series_b","overlap","r","r_hol","t","t_hol","sgc","ssgc","p")
-    }
   return(total)
 }
