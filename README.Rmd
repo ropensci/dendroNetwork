@@ -6,8 +6,6 @@ csl: journal-of-computer-applications-in-archaeology.csl
 
 # DendroNetwork
 
-[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-
 ![](inst/figures/DendroNetwork_hexsticker.png){width="186"}
 
 DendroNetwork is package to create dendrochronological networks for gaining insight into provenance or other patterns based on the statistical relations between tree ring curves. The code and the functions are based on several published papers [@visser2021a; @visser2021b; @visser2022]
