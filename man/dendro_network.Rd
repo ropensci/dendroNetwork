@@ -14,7 +14,7 @@ dendro_network(
 \arguments{
 \item{sim_table}{a table of similarities created by the sim_table() function}
 
-\item{r_threshold}{all correlations equal or above this value are taken into account for the creation of edges. If you want all possitive correlations included set this to 0.}
+\item{r_threshold}{all correlations equal or above this value are taken into account for the creation of edges. If you want all positive correlations included set this to 0.}
 
 \item{sgc_threshold}{all sgc-values equal or above this value are taken into account for the creation of edges.}
 

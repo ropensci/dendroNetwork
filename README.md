@@ -8,7 +8,7 @@ state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
-[![pkgcheck](https://github.com/%3Corg%3E/%3Crepo%3E/workflows/pkgcheck/badge.svg)](https://github.com/%3Corg%3E/%3Crepo%3E/actions?query=workflow%3Apkgcheck)
+[![pkgcheck](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/pkgcheck.yaml/badge.svg)](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/pkgcheck.yaml)
 <!-- badges: end -->
 
 dendroNetwork is a package to create dendrochronological networks for

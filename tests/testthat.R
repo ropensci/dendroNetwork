@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/reference/test_package.html#special-files
 
 library(testthat)
-library(DendroNetwork)
+library(dendroNetwork)
 
-test_check("DendroNetwork")
+test_check("dendroNetwork")
