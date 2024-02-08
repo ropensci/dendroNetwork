@@ -13,6 +13,7 @@ Cytoscape cleaned of styles and only styles with white and grey nodes.
 Cleaning nearly all styles in cytoscape session and import simple styles
 }
 \examples{
+
 cyto_clean_styles()
 
 }

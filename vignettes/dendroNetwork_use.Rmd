@@ -1,35 +1,23 @@
 ---
-output: github_document
+title: "dendroNetwork: how to use it"
+output: rmarkdown::html_vignette
 bibliography: references.bib
 csl: journal-of-computer-applications-in-archaeology.csl
+vignette: >
+  %\VignetteIndexEntry{dendroNetwork_use}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
-# dendroNetwork <img src="inst/figures/DendroNetwork_hexsticker.png" align="right" height="200"/>
-
-<!-- badges: start -->
-
-[![Project Status: Active -- The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable) [![DOI](https://zenodo.org/badge/582742098.svg)](https://zenodo.org/doi/10.5281/zenodo.10636310)
-
-<!-- badges: end -->
-
-dendroNetwork is a package to create dendrochronological networks for gaining insight into provenance or other patterns based on the statistical relations between tree ring curves. The code and the functions are based on several published papers [@visser2021a; @visser2021b; @visser2022]
-
-## Installation
-
-You can install the development version of DendroNetwork from [GitHub](https://github.com/RonaldVisser/DendroNetwork) with:
-
-``` r
-# install.packages("devtools")
-devtools::install_github("RonaldVisser/DendroNetwork")
-```
+dendroNetwork is a package to create dendrochronological networks for gaining insight into provenance or other patterns based on the statistical relations between tree ring curves. The code and the functions are based on several published papers [@visser2022; @visser2021; @visser2021]
 
 ## Usage {#usage}
 
-The package aims to make the creation of dendrochronological (provenance) networks as easy as possible. To be able to make use of all options, it is assumed that Cytoscape [@shannon2003]is installed (<https://cytoscape.org/>). Some data is included in this package, namely the Roman data published by Hollstein [@hollstein1980].
+The package aims to make the creation of dendrochronological (provenance) networks as easy as possible. To be able to make use of all options, it is assumed that Cytoscape [@shannon2003] is installed (<https://cytoscape.org/>). Some data is included in this package, namely the Roman data published by Hollstein [@hollstein1980].
 
 The first steps are visualized in the flowchart below, including community detection using either (or both) the Girvan-Newman algorithm [@girvan2002] and Clique Percolation Method [@palla2005] for all clique sizes.
 
-```{r flowchart_workflow, echo=FALSE, fig.width=15}
+```{r flowchart_workflow, echo=FALSE, fig.width=5}
 DiagrammeR::grViz("
 digraph {
   # graph attributes
@@ -55,7 +43,7 @@ digraph {
 ")
 ```
 
-```{r network_hollstein_1980}
+```{r network_hollstein_1980, fig.width=5}
 library(dendroNetwork)
 data(hol_rom) # 1
 sim_table_hol <- sim_table(hol_rom) # 2
@@ -63,9 +51,11 @@ g_hol <- dendro_network(sim_table_hol) # 3
 g_hol_gn <- gn_names(g_hol) # 4
 g_hol_cpm <- clique_community_names(g_hol, k=3) # 4
 hol_com_cpm_all <- find_all_cpm_com(g_hol) # 5
-plot(g_hol)  # plotting the graph in R
+# plotting the graph in R
+plot(g_hol)  
+# better readable version
 plot(g_hol, vertex.color="deepskyblue", vertex.size=15, vertex.frame.color="gray",
-     vertex.label.color="darkslategrey", vertex.label.cex=0.8, vertex.label.dist=2) # better readable version
+     vertex.label.color="darkslategrey", vertex.label.cex=0.8, vertex.label.dist=2) 
 ```
 
 ### Visualization in Cytoscape {#visualization_cytoscape}
@@ -79,7 +69,7 @@ After creating the network in R, it is possible to visualize the network using C
     -   To automate this: `for (i in 3:igraph::clique_num(g_hol)) { cyto_create_cpm_style(g_hol, k=i, com_k = g_hol_cpm)}`.
 4.  To visualize the styles using the Girvan-Newman algorithm (GN): `cyto_create_gn_style(g_hol)` This would look something like this in Cytoscape:
 
-![The network of Roman sitechronologies with the Girvan-Newman communities visualized.](README_files/g_hol_GN.png)
+![The network of Roman sitechronologies with the Girvan-Newman communities visualized.](images/g_hol_GN.png){width="800"}
 
 ## Usage for large datasets
 

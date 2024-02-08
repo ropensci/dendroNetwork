@@ -1,5 +1,5 @@
 
-# dendroNetwork <img src="inst/figures/DendroNetwork_hexsticker.png"  align="right" height="200" />
+# dendroNetwork <img src="inst/figures/DendroNetwork_hexsticker.png" align="right" height="200"/>
 
 <!-- badges: start -->
 
@@ -9,6 +9,7 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![DOI](https://zenodo.org/badge/582742098.svg)](https://zenodo.org/doi/10.5281/zenodo.10636310)
+
 <!-- badges: end -->
 
 dendroNetwork is a package to create dendrochronological networks for
@@ -133,9 +134,9 @@ The workflow is similar as above, but with minor changes:
 
 If you use this software, please cite this using:
 
-Visser, R. (2023). DendroNetwork: a R-package to create
-dendrochronological provenance networks (Version 0.2.0) \[Computer
-software\]. <https://doi.org/xxx>
+Visser, R. (2024). DendroNetwork: a R-package to create
+dendrochronological provenance networks (Version 0.5.0) \[Computer
+software\]. <https://zenodo.org/doi/10.5281/zenodo.10636310>
 
 ## References
 
