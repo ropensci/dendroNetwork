@@ -2,6 +2,7 @@
 #'
 #' @returns Cytoscape cleaned of styles and only styles with white and grey nodes.
 #' @examples
+#'
 #' cyto_clean_styles()
 #'
 #' @export cyto_clean_styles

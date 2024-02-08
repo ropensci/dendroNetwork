@@ -29,7 +29,7 @@ clique_community_names_par(g_hol, k = 3, n_core = 6)
 \references{
 Palla, G., Derényi, I., Farkas, I., & Vicsek, T. (2005). Uncovering the overlapping community structure of complex networks in nature and society. Nature, 435(7043), 814-818.
 
-Code adapted from source: # uit: https://github.com/angelosalatino/CliquePercolationMethod-R/blob/master/clique.community.opt.par.R
+Code adapted from source: https://github.com/angelosalatino/CliquePercolationMethod-R/blob/master/clique.community.opt.par.R
 }
 \author{
 Angelo Salatino
