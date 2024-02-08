@@ -7,7 +7,8 @@
 #' @param x tree-ring series
 #' @returns tree-ring series normalized according to Hollstein (1980, 14-15)
 #' @examples
-#' wuchswerte(trs)
+#' data(hol_rom)
+#' wuchswerte(hol_rom)
 #' # to convert a rwl object into wuchwerte use:
 #' dplR::as.rwl(apply(anos1, 2, wuchswerte))
 #' @export wuchswerte

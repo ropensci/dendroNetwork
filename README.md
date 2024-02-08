@@ -40,7 +40,7 @@ community detection using either (or both) the Girvan-Newman algorithm
 (Girvan and Newman 2002) and Clique Percolation Method (Palla et al.
 2005) for all clique sizes.
 
-![](README_files/figure-gfm/flowchart%20of%20workflow-1.png)<!-- -->
+![](README_files/figure-gfm/flowchart_workflow-1.png)<!-- -->
 
 ``` r
 library(dendroNetwork)
@@ -53,14 +53,14 @@ hol_com_cpm_all <- find_all_cpm_com(g_hol) # 5
 plot(g_hol)  # plotting the graph in R
 ```
 
-![](README_files/figure-gfm/building%20a%20network%20with%20Hollstein%20(1980%20data)-1.png)<!-- -->
+![](README_files/figure-gfm/network_hollstein_1980-1.png)<!-- -->
 
 ``` r
 plot(g_hol, vertex.color="deepskyblue", vertex.size=15, vertex.frame.color="gray",
      vertex.label.color="darkslategrey", vertex.label.cex=0.8, vertex.label.dist=2) # better readable version
 ```
 
-![](README_files/figure-gfm/building%20a%20network%20with%20Hollstein%20(1980%20data)-2.png)<!-- -->
+![](README_files/figure-gfm/network_hollstein_1980-2.png)<!-- -->
 
 ### Visualization in Cytoscape
 

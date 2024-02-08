@@ -10,6 +10,8 @@
 #'
 #' @returns a list with two matrices: one with the correlation values and one with the number of overlapping tree rings for each correlation value. The matrices have row names and column names of the compared tree-ring curves
 #' @examples
+#' rwl_object1 <- hol_rom
+#' rwl_object2 <- hol_rom
 #' cor_mat_overlap(rwl_object1, rwl_object2, 50)
 #' cor_mat_overlap(rwl_object1, rwl_object1, 50)
 #'

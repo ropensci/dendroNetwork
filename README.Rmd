@@ -29,7 +29,7 @@ The package aims to make the creation of dendrochronological (provenance) networ
 
 The first steps are visualized in the flowchart below, including community detection using either (or both) the Girvan-Newman algorithm [@girvan2002] and Clique Percolation Method [@palla2005] for all clique sizes.
 
-```{r flowchart of workflow, echo=FALSE, fig.width=15}
+```{r flowchart_workflow, echo=FALSE, fig.width=15}
 DiagrammeR::grViz("
 digraph {
   # graph attributes
@@ -55,7 +55,7 @@ digraph {
 ")
 ```
 
-```{r building a network with Hollstein (1980 data)}
+```{r network_hollstein_1980}
 library(dendroNetwork)
 data(hol_rom) # 1
 sim_table_hol <- sim_table(hol_rom) # 2

@@ -23,6 +23,8 @@ Function that creates a Pearson correlation matrix of two rwl objects compared. 
 The function is an adaptation of the function cor.with.limit.R() from https://github.com/AndyBunn/dplR/blob/master/R/rwi.stats.running.R, but it is faster and also gives the overlap.
 }
 \examples{
+rwl_object1 <- hol_rom
+rwl_object2 <- hol_rom
 cor_mat_overlap(rwl_object1, rwl_object2, 50)
 cor_mat_overlap(rwl_object1, rwl_object1, 50)
 
