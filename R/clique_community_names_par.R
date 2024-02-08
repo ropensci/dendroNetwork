@@ -1,7 +1,7 @@
 #' Clique Percolation Method (with node names)
 #'
 #' Function to determine communities in a network using clique percolation method (Palla et al., 2005). Communities are created based on cliques. Cliques are subsets of a network that can be considered complete (sub)networks. The size of the cliques to be used to community detection is part of the input of the function.
-#' This function uses parallelisation and should be used for larger networks
+#' This function uses parallelisation and should be used for larger networks.
 #'
 #' @param g network object (igraph)
 #' @param k clique size to be used, default set to smallest possible size (3)
@@ -11,7 +11,7 @@
 #'
 #' @examples
 #' hol_sim <- sim_table(hol_rom)
-#' g_hol <- dendro_network(hol_sim)
+#' g_hol <- dendro_network(hol_sim, r_threshold = 0.4, sgc_threshold = 0.4)
 #' clique_community_names_par(g_hol, k = 3, n_core = 6)
 #'
 #' @references
@@ -34,6 +34,10 @@ clique_community_names_par <- function(g, k = 3, n_core = 4) {
   }
   # find cliques
   clq <- igraph::cliques(g, min = k, max = k) %>% lapply(as.vector)
+  if(length(clq)<2) {
+    stop(paste0("The network has only ", length(clq), " cliques and this function is for larger networks. Please use the clique_community_names() function"))
+
+  }
   # get node names
   node <- (igraph::V(g)$name)
   node <- as.data.frame(node)
@@ -53,11 +57,11 @@ clique_community_names_par <- function(g, k = 3, n_core = 4) {
 
   # Create an empty graph and then adding edges
   clq.graph <- igraph::make_empty_graph(n = length(clq)) %>% igraph::add_edges(unlist(edges))
-  if (!igraph::is.simple(clq.graph)) {
+  if (!igraph::is_simple(clq.graph)) {
     clq.graph <- igraph::simplify(clq.graph)
   }
   igraph::V(clq.graph)$name <- seq_len(igraph::vcount(clq.graph))
-  comps <- igraph::decompose.graph(clq.graph)
+  comps <- igraph::decompose(clq.graph)
   comps <- lapply(comps, function(x) {
     unique(unlist(clq[igraph::V(x)$name]))
   })
