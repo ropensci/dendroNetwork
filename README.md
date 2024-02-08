@@ -1,9 +1,16 @@
 
-# DendroNetwork
+# dendroNetwork <img src="inst/figures/DendroNetwork_hexsticker.png"  align="right" height="200" />
 
-<img src="inst/figures/DendroNetwork_hexsticker.png" width="186" />
+<!-- badges: start -->
 
-DendroNetwork is package to create dendrochronological networks for
+[![Project Status: Active – The project has reached a stable, usable
+state and is being actively
+developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![Lifecycle:
+stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+<!-- badges: end -->
+
+dendroNetwork is a package to create dendrochronological networks for
 gaining insight into provenance or other patterns based on the
 statistical relations between tree ring curves. The code and the
 functions are based on several published papers (Visser 2021b, 2021a;

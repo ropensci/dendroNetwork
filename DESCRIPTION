@@ -1,7 +1,7 @@
 Package: dendroNetwork
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.2.0
+Title: Create networks of dendrochronological series using pairwise similarity
+Version: 0.5.0
 Authors@R: 
     c(person(given ="Ronald", 
             family = "Visser", 
@@ -18,12 +18,25 @@ Authors@R:
             comment = c(ORCID = "0000-0001-9027-2162")))
 Maintainer: Ronald Visser <r.m.visser@saxion.nl>
 Depends: R (>= 3.5.0)
-Imports: dplR (>= 1.7.2), igraph, stringr, reshape2, RCy3, dplyr, RColorBrewer, tidyr, foreach, magrittr, doParallel
+Imports: 
+    dplR (>= 1.7.2),
+    igraph,
+    stringr,
+    reshape2,
+    RCy3,
+    dplyr,
+    RColorBrewer,
+    tidyr,
+    foreach,
+    magrittr,
+    doParallel,
+    lifecycle
 Description: This package makes it easy to create dendrochronological networks based on the similarity between tree-ring series or chronologies. It includes various functions to compare tree-ring curves building upon dplR. The networks can be used to visualise and understand the relations between tree-ring curves. These networks are also very useful to estimate the provenance or wood-use within a structure/context/site.
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Roxygen: list(markdown = TRUE)
