@@ -35,7 +35,7 @@ community detection using either (or both) the Girvan-Newman algorithm
 ![](README_files/figure-gfm/flowchart%20of%20workflow-1.png)<!-- -->
 
 ``` r
-library(DendroNetwork)
+library(dendroNetwork)
 data(hol_rom) # 1
 sim_table_hol <- sim_table(hol_rom) # 2
 g_hol <- dendro_network(sim_table_hol) # 3
@@ -48,8 +48,8 @@ plot(g_hol)  # plotting the graph in R
 ![](README_files/figure-gfm/building%20a%20network%20with%20Hollstein%20(1980%20data)-1.png)<!-- -->
 
 ``` r
-plot(g_hol, vertex.color="blue", vertex.size=15, vertex.frame.color="gray",
-     vertex.label.color="black", vertex.label.cex=0.8, vertex.label.dist=2) # better readable version
+plot(g_hol, vertex.color="deepskyblue", vertex.size=15, vertex.frame.color="gray",
+     vertex.label.color="darkslategrey", vertex.label.cex=0.8, vertex.label.dist=2) # better readable version
 ```
 
 ![](README_files/figure-gfm/building%20a%20network%20with%20Hollstein%20(1980%20data)-2.png)<!-- -->

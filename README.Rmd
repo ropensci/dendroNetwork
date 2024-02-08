@@ -52,7 +52,7 @@ digraph {
 ```
 
 ```{r building a network with Hollstein (1980 data)}
-library(DendroNetwork)
+library(dendroNetwork)
 data(hol_rom) # 1
 sim_table_hol <- sim_table(hol_rom) # 2
 g_hol <- dendro_network(sim_table_hol) # 3
@@ -60,8 +60,8 @@ g_hol_gn <- gn_names(g_hol) # 4
 g_hol_cpm <- clique_community_names(g_hol, k=3) # 4
 hol_com_cpm_all <- find_all_cpm_com(g_hol) # 5
 plot(g_hol)  # plotting the graph in R
-plot(g_hol, vertex.color="blue", vertex.size=15, vertex.frame.color="gray",
-     vertex.label.color="black", vertex.label.cex=0.8, vertex.label.dist=2) # better readable version
+plot(g_hol, vertex.color="deepskyblue", vertex.size=15, vertex.frame.color="gray",
+     vertex.label.color="darkslategrey", vertex.label.cex=0.8, vertex.label.dist=2) # better readable version
 ```
 
 ### Visualization in Cytoscape {#visualization_cytoscape}

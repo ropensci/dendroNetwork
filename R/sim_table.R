@@ -119,8 +119,8 @@ sim_table <- function(trs1,
 
   # listing data
   list_overlap <- subset(reshape2::melt(SGC_ol_mat, value.name = "overlap"))
-  list_SGC <- subset(reshape2::melt(SGC_mat), value.name = "SGC")
-  list_SSGC <- subset(reshape2::melt(SSGC_mat), value.name = "SSGC")
+  list_SGC <- subset(reshape2::melt(SGC_mat, value.name = "SGC"))
+  list_SSGC <- subset(reshape2::melt(SSGC_mat, value.name = "SSGC"))
   list_p <- subset(reshape2::melt(p_mat, value.name = "p"))
   list_r <- subset(reshape2::melt(r_mat, value.name = "r"))
   list_r_ol <- subset(reshape2::melt(r_ol_mat, value.name = "r_ol"))
