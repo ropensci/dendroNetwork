@@ -8,6 +8,14 @@
 \description{
 This package makes it easy to create dendrochronological networks based on the similarity between tree-ring series or chronologies. It includes various functions to compare tree-ring curves building upon dplR. The networks can be used to visualise and understand the relations between tree-ring curves. These networks are also very useful to estimate the provenance or wood-use within a structure/context/site.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/RonaldVisser/dendroNetwork}
+  \item Report bugs at \url{https://github.com/RonaldVisser/dendroNetwork/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Ronald Visser \email{r.m.visser@saxion.nl} (\href{https://orcid.org/0000-0001-6966-1729}{ORCID})
 

@@ -33,7 +33,7 @@ cyto_create_gn_style <- function(graph_input, gn_coms = NULL, style_name = "auto
     gn_coms <- gn_names(graph_input)
   }
   com_count <- length(unique(gn_coms$com_name))
-  getPalette <- colorRampPalette(RColorBrewer::brewer.pal(12, "Paired"))
+  getPalette <- grDevices::colorRampPalette(RColorBrewer::brewer.pal(12, "Paired"))
   RCy3::setNodeColorMapping(
     table.column = "com_name",
     table.column.values = unique(gn_coms$com_name),

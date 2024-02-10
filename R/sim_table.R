@@ -99,7 +99,7 @@ sim_table <- function(trs1,
   size_ol <- dim(SGC_ol_mat)
   s_mat <- 1 / (2 * sqrt(SGC_ol_mat))
   z_mat <- (SGC_mat - 0.5) / s_mat
-  p_mat <- 2 * (1 - pnorm(z_mat, 0, 1))
+  p_mat <- 2 * (1 - stats::pnorm(z_mat, 0, 1))
 
   # correlation and T
   trs1_wuchs <- dplR::as.rwl(apply(trs1, 2, wuchswerte))

@@ -45,7 +45,7 @@ cyto_create_cpm_style <- function(graph_input, k = 3, com_k = NULL, style_name =
         style.name = style_name
       )
     } else {
-      getPalette <- colorRampPalette(RColorBrewer::brewer.pal(12, "Paired"))
+      getPalette <- grDevices::colorRampPalette(RColorBrewer::brewer.pal(12, "Paired"))
       RCy3::setNodeCustomPieChart(unique(com_k$com_name),
         colors = getPalette(com_count),
         style.name = style_name

@@ -3,6 +3,8 @@ dendroNetwork 0.5.1 (2024-... under development)
 
 ### NEW FEATURES
 ### MINOR IMPROVEMENTS
+  * replaced igraph::graph.data.frame() with igraph::graph_from_data_frame(), since the former is deprecated in igraph 2.0.0
+  * correction to calls to functions grDevices::colorRampPalette and stats::pnorm
 ### BUG FIXES
 ### DEPRECATED AND DEFUNCT
 ### DOCUMENTATION FIXES
@@ -10,6 +12,7 @@ dendroNetwork 0.5.1 (2024-... under development)
   * added codemeta.json using codemetar::write_codemeta()
   * added .github/CONTRIBUTING.md using usethis::use_tidy_contributing()
   * DESCRIPTION: added URL and BugReports to DESCRIPTION + package checks
+  * correction in clique_community_names(_par) functions, due to [k] seen as link
 ### CONTINUOUS INTEGRATION
   * added GitHub Action for BiocMananager (https://lcolladotor.github.io/biocthis/index.html)
 

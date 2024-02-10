@@ -9,10 +9,10 @@ clique_community_names(g, k = 3)
 \arguments{
 \item{g}{network object (igraph)}
 
-\item{k}{clique size to be used, default set to smallest possible size (3)}
+\item{k}{clique size to be used. The default is set to smallest possible size (3)}
 }
 \value{
-a dataframe with node names and community name (CPM_K\link{k}_number_of_community)
+a dataframe with node names and community name. The community is named as CPM_Kk_number_of_community with k replaced by the value of k.
 }
 \description{
 Function to determine communities in a network using clique percolation method (Palla et al., 2005). Communities are created based on cliques. Cliques are subsets of a network that can be considered complete (sub)networks. The size of the cliques to be used to community detection is part of the input of the function.

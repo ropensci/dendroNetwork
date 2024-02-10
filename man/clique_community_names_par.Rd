@@ -14,7 +14,7 @@ clique_community_names_par(g, k = 3, n_core = 4)
 \item{n_core}{number of cores to be used for parrallisation, defaults to 4}
 }
 \value{
-a dataframe with node names and community name (CPM_K\link{k}_number_of_community)
+a dataframe with node names and community name. The community is named as CPM_Kk_number_of_community with k replaced by the value of k.
 }
 \description{
 Function to determine communities in a network using clique percolation method (Palla et al., 2005). Communities are created based on cliques. Cliques are subsets of a network that can be considered complete (sub)networks. The size of the cliques to be used to community detection is part of the input of the function.
@@ -23,7 +23,7 @@ This function uses parallelisation and should be used for larger networks.
 \examples{
 hol_sim <- sim_table(hol_rom)
 g_hol <- dendro_network(hol_sim, r_threshold = 0.4, sgc_threshold = 0.4)
-clique_community_names_par(g_hol, k = 3, n_core = 6)
+clique_community_names_par(g_hol, k = 3, n_core = 4)
 
 }
 \references{

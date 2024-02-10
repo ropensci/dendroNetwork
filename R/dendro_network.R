@@ -30,7 +30,7 @@ dendro_network <- function(sim_table,
     dplyr::filter(r >= r_threshold, sgc >= sgc_threshold, p <= p_threshold) %>%
     dplyr::select(series_a, series_b)
   netw_data <- unique(netw_data)
-  graph_dendro <- igraph::graph.data.frame(netw_data, directed = FALSE)
+  graph_dendro <- igraph::graph_from_data_frame(netw_data, directed = FALSE)
   graph_dendro <- igraph::simplify(graph_dendro)
   graph_dendro
 }
