@@ -25,7 +25,7 @@ The function uses a graph as input and the number of cliques (default = 3). The 
 Before starting this function, Cytoscape must be up and running!
 }
 \examples{
-\donttest{
+\dontrun{
 data(hol_rom)
 sim_table_hol <- sim_table(hol_rom)
 g_hol <- dendro_network(sim_table_hol)

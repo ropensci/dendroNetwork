@@ -2,7 +2,7 @@
 #'
 #' @returns Cytoscape cleaned of styles and only styles with white and grey nodes.
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' cyto_clean_styles()
 #' }
 #'

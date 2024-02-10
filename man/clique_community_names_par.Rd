@@ -21,7 +21,7 @@ Function to determine communities in a network using clique percolation method (
 This function uses parallelisation and should be used for larger networks.
 }
 \examples{
-\donttest{
+\dontrun{
 hol_sim <- sim_table(hol_rom)
 g_hol <- dendro_network(hol_sim, r_threshold = 0.4, sgc_threshold = 0.4)
 clique_community_names_par(g_hol, k = 3, n_core = 2)

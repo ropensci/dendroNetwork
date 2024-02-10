@@ -19,7 +19,7 @@ Function to normalize tree-ring values according to Hollsteins transformation to
 Published on pages 14-15 in Hollstein, E. 1980. Mitteleuropäische Eichenchronologie. Trierer Dendrochronologische Forschungen zur Archäologie und Kunstgeschichte. Trierer Grabungen und Forschungen 11. Mainz am Rhein: Verlag Philipp von Zabern.
 }
 \examples{
-\donttest{
+\dontrun{
 data(hol_rom)
 wuchswerte(hol_rom)
 # to convert a rwl object into wuchwerte use:
