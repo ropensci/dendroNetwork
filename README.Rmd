@@ -120,6 +120,6 @@ The workflow is similar as above, but with minor changes:
 
 If you use this software, please cite this using:
 
-Visser, R. (2024). DendroNetwork: a R-package to create dendrochronological provenance networks (Version 0.5.0) [Computer software]. <https://zenodo.org/doi/10.5281/zenodo.10636310>
+Visser, R. (2024). dendroNetwork: a R-package to create dendrochronological provenance networks (Version 0.5.1) [Computer software]. <https://zenodo.org/doi/10.5281/zenodo.10636310>
 
 ## References

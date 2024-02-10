@@ -6,7 +6,7 @@ author:
     affiliation: Saxion University of Applied Sciences
 date: "`r format(Sys.time(), '%d %B %Y')`"
 bibliography: paper.bib
-abstract: "The R-package dendroNetwork aims to make network analyses of dendrochronological data accessible for researchers. DendroNetwork enables researchers to easily construct a network of dendrochronological series based on the similarity and find patterns of matching tree-ring material. The detection of patterns is assisted by the easy application of community detection and subsequent (automated) visualization using Cytoscape. This enables dendrochronologists and other researchers to apply networks analyses to understand patterns of similarity between tree-ring series."
+abstract: "The R-package dendroNetwork aims to make network analyses of dendrochronological data accessible for researchers. dendroNetwork enables researchers to easily construct a network of dendrochronological series based on the similarity and find patterns of matching tree-ring material. The detection of patterns is assisted by the easy application of community detection and subsequent (automated) visualization using Cytoscape. This enables dendrochronologists and other researchers to apply networks analyses to understand patterns of similarity between tree-ring series."
 keywords: "dendrochronology, network analysis, R, cytoscape, tree ring, archaeology"
 output: 
   bookdown::html_document2:
@@ -19,14 +19,16 @@ output:
 knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding, output_format = "all") })
 ---
+
+```{=html}
 <style>
 body {
 text-align: justify}
 </style>
-
+```
 # Introduction
 
-Dendrochronological analyses are often based on the comparison of tree-ring series with other tree-ring series. These comparions are often visualised as tabular data. However, to analyse the complex system of relations between tree-ring curves other methods are necessary. The author has developed a method to analyse patterns of similarity between tree-ring series using network analysis [@visser2021; @visser2022]. The analyses of these papers was mostly based on scripts that are shared with the papers [@visser; @visser]. For others to apply the developed method with these scripts is possible, but cumbersome and various things need to be changed. In addition, to try the network approach on dendrochronological data for the first time can be overwhelming an seemingly difficult. To make this more easy and accessible a new package for R has been designed to help users to apply this method to their data. The package DendroNetwork enables researchers to create tables with the similarity using various measures and visualize these using R [@rcoreteam2022] and Cytoscape [@otasek2019; @shannon2003a].
+Dendrochronological analyses are often based on the comparison of tree-ring series with other tree-ring series. These comparions are often visualised as tabular data. However, to analyse the complex system of relations between tree-ring curves other methods are necessary. The author has developed a method to analyse patterns of similarity between tree-ring series using network analysis [@visser2021; @visser2022]. The analyses of these papers was mostly based on scripts that are shared with the papers [@visser; @visser]. For others to apply the developed method with these scripts is possible, but cumbersome and various things need to be changed. In addition, to try the network approach on dendrochronological data for the first time can be overwhelming an seemingly difficult. To make this more easy and accessible a new package for R has been designed to help users to apply this method to their data. The package dendroNetwork enables researchers to create tables with the similarity using various measures and visualize these using R [@rcoreteam2022] and Cytoscape [@otasek2019; @shannon2003a].
 
 # Statement of need
 
@@ -48,12 +50,12 @@ plot(g_dendro_packages, edge.arrow.size=.1, vertex.color="deepskyblue",
      vertex.label.cex=0.8, vertex.label.dist=2, vertex.shape="sphere")
 ```
 
-The network shows that nearly all packages depend on dplR [@bunn2008]. The newly created package DendroNetwork fits in this ecosystem of depending packages, since it depends on both dplR and the Tidyverse. In addition, it adds a whole new world by adding network analyses through igraph [@csardi2006] to the ecosystem of dendrochronological packages. The igraph library has close connections to the tidyverse, creating a full circle and filling a gap as shown in the networks below.
+The network shows that nearly all packages depend on dplR [@bunn2008]. The newly created package dendroNetwork fits in this ecosystem of depending packages, since it depends on both dplR and the Tidyverse. In addition, it adds a whole new world by adding network analyses through igraph [@csardi2006] to the ecosystem of dendrochronological packages. The igraph library has close connections to the tidyverse, creating a full circle and filling a gap as shown in the networks below.
 
 ```{r, fig.show="hold", out.width="50%", fig.cap = "The interdependent relations between R-packages including dendroNetwork. On the left only the dependencies for dendroNetwork, on the right all dendrochronological R-packages, including dendroNetwork", echo=FALSE}
-g_DendroNetwork <- igraph::graph( c("dplR", "DendroNetwork", "tidyverse", "DendroNetwork", "igraph", "DendroNetwork", "igraph", "tidyverse", "tidyverse", "igraph"))
-plot(g_DendroNetwork, edge.arrow.size=.5, vertex.color="deepskyblue", vertex.shape="sphere", vertex.size=15,vertex.label.family="sans", vertex.label.color="darkslategrey", vertex.label.cex=0.8, vertex.label.dist=2)
-plot(g_DendroNetwork+g_dendro_packages, edge.arrow.size=.5, vertex.color="deepskyblue", vertex.size=15, vertex.label.family="sans", vertex.label.color="darkslategrey", vertex.label.cex=0.8, vertex.shape="sphere", vertex.label.dist=2)
+g_dendroNetwork <- igraph::graph( c("dplR", "dendroNetwork", "tidyverse", "dendroNetwork", "igraph", "dendroNetwork", "igraph", "tidyverse", "tidyverse", "igraph"))
+plot(g_dendroNetwork, edge.arrow.size=.5, vertex.color="deepskyblue", vertex.shape="sphere", vertex.size=15,vertex.label.family="sans", vertex.label.color="darkslategrey", vertex.label.cex=0.8, vertex.label.dist=2)
+plot(g_dendroNetwork+g_dendro_packages, edge.arrow.size=.5, vertex.color="deepskyblue", vertex.size=15, vertex.label.family="sans", vertex.label.color="darkslategrey", vertex.label.cex=0.8, vertex.shape="sphere", vertex.label.dist=2)
 ```
 
 # Workflow using dendroNetwork
