@@ -22,7 +22,7 @@ Each node is filled with a separate colour for each community.
 Before starting this function, Cytoscape must be up and running!
 }
 \examples{
-\dontrun{
+\donttest{
 data(hol_rom)
 sim_table_hol <- sim_table(hol_rom)
 g_hol <- dendro_network(sim_table_hol)
