@@ -28,7 +28,7 @@ cyto_create_graph <- function(graph_input,
                               collection_name = "default",
                               style_name = "default",
                               CPM_table = NULL,
-                              GN_table = NULL) {
+                              GN_table = NULL) { # nocov start
   if (length(RCy3::cytoscapeVersionInfo()) != 2) {
     message("Cytoscape is not running, please start Cytoscape first")
     stop()
@@ -59,4 +59,4 @@ cyto_create_graph <- function(graph_input,
   }
   RCy3::layoutNetwork(layout.name = "kamada-kawai")
   RCy3::setNodeLabelMapping("id", style.name = style_name)
-}
+} # nocov end

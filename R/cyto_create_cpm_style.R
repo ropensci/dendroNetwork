@@ -21,7 +21,7 @@
 #'
 #' @export cyto_create_cpm_style
 
-cyto_create_cpm_style <- function(graph_input, k = 3, com_k = NULL, style_name = "auto") {
+cyto_create_cpm_style <- function(graph_input, k = 3, com_k = NULL, style_name = "auto") { # nocov start
   if (length(RCy3::cytoscapeVersionInfo()) != 2) {
     message("Cytoscape is not running, please start Cytoscape first")
     stop()
@@ -58,4 +58,4 @@ cyto_create_cpm_style <- function(graph_input, k = 3, com_k = NULL, style_name =
     message("k can only be a number")
     stop()
   }
-}
+} # nocov end

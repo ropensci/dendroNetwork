@@ -19,6 +19,7 @@ dendroNetwork 0.5.1 (2024-... under development)
 ### CONTINUOUS INTEGRATION
   * added GitHub Action for BiocMananager (https://lcolladotor.github.io/biocthis/index.html)
   * added more tests
+  * excluded Cytoscape-functions from testing
 
 
 dendroNetwork 0.5.0 (2024-02-08)

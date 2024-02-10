@@ -19,7 +19,7 @@
 #'
 #' @export cyto_create_gn_style
 
-cyto_create_gn_style <- function(graph_input, gn_coms = NULL, style_name = "auto") {
+cyto_create_gn_style <- function(graph_input, gn_coms = NULL, style_name = "auto") { # nocov start
   if (length(RCy3::cytoscapeVersionInfo()) != 2) {
     message("Cytoscape is not running, please start Cytoscape first")
     stop()
@@ -44,4 +44,4 @@ cyto_create_gn_style <- function(graph_input, gn_coms = NULL, style_name = "auto
     style.name = style_name
   )
   RCy3::setVisualStyle(style_name)
-}
+} # nocov end
