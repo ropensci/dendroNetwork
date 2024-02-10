@@ -10,9 +10,11 @@
 #' @returns a dataframe with node names and community name. The community is named as CPM_Kk_number_of_community with k replaced by the value of k.
 #'
 #' @examples
+#' \dontrun{
 #' hol_sim <- sim_table(hol_rom)
 #' g_hol <- dendro_network(hol_sim, r_threshold = 0.4, sgc_threshold = 0.4)
-#' clique_community_names_par(g_hol, k = 3, n_core = 4)
+#' clique_community_names_par(g_hol, k = 3, n_core = 2)
+#' }
 #'
 #' @references
 #' Palla, G., Derényi, I., Farkas, I., & Vicsek, T. (2005). Uncovering the overlapping community structure of complex networks in nature and society. Nature, 435(7043), 814-818.

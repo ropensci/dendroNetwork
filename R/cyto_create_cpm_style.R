@@ -11,11 +11,13 @@
 #' @param style_name name of the output style in Cytoscape. If set to "auto", the style is derived from the name of the network and value for k
 #' @returns The style applied in Cytoscape, no objects in R as return.
 #' @examples
+#' \dontrun{
 #' data(hol_rom)
 #' sim_table_hol <- sim_table(hol_rom)
 #' g_hol <- dendro_network(sim_table_hol)
 #' hol_com_cpm_k3 <- clique_community_names(g_hol, k = 3)
 #' cyto_create_cpm_style(g_hol, k = 3, com_k = hol_com_cpm_k3)
+#' }
 #'
 #' @export cyto_create_cpm_style
 

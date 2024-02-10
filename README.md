@@ -10,6 +10,7 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![DOI](https://zenodo.org/badge/582742098.svg)](https://zenodo.org/doi/10.5281/zenodo.10636310)
 [![pkgcheck](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/pkgcheck.yaml/badge.svg)](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/pkgcheck.yaml)
+[![R-CMD-check](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/R-CMD-check.yaml)
 
 <!-- badges: end -->
 

@@ -22,10 +22,12 @@ Each node is filled with a separate colour for each community.
 Before starting this function, Cytoscape must be up and running!
 }
 \examples{
+\dontrun{
 data(hol_rom)
 sim_table_hol <- sim_table(hol_rom)
 g_hol <- dendro_network(sim_table_hol)
 g_hol_gn <- gn_names(g_hol)
 cyto_create_gn_style(g_hol, gn_coms = g_hol_gn)
+}
 
 }

@@ -44,11 +44,11 @@ clique_community_names <- function(g, k = 3) {
   }
   # Create an empty graph and then adding edges
   clq.graph <- igraph::make_empty_graph(n = length(clq)) %>% igraph::add_edges(unlist(edges))
-  if (!igraph::is.simple(clq.graph)) {
+  if (!igraph::is_simple(clq.graph)) {
     clq.graph <- igraph::simplify(clq.graph)
   }
   igraph::V(clq.graph)$name <- seq_len(igraph::vcount(clq.graph))
-  comps <- igraph::decompose.graph(clq.graph)
+  comps <- igraph::decompose(clq.graph)
   comps <- lapply(comps, function(x) {
     unique(unlist(clq[igraph::V(x)$name]))
   })

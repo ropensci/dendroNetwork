@@ -12,12 +12,14 @@
 #'
 #' @returns a graph in Cytoscape
 #' @examples
+#' \dontrun{
 #' data(hol_rom)
 #' sim_table_hol <- sim_table(hol_rom)
 #' g_hol <- dendro_network(sim_table_hol)
 #' hol_com_cpm_all <- find_all_cpm_com(g_hol)
 #' g_hol_gn <- gn_names(g_hol)
 #' cyto_create_graph(g_hol, CPM_table = hol_com_cpm_all, GN_table = g_hol_gn)
+#' }
 #'
 #' @export cyto_create_graph
 
