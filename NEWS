@@ -1,0 +1,27 @@
+dendroNetwork 0.5.1 (2024-... under development)
+=========================
+
+### NEW FEATURES
+### MINOR IMPROVEMENTS
+### BUG FIXES
+### DEPRECATED AND DEFUNCT
+### DOCUMENTATION FIXES
+  * minor corrections to README
+  * added codemeta.json using codemetar::write_codemeta()
+  * added .github/CONTRIBUTING.md using usethis::use_tidy_contributing()
+  * DESCRIPTION: added URL and BugReports to DESCRIPTION + package checks
+### CONTINUOUS INTEGRATION
+  * added GitHub Action for BiocMananager (https://lcolladotor.github.io/biocthis/index.html)
+
+
+dendroNetwork 0.5.0 (2024-02-08)
+=========================
+
+### NEW FEATURES
+
+  * First public release
+
+### MINOR IMPROVEMENTS
+### BUG FIXES
+### DEPRECATED AND DEFUNCT
+### DOCUMENTATION FIXES

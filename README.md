@@ -10,6 +10,7 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![DOI](https://zenodo.org/badge/582742098.svg)](https://zenodo.org/doi/10.5281/zenodo.10636310)
 [![pkgcheck](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/pkgcheck.yaml/badge.svg)](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/pkgcheck.yaml)
+
 <!-- badges: end -->
 
 dendroNetwork is a package to create dendrochronological networks for
@@ -20,12 +21,22 @@ Visser and Vorst 2022)
 
 ## Installation
 
-You can install the development version of DendroNetwork from
+This package depends on RCy3, which is part of Bioconductor. Therefore
+it is recommended to install RCy3 first using:
+
+``` r
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("RCy3")
+```
+
+You can install the development version of dendroNetwork from
 [GitHub](https://github.com/RonaldVisser/DendroNetwork) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("RonaldVisser/DendroNetwork")
+devtools::install_github("RonaldVisser/dendroNetwork")
 ```
 
 ## Usage
