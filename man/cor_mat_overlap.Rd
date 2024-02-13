@@ -20,7 +20,7 @@ a list with two matrices: one with the correlation values and one with the numbe
 Function that creates a Pearson correlation matrix of two rwl objects compared. If the same rwl-object is passed to the function, the correlation between all series is calculated. In addition, the number of overlapping tree-rings is part of the output. The results can be used to calculate the Students' t value
 }
 \details{
-The function is an adaptation of the function cor.with.limit.R() from https://github.com/AndyBunn/dplR/blob/master/R/rwi.stats.running.R, but it is faster and also gives the overlap.
+The function is an adaptation of the function cor.with.limit.R() from https://github.com/AndyBunn/dplR/blob/master/R/rwi.stats.running.R. The new function is optimized and also outputs the number of overlapping rings.
 }
 \examples{
 rwl_object1 <- hol_rom
