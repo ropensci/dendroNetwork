@@ -7,10 +7,10 @@ authors:
 date: "2024-02-08"
 bibliography: paper.bib
 output: 
+  pdf_document: default
   html_document:
       fig_caption: true
       keep_md: yes
-  pdf_document: default
 tags:
 - dendrochronology
 - network analysis

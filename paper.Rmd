@@ -1,13 +1,21 @@
 ---
 title: "dendroNetwork: a R-package to create networks of dendrochronological data"
-author: 
+tags:
+  - dendrochronology
+  - network analysis
+  - cytoscape
+  - tree ring
+  - archaeology"
+author:
   - name: Ronald M. Visser
     orcid: 0000-0001-6966-1729
-    affiliation: Saxion University of Applied Sciences
+    affiliation: 1
+affiliations:
+ - name: Saxion University of Applied Sciences, Deventer
+   index: 1
 date: "`r format(Sys.time(), '%d %B %Y')`"
 bibliography: paper.bib
 abstract: "The R-package dendroNetwork aims to make network analyses of dendrochronological data accessible for researchers. dendroNetwork enables researchers to easily construct a network of dendrochronological series based on the similarity and find patterns of matching tree-ring material. The detection of patterns is assisted by the easy application of community detection and subsequent (automated) visualization using Cytoscape. This enables dendrochronologists and other researchers to apply networks analyses to understand patterns of similarity between tree-ring series."
-keywords: "dendrochronology, network analysis, R, cytoscape, tree ring, archaeology"
 output: 
   bookdown::html_document2:
     number_sections: false
