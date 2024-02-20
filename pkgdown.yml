@@ -2,8 +2,9 @@ pandoc: 2.19.2
 pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
+  cytoscape: cytoscape.html
   dendroNetwork_use: dendroNetwork_use.html
-last_built: 2024-02-20T14:36Z
+last_built: 2024-02-20T15:32Z
 urls:
   reference: https://ronaldvisser.github.io/dendroNetwork/reference
   article: https://ronaldvisser.github.io/dendroNetwork/articles
