@@ -70,7 +70,7 @@ cyto_clean_styles <- function() { # nocov start
 
   # import style with grey nodes
   if ("GreyNodesLabel" %in% RCy3::getVisualStyleNames() == FALSE) {
-    RCy3::importVisualStyles(filename = system.file("extdata", "NetworkStyles.xml", package = "DendroNetwork"))
+    RCy3::importVisualStyles(filename = system.file("extdata", "NetworkStyles.xml", package = "dendroNetwork"))
   }
   message("All default styles are removed and some new ones are added")
 } # nocov end

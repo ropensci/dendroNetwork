@@ -4,6 +4,7 @@ dendroNetwork 0.5.2 (development)
 ### NEW FEATURES
 ### MINOR IMPROVEMENTS
 ### BUG FIXES
+  * corrected bug in cyto_clean_styles()
 ### DEPRECATED AND DEFUNCT
   * dev-folder removed, since this was not needed (created by biocthis)
 ### DOCUMENTATION FIXES
@@ -11,6 +12,7 @@ dendroNetwork 0.5.2 (development)
   * corrected text of documentation in cor_mat_overlap()
   * added pkgdown site: https://ronaldvisser.github.io/dendroNetwork/
   * moved some images to man/figures
+  * added Vignette on Cytoscape use
 ### CONTINUOUS INTEGRATION
 
 dendroNetwork 0.5.1 (2024-02-10)
