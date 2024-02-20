@@ -1,12 +1,13 @@
 ---
 title: "dendroNetwork: a R-package to create networks of dendrochronological data"
 tags:
+  - R
   - dendrochronology
   - network analysis
   - cytoscape
   - tree ring
-  - archaeology"
-author:
+  - archaeology
+authors:
   - name: Ronald M. Visser
     orcid: 0000-0001-6966-1729
     affiliation: 1
@@ -15,13 +16,13 @@ affiliations:
    index: 1
 date: "`r format(Sys.time(), '%d %B %Y')`"
 bibliography: paper.bib
+csl: apa.csl
 abstract: "The R-package dendroNetwork aims to make network analyses of dendrochronological data accessible for researchers. dendroNetwork enables researchers to easily construct a network of dendrochronological series based on the similarity and find patterns of matching tree-ring material. The detection of patterns is assisted by the easy application of community detection and subsequent (automated) visualization using Cytoscape. This enables dendrochronologists and other researchers to apply networks analyses to understand patterns of similarity between tree-ring series."
 output: 
   bookdown::html_document2:
     number_sections: false
     global_numbering: true
   bookdown::pdf_document2:
-    toc: false
     number_sections: false
     global_numbering: true
 knit: (function(inputFile, encoding) {
@@ -143,7 +144,7 @@ The main advantage is that visualisation in Cytoscape is more easy, intuitive an
 4.  To visualize the styles using the Girvan-Newman algorithm (GN): `cyto_create_gn_style(g_hol)` This would look something like this in Cytoscape:
 
 ```{r, echo=FALSE, fig.cap="The network of Roman sitechronologies with the Girvan-Newman communities visualized using Cytoscape.", out.width = "100%"}
-knitr::include_graphics("README_files/g_hol_GN.png")
+knitr::include_graphics("man/figures/g_hol_GN.png")
 ```
 
 # Conclusion
@@ -152,6 +153,6 @@ The new R package dendroNetwork has been developed based on earlier research by 
 
 # Acknowledgements
 
-This package was mostly created in my spare time and I'd like to thank my family for bearing with me. I want to thank Angelino Salentino for creating the orginal function for clique_community_names() and lique_community_names_par(), which I adapted for use in this package (source: [https://github.com/angelosalatino/CliquePercolationMethod-R](https://eur05.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgithub.com%2Fangelosalatino%2FCliquePercolationMethod-R&data=05%7C02%7Cr.m.visser%40saxion.nl%7C98bf86e9d8de4bec4aff08dc2c74ce15%7Ca77b0754fdc14a62972c8425ffbfcbd2%7C0%7C0%7C638434127387203622%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=14k0ITGo4Z%2FhQZv28AF0rCIbxu23PVvmxsC95Iu4ZFo%3D&reserved=0 "Original URL: https://github.com/angelosalatino/CliquePercolationMethod-R. Click or tap if you trust this link.")). I want to thank Andy Bunn for the function cor.with.limit.R() which I adapted for use in this package as cor_mat_overlap() (source: <https://github.com/AndyBunn/dplR/blob/master/R/rwi.stats.running.R>).
+This package was mostly created in my spare time and I'd like to thank my family for bearing with me. I want to thank Angelino Salentino for creating the orginal function for clique_community_names() and lique_community_names_par(), which I adapted for use in this package (source: <https://github.com/angelosalatino/CliquePercolationMethod-R>. I want to thank Andy Bunn for the function cor.with.limit.R() which I adapted for use in this package as cor_mat_overlap() (source: <https://github.com/AndyBunn/dplR/blob/master/R/rwi.stats.running.R>).
 
 # References

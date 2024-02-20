@@ -1,5 +1,5 @@
 
-# dendroNetwork <img src="inst/figures/DendroNetwork_hexsticker.png" align="right" height="200"/>
+# dendroNetwork <img src="man/figures/dendroNetwork_hexsticker.png" align="right" height="200" style="float:right; height:200px;">
 
 <!-- badges: start -->
 
@@ -8,9 +8,11 @@ state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
-[![DOI](https://zenodo.org/badge/582742098.svg)](https://zenodo.org/doi/10.5281/zenodo.10636310)
 [![pkgcheck](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/pkgcheck.yaml/badge.svg)](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/pkgcheck.yaml)
 [![R-CMD-check](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/R-CMD-check.yaml)
+[![Status at rOpenSci Software Peer
+Review](https://badges.ropensci.org/627_status.svg)](https://github.com/ropensci/software-review/issues/627)
+[![DOI](https://zenodo.org/badge/582742098.svg)](https://zenodo.org/doi/10.5281/zenodo.10636310)
 
 <!-- badges: end -->
 
@@ -53,7 +55,7 @@ community detection using either (or both) the Girvan-Newman algorithm
 (Girvan and Newman 2002) and Clique Percolation Method (Palla et al.
 2005) for all clique sizes.
 
-![](README_files/figure-gfm/flowchart_workflow-1.png)<!-- -->
+![](man/figures/README-flowchart_workflow-1.png)<!-- -->
 
 ``` r
 library(dendroNetwork)
@@ -66,14 +68,14 @@ hol_com_cpm_all <- find_all_cpm_com(g_hol) # 5
 plot(g_hol)  # plotting the graph in R
 ```
 
-![](README_files/figure-gfm/network_hollstein_1980-1.png)<!-- -->
+![](man/figures/README-network_hollstein_1980-1.png)<!-- -->
 
 ``` r
 plot(g_hol, vertex.color="deepskyblue", vertex.size=15, vertex.frame.color="gray",
      vertex.label.color="darkslategrey", vertex.label.cex=0.8, vertex.label.dist=2) # better readable version
 ```
 
-![](README_files/figure-gfm/network_hollstein_1980-2.png)<!-- -->
+![](man/figures/README-network_hollstein_1980-2.png)<!-- -->
 
 ### Visualization in Cytoscape
 
@@ -103,7 +105,7 @@ completely loaded, the next steps can be taken.
     Cytoscape:
 
 <figure>
-<img src="README_files/g_hol_GN.png"
+<img src="man/figures/g_hol_GN.png"
 alt="The network of Roman sitechronologies with the Girvan-Newman communities visualized." />
 <figcaption aria-hidden="true">The network of Roman sitechronologies
 with the Girvan-Newman communities visualized.</figcaption>

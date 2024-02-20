@@ -9,6 +9,8 @@ dendroNetwork 0.5.2 (development)
 ### DOCUMENTATION FIXES
   * update acknowledgements in readme and paper
   * corrected text of documentation in cor_mat_overlap()
+  * added pkgdown site: https://ronaldvisser.github.io/dendroNetwork/
+  * moved some images to man/figures
 ### CONTINUOUS INTEGRATION
 
 dendroNetwork 0.5.1 (2024-02-10)
