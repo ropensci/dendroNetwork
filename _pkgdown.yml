@@ -1,4 +1,5 @@
 url: https://ronaldvisser.github.io/dendroNetwork/
 template:
   bootstrap: 5
+  theme: spacelab
 
