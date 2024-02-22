@@ -25,7 +25,6 @@ output:
     global_numbering: true
 knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding, output_format = "all") })
-
 ---
 
 ```{=html}
@@ -40,7 +39,7 @@ Dendrochronological analyses are often based on the comparison of tree-ring seri
 
 # Statement of need
 
-There are several packages available in R for dendrochronological research [@guiterman2020; @jevsenak2018; @campelo2012; @bunn2008; @shi2019; @vandermaaten-theunissen2015; @reynolds2021; @altman2014; @rademacher; @campelo2019; @haneca2023; @alday2018]. An overview with links to these packages can be found online (<https://ronaldvisser.github.io/Dendro_R/>). Some packages are specifically creates to obtain measurements [@campelo2019; @shi2019], while others are written for crossdating [@reynolds2021]. There are also various for analysing tree-ring data [@alday2018; @alday2018; @altman2014; @bunn2008; @campelo2012; @guiterman2020]. These R-packages in dendrochronology all fill different needs, but the nice thing is that these are all interconnected in some way in depending on each other, or that they build further into different avenues. Apart from depending on dendrochronological packages, various packages from the Tidyverse [@wickham2019] are often also needed. The various relations can easily be visualised using a network, with the edges based on the dependency of two packages on each other, and and arrow indicating the direction of the dependency.
+There are several packages available in R for dendrochronological research [@guiterman2020; @jevsenak2018; @campelo2012; @bunn2008; @shi2019; @vandermaaten-theunissen2015; @reynolds2021; @altman2014; @malevich2018; @rademacher; @campelo2019; @haneca2023; @alday2018]. An overview with links to these packages can be found online (<https://ronaldvisser.github.io/Dendro_R/>). Some packages are specifically creates to obtain measurements [@campelo2019; @shi2019], while others are written for crossdating [@reynolds2021]. There are also various for analysing tree-ring data [@alday2018; @alday2018; @altman2014; @bunn2008; @campelo2012; @guiterman2020]. These R-packages in dendrochronology all fill different needs, but the nice thing is that these are all interconnected in some way in depending on each other, or that they build further into different avenues. Apart from depending on dendrochronological packages, various packages from the Tidyverse [@wickham2019] are often also needed. The various relations can easily be visualised using a network, with the edges based on the dependency of two packages on each other, and and arrow indicating the direction of the dependency.
 
 ```{r, out.width="50%", fig.cap = "The interdependent relations between existing R-packages related to dendrochronology", echo=FALSE}
 g_dendro_packages <- igraph::graph( c("dplR", "dfoliatR", "tidyverse", "dfoliatR",
@@ -52,7 +51,7 @@ g_dendro_packages <- igraph::graph( c("dplR", "dfoliatR", "tidyverse", "dfoliatR
                      "dplR", "pointRes", "tidyverse", "pointRes",
                      "dplR", "RingdateR", "tidyverse", "RingdateR",
                      "dplR", "wiad", "tidyverse", "wiad",
-                     "dplR", "TRADER", "dplR", "xRing", "detrendeR", "xRing", "tidyverse","dendroSync"))
+                     "dplR", "TRADER", "dplR", "xRing", "detrendeR", "xRing", "tidyverse","dendroSync", "tidyverse", "burnr"))
 plot(g_dendro_packages, edge.arrow.size=.1, vertex.color="deepskyblue", 
      vertex.size=15, vertex.label.color="darkslategrey", vertex.label.family="sans", vertex.font.size=5,
      vertex.label.cex=0.8, vertex.label.dist=2, vertex.shape="sphere")
