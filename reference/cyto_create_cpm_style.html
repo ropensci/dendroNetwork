@@ -102,6 +102,7 @@ Before starting this function, Cytoscape must be up and running!</p>
 <span class="r-in"><span><span class="va">sim_table_hol</span> <span class="op">&lt;-</span> <span class="fu"><a href="sim_table.html">sim_table</a></span><span class="op">(</span><span class="va">hol_rom</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">g_hol</span> <span class="op">&lt;-</span> <span class="fu"><a href="dendro_network.html">dendro_network</a></span><span class="op">(</span><span class="va">sim_table_hol</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">hol_com_cpm_k3</span> <span class="op">&lt;-</span> <span class="fu"><a href="clique_community_names.html">clique_community_names</a></span><span class="op">(</span><span class="va">g_hol</span>, k <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="cyto_create_graph.html">cyto_create_graph</a></span><span class="op">(</span><span class="va">g_hol</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">cyto_create_cpm_style</span><span class="op">(</span><span class="va">g_hol</span>, k <span class="op">=</span> <span class="fl">3</span>, com_k <span class="op">=</span> <span class="va">hol_com_cpm_k3</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
 <span class="r-in"><span></span></span>
