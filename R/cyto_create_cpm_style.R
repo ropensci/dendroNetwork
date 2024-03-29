@@ -16,6 +16,7 @@
 #' sim_table_hol <- sim_table(hol_rom)
 #' g_hol <- dendro_network(sim_table_hol)
 #' hol_com_cpm_k3 <- clique_community_names(g_hol, k = 3)
+#' cyto_create_graph(g_hol)
 #' cyto_create_cpm_style(g_hol, k = 3, com_k = hol_com_cpm_k3)
 #' }
 #'
@@ -27,7 +28,7 @@ cyto_create_cpm_style <- function(graph_input, k = 3, com_k = NULL, style_name =
     stop()
   }
   if ("GreyNodesLabel" %in% RCy3::getVisualStyleNames() == FALSE) {
-    RCy3::importVisualStyles(filename = system.file("extdata", "NetworkStyles.xml", package = "DendroNetwork"))
+    RCy3::importVisualStyles(filename = system.file("extdata", "NetworkStyles.xml", package = "dendroNetwork"))
   }
   if (is.numeric(k)) {
     if (style_name == "auto") {

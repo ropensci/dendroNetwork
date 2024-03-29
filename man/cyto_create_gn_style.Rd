@@ -27,6 +27,7 @@ data(hol_rom)
 sim_table_hol <- sim_table(hol_rom)
 g_hol <- dendro_network(sim_table_hol)
 g_hol_gn <- gn_names(g_hol)
+cyto_create_graph(g_hol)
 cyto_create_gn_style(g_hol, gn_coms = g_hol_gn)
 }
 

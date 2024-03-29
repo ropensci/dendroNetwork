@@ -6,6 +6,7 @@ dendroNetwork 0.5.2 (development)
 ### BUG FIXES
   * corrected bug in cyto_clean_styles()
   * corrected error in wuchwerte(). It is not using the anos1 dataset from dplR anymore
+  * corrected error in cyto_create_gn_style and cyto_create_cpm_style
 ### DEPRECATED AND DEFUNCT
   * dev-folder removed, since this was not needed (created by biocthis)
 ### DOCUMENTATION FIXES
@@ -16,6 +17,7 @@ dendroNetwork 0.5.2 (development)
   * added Vignette on Cytoscape use
   * moved information for using big datasett to seperate vignette
   * updated README: added more installion instructions
+  * corrected examples in cyto_create_gn_style and cyto_create_cpm_style
 ### CONTINUOUS INTEGRATION
 
 dendroNetwork 0.5.1 (2024-02-10)
