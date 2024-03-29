@@ -3,19 +3,24 @@ Type: Package
 Title: Create networks of dendrochronological series using pairwise similarity
 Version: 0.5.2
 Authors@R: 
-    c(person(given ="Ronald", 
+    c(person(given = "Ronald", 
             family = "Visser", 
             email = "r.m.visser@saxion.nl", 
             role = c("aut", "cre"),
             comment = c(ORCID = "0000-0001-6966-1729")),
     person(given = "Angelino", 
-            family ="Salentino",
+            family = "Salentino",
             role = "ctb",
             comment = c(ORCID = "0000-0002-4763-3943")),
-   person(given = "Andy", 
-            family ="Bunn",
+    person(given = "Andy", 
+            family = "Bunn",
             role = "ctb",
-            comment = c(ORCID = "0000-0001-9027-2162")))
+            comment = c(ORCID = "0000-0001-9027-2162")),
+    person(given = "Kaija", 
+            family = "Gahm", 
+            role = "rev", 
+            comment = "Kaija reviewed the package for rOpenSci, see https://github.com/ropensci/software-review/issues/627#issuecomment-1993235710")
+            )
 Maintainer: Ronald Visser <r.m.visser@saxion.nl>
 Depends: R (>= 3.5.0)
 Imports: 
