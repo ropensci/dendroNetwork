@@ -18,14 +18,17 @@
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
-      <ul class="navbar-nav me-auto"><li class="active nav-item">
+      <ul class="navbar-nav me-auto"><li class="nav-item">
+  <a class="nav-link" href="../articles/dendroNetwork.html">Get started</a>
+</li>
+<li class="active nav-item">
   <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/cytoscape.html">Cytoscape visualization</a>
-    <a class="dropdown-item" href="../articles/dendroNetwork_use.html">dendroNetwork: how to use it</a>
+    <a class="dropdown-item" href="../articles/large_datasets_communities.html">Finding communities in large datasets</a>
   </div>
 </li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
@@ -97,17 +100,17 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">hol_rom</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">sim_table_hol</span> <span class="op">&lt;-</span> <span class="fu"><a href="sim_table.html">sim_table</a></span><span class="op">(</span><span class="va">hol_rom</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">dendro_network</span><span class="op">(</span><span class="va">sim_table_hol</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> IGRAPH 3a26873 UN-- 13 10 -- </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> IGRAPH 9f6dcb6 UN-- 13 10 -- </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + attr: name (v/c)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> + edges from 3a26873 (vertex names):</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> + edges from 9f6dcb6 (vertex names):</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1] HOL_IRRBH --HOL_TMB11H  HOL_KBMBH --HOL_MBUFH   HOL_KORBH --HOL_MB253H </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [4] HOL_LKBBH --HOL_MBRUH   HOL_LKBBH --HOL_MRBRH   HOL_MB253H--HOL_TRMB32H</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [7] HOL_MBRUH --HOL_MRBRH   HOL_MBUFH --HOL_MRBRH   HOL_MBUFH --HOL_PALZH  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [10] HOL_WEDEH --HOL_WEDWH  </span>
 <span class="r-in"><span><span class="fu">dendro_network</span><span class="op">(</span><span class="va">sim_table_hol</span>, r_threshold <span class="op">=</span> <span class="fl">0.4</span>, sgc_threshold <span class="op">=</span> <span class="fl">0.6</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> IGRAPH bfe9df6 UN-- 19 27 -- </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> IGRAPH cfffcd7 UN-- 19 27 -- </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> + attr: name (v/c)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> + edges from bfe9df6 (vertex names):</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> + edges from cfffcd7 (vertex names):</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1] HOL_AAHOH --HOL_MBUFH   HOL_IRRBH --HOL_TMB11H  HOL_KBMBH --HOL_MBUFH  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [4] HOL_KBMBH --HOL_MRBRH   HOL_KBMBH --HOL_WEDEH   HOL_KBMBH --HOL_WEDWH  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [7] HOL_KORBH --HOL_MB253H  HOL_KORBH --HOL_TATEH   HOL_KORBH --HOL_TRMB32H</span>
