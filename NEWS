@@ -5,6 +5,7 @@ dendroNetwork 0.5.2 (development)
 ### MINOR IMPROVEMENTS
 ### BUG FIXES
   * corrected bug in cyto_clean_styles()
+  * corrected error in wuchwerte(). It is not using the anos1 dataset from dplR anymore
 ### DEPRECATED AND DEFUNCT
   * dev-folder removed, since this was not needed (created by biocthis)
 ### DOCUMENTATION FIXES
