@@ -1,6 +1,20 @@
 # dendroNetwork: news {#dendroNetwork}
 
-## dendroNetwork 0.5.2 (development)
+## dendroNetwork 0.5.3 (development)
+
+### New features
+
+### Minor improvements
+
+### Bug Fixes
+
+### Deprecated and defunct
+
+### Documentation fixes
+
+### Continous integration
+
+## dendroNetwork 0.5.2
 
 ### New features
 
