@@ -4,13 +4,11 @@ bibliography: references.bib
 csl: journal-of-computer-applications-in-archaeology.csl
 ---
 
-# dendroNetwork <img src="man/figures/dendroNetwork_hexsticker.png" align="right" height="200" style="float:right; height:200px;">
+# dendroNetwork <img src="man/figures/dendroNetwork_hexsticker.png" align="right" height="200" style="float:right; height:200px;"/>
 
 <!-- badges: start -->
 
-[![Project Status: Active -- The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)  [![pkgcheck](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/pkgcheck.yaml/badge.svg)](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/pkgcheck.yaml) [![R-CMD-check](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/R-CMD-check.yaml)
-[![Status at rOpenSci Software Peer Review](https://badges.ropensci.org/627_status.svg)](https://github.com/ropensci/software-review/issues/627)
-[![DOI](https://zenodo.org/badge/582742098.svg)](https://zenodo.org/doi/10.5281/zenodo.10636310)
+[![Project Status: Active -- The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable) [![pkgcheck](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/pkgcheck.yaml/badge.svg)](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/pkgcheck.yaml) [![R-CMD-check](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/R-CMD-check.yaml) [![Status at rOpenSci Software Peer Review](https://badges.ropensci.org/627_status.svg)](https://github.com/ropensci/software-review/issues/627) [![DOI](https://zenodo.org/badge/582742098.svg)](https://zenodo.org/doi/10.5281/zenodo.10636310)
 
 <!-- badges: end -->
 
@@ -26,7 +24,7 @@ dendroNetwork is a package to create dendrochronological networks for gaining in
 
 ## Installation
 
-This package depends on RCy3, which is part of Bioconductor. Therefore it is recommended to install RCy3 first using:
+This package depends on [RCy3](https://www.bioconductor.org/packages/release/bioc/html/RCy3.html), which is part of Bioconductor. Therefore it is recommended to install RCy3 first using:
 
 ``` r
 if (!require("BiocManager", quietly = TRUE))
@@ -34,6 +32,8 @@ if (!require("BiocManager", quietly = TRUE))
 
 BiocManager::install("RCy3")
 ```
+
+The functionaliy of RCy3 depends on the installation of Cytoscape. It is therefore recommended to install Cyscape as well. Please follow the download and installation instructions for your operating system: <https://cytoscape.org/>.
 
 You can install the development version of dendroNetwork from [GitHub](https://github.com/RonaldVisser/DendroNetwork) with:
 
@@ -127,6 +127,10 @@ The workflow is similar as above, but with minor changes:
 7.  Continue with the visualisation in Cytoscape, see the previous [section on visualization in Cytoscape](#visualization_cytoscape)
 
 ## Citation
+
+```{r citation}
+citation("dendroNetwork")
+```
 
 If you use this software, please cite this using:
 

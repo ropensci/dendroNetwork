@@ -1,5 +1,5 @@
 
-# dendroNetwork <img src="man/figures/dendroNetwork_hexsticker.png" align="right" height="200" style="float:right; height:200px;">
+# dendroNetwork <img src="man/figures/dendroNetwork_hexsticker.png" align="right" height="200" style="float:right; height:200px;"/>
 
 <!-- badges: start -->
 
@@ -24,8 +24,10 @@ Visser and Vorst 2022)
 
 ## Installation
 
-This package depends on RCy3, which is part of Bioconductor. Therefore
-it is recommended to install RCy3 first using:
+This package depends on
+[RCy3](https://www.bioconductor.org/packages/release/bioc/html/RCy3.html),
+which is part of Bioconductor. Therefore it is recommended to install
+RCy3 first using:
 
 ``` r
 if (!require("BiocManager", quietly = TRUE))
@@ -33,6 +35,11 @@ if (!require("BiocManager", quietly = TRUE))
 
 BiocManager::install("RCy3")
 ```
+
+The functionaliy of RCy3 depends on the installation of Cytoscape. It is
+therefore recommended to install Cyscape as well. Please follow the
+download and installation instructions for your operating system:
+<https://cytoscape.org/>.
 
 You can install the development version of dendroNetwork from
 [GitHub](https://github.com/RonaldVisser/DendroNetwork) with:
@@ -145,6 +152,27 @@ The workflow is similar as above, but with minor changes:
     [section on visualization in Cytoscape](#visualization_cytoscape)
 
 ## Citation
+
+``` r
+citation("dendroNetwork")
+#> Warning in citation("dendroNetwork"): could not determine year for
+#> 'dendroNetwork' from package DESCRIPTION file
+#> To cite package 'dendroNetwork' in publications use:
+#> 
+#>   Visser R (????). _dendroNetwork: Create networks of
+#>   dendrochronological series using pairwise similarity_. R package
+#>   version 0.5.2, https://ronaldvisser.github.io/dendroNetwork/,
+#>   <https://github.com/RonaldVisser/dendroNetwork>.
+#> 
+#> A BibTeX entry for LaTeX users is
+#> 
+#>   @Manual{,
+#>     title = {dendroNetwork: Create networks of dendrochronological series using pairwise similarity},
+#>     author = {Ronald Visser},
+#>     note = {R package version 0.5.2, https://ronaldvisser.github.io/dendroNetwork/},
+#>     url = {https://github.com/RonaldVisser/dendroNetwork},
+#>   }
+```
 
 If you use this software, please cite this using:
 
