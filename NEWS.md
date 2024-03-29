@@ -12,13 +12,14 @@
 
 ### Bug Fixes
 
--   corrected bug in cyto_clean_styles()
--   corrected error in wuchwerte(). It is not using the anos1 dataset from dplR anymore
--   corrected error in cyto_create_gn_style and cyto_create_cpm_style
+-   corrected bug in `cyto_clean_styles()`
+-   corrected error in `wuchwerte()`. It is not using the `anos1` dataset from dplR anymore
+-   corrected error in `cyto_create_gn_style` and `cyto_create_cpm_style`
+-   updated `cyto_create_cpm_style` because it was not working properly.
 
 ### Deprecated and defunct
 
--   dev-folder removed, since this was not needed (created by biocthis)
+-   dev-folder removed, since this was not needed (created by `biocthis`)
 
 ### Documentation fixes
 
@@ -29,7 +30,7 @@
 -   added Vignette on Cytoscape use
 -   moved information for using big datasett to seperate vignette
 -   updated README: added more installion instructions
--   corrected examples in cyto_create_gn_style and cyto_create_cpm_style
+-   corrected examples in `cyto_create_gn_style` and `cyto_create_cpm_style`
 
 ### Continous integration
 
@@ -40,9 +41,9 @@
 ### Minor improvements
 
 -   replaced igraph::graph.data.frame() with igraph::graph_from_data_frame(), since the former is deprecated in igraph 2.0.0
--   replaced igraph::is.simple with igraph::is_simple
--   replaced igraph::decompose.graph with igraph::decompose
--   correction to calls to functions grDevices::colorRampPalette and stats::pnorm
+-   replaced `igraph::is.simple` with `igraph::is_simple`
+-   replaced `igraph::decompose.graph` with `igraph::decompose`
+-   correction to calls to functions `grDevices::colorRampPalette` and `stats::pnorm`
 
 ### Bug Fixes
 

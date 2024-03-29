@@ -24,6 +24,7 @@ Other contributors:
 \itemize{
   \item Angelino Salentino (\href{https://orcid.org/0000-0002-4763-3943}{ORCID}) [contributor]
   \item Andy Bunn (\href{https://orcid.org/0000-0001-9027-2162}{ORCID}) [contributor]
+  \item Kaija Gahm (Kaija reviewed the package for rOpenSci, see https://github.com/ropensci/software-review/issues/627#issuecomment-1993235710) [reviewer]
 }
 
 }

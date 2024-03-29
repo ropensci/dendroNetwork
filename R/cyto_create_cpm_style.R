@@ -33,6 +33,9 @@ cyto_create_cpm_style <- function(graph_input, k = 3, com_k = NULL, style_name =
   if (!igraph::is.igraph(graph_input)) {
     stop(paste0("Please use an igraph object as input. The current object is an ", class(graph_input), "."))
   }
+  if (is.null(com_k)) {
+    stop("Please present a data frame with the communities for the given clique size")
+  }
   if (is.numeric(k)) {
     if (style_name == "auto") {
       style_name <- paste0(substitute(graph_input), "_CPM(k=", k, ")")
@@ -43,17 +46,21 @@ cyto_create_cpm_style <- function(graph_input, k = 3, com_k = NULL, style_name =
     RCy3::copyVisualStyle("WhiteNodesLabel", style_name)
     # com_k <- clique_community_names(graph_input, k)
     com_count <- length(unique(com_k$com_name))
+    com_k_spread <- com_k %>%
+      dplyr::count(node, com_name) %>%
+      tidyr::spread(com_name, n)
+    RCy3::loadTableData(com_k_spread, data.key.column = "node")
     if (com_count == 1) {
       # RCy3::setNodeCustomPieChart does not work with a single column and therefore the nodes are coloured based on the single community
       RCy3::setNodeColorMapping(unique(com_k$com_name),
         table.column.values = 1,
         colors = RColorBrewer::brewer.pal(12, "Paired")[1],
+        mapping.type = "d",
         style.name = style_name
       )
     } else {
-      getPalette <- grDevices::colorRampPalette(RColorBrewer::brewer.pal(12, "Paired"))
       RCy3::setNodeCustomPieChart(unique(com_k$com_name),
-        colors = getPalette(com_count),
+        colors = RColorBrewer::brewer.pal(com_count, "Paired"),
         style.name = style_name
       )
     }

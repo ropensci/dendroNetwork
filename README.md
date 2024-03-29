@@ -20,7 +20,14 @@ dendroNetwork is a package to create dendrochronological networks for
 gaining insight into provenance or other patterns based on the
 statistical relations between tree ring curves. The code and the
 functions are based on several published papers (Visser 2021b, 2021a;
-Visser and Vorst 2022)
+Visser and Vorst 2022).
+
+The package is written for dendrochronologists and have a general
+knowledge on the discipline and used jargon. There is an excellent
+website for the introduction of using R in dendrochronology:
+<https://opendendro.org/r/>. The basics of dendrochronology can be found
+in handbooks (Cook and Kariukstis 1990; Speer 2010) or on
+<https://www.dendrohub.com/>.
 
 ## Installation
 
@@ -120,36 +127,19 @@ with the Girvan-Newman communities visualized.</figcaption>
 
 ## Usage for large datasets
 
-When using larger datasets calculating the table with similarities can
-take a lot of time, but finding communities even more. It is therefore
-recommended to use of parallel computing for Clique Percolation:
-`clique_community_names_par(network, k=3, n_core = 6)`. This reduces the
-amount of time significantly.
-
-The workflow is similar as above, but with minor changes:
-
-1.  load network
-
-2.  compute similarities
-
-3.  find the maximum clique size: `igraph::clique_num(network)`
-
-4.  detect communities for each clique size separately:
-
-    - `com_cpm_k3 <- clique_community_names_par(network, k=3, n_core = 6)`.
-
-    - `com_cpm_k4 <- clique_community_names_par(network, k=4, n_core = 6)`.
-
-    - and so on until the maximum clique size
-
-5.  merge these into a single `data frame` by
-    `com_cpm_all <- rbind(com_cpm_k3,com_cpm_k4, com_cpm_k5,... )`
-
-6.  create table for use in cytoscape with all communities:
-    `com_cpm_all <- com_cpm_all %>% dplyr::count(node, com_name) %>% tidyr::spread(com_name, n)`
-
-7.  Continue with the visualisation in Cytoscape, see the previous
-    [section on visualization in Cytoscape](#visualization_cytoscape)
+When using larger datasets of tree-ring series, calculating the table
+with similarities can take a lot of time, but finding communities even
+more. It is therefore recommended to use of parallel computing for
+Clique Percolation:
+`clique_community_names_par(network, k=3, n_core = 4)`. This reduces the
+amount of time significantly. For most datasets
+`clique_community_names()` is sufficiently fast and for smaller datasets
+`clique_community_names_par()` can even be slower due to the
+parallelisation. Therefore, the funtion `clique_community_names()`
+should be used initially and if this is very slow, start using
+`clique_community_names_par()`. See the separate
+[vignette](https://ronaldvisser.github.io/dendroNetwork/articles/large_datasets_communities.html)for
+that.
 
 ## Citation
 
@@ -196,6 +186,14 @@ optimized and also outputs the number of overlapping rings. Source code:
 <div id="refs" class="references csl-bib-body hanging-indent"
 line-spacing="2">
 
+<div id="ref-cook1990" class="csl-entry">
+
+Cook, ER and Kariukstis, LA. 1990. *Methods of dendrochronology.
+Applications in the environmental sciences*. Dordrecht: Kluwer Academic
+Publishers.
+
+</div>
+
 <div id="ref-girvan2002" class="csl-entry">
 
 Girvan, M and Newman, MEJ. 2002 Community structure in social and
@@ -230,6 +228,13 @@ N, Schwikowski, B and Ideker, T. 2003 Cytoscape: A software environment
 for integrated models of biomolecular interaction networks. *Genome
 Research* 13(11): 2498–2504. DOI:
 https://doi.org/[10.1101/gr.1239303](https://doi.org/10.1101/gr.1239303).
+
+</div>
+
+<div id="ref-speer2010" class="csl-entry">
+
+Speer, JH. 2010. *Fundamentals of tree ring research*. Tucson:
+University of Arizona Press.
 
 </div>
 

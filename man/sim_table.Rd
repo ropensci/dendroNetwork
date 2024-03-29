@@ -10,9 +10,9 @@ sim_table(trs1,
           last_digit_radius=FALSE)
 }
 \arguments{
-\item{trs1}{Rwl object with first tree-ring series to be compared with trs2}
+\item{trs1}{Rwl object with first tree-ring series to be compared with trs2. A rwl object is a data.frame with series or tree-ring widths as columns and years as rows. This object is created or read by using the dplR-package}
 
-\item{trs2}{Optional second rwl object with second tree-ring series to be compared with trs1. Use this is you have to datasets that you want to compare.}
+\item{trs2}{Optional second rwl object with second tree-ring series to be compared with trs1. Use this is you have two different datasets that you want to compare. Otherwise all series in trs1 are pair wise compared.}
 
 \item{min_overlap}{If the overlap of the compared series is longer or equal than this minimal value, the similarities will be calculated for the comparison}
 

@@ -4,12 +4,14 @@ output: rmarkdown::html_vignette
 bibliography: references.bib
 csl: journal-of-computer-applications-in-archaeology.csl
 vignette: >
-  %\VignetteIndexEntry{dendroNetwork_use}
+  %\VignetteIndexEntry{dendroNetwork}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
-dendroNetwork is a package to create dendrochronological networks for gaining insight into provenance or other patterns based on the statistical relations between tree ring curves. The code and the functions are based on several published papers [@visser2022; @visser2021; @visser2021]
+dendroNetwork is a package to create dendrochronological networks for gaining insight into provenance or other patterns based on the statistical relations between tree ring curves. The code and the functions are based on several published papers [@visser2022; @visser2021; @visser2021].
+
+The package is written for dendrochronologists and have a general knowledge on the discipline and used jargon. There is an excellent website for the introduction of using R in dendrochronology: <https://opendendro.org/r/>. The basics of dendrochronology can be found in handbooks [@speer2010; @cook1990] or on <https://www.dendrohub.com/>.
 
 ## Usage {#usage}
 
@@ -74,8 +76,6 @@ After creating the network in R, it is possible to visualize the network using C
 ![The network of Roman sitechronologies with the Girvan-Newman communities visualized.](images/g_hol_GN.png){width="800"}
 
 A more complete description of using Cytoscape with this package can be found here: `vignette("large_datasets_communities")`
-
-
 
 ## Citation
 

@@ -8,8 +8,8 @@
 #'           min_overlap=50,
 #'           last_digit_radius=FALSE)
 #'
-#' @param trs1 Rwl object with first tree-ring series to be compared with trs2
-#' @param trs2 Optional second rwl object with second tree-ring series to be compared with trs1. Use this is you have to datasets that you want to compare.
+#' @param trs1 Rwl object with first tree-ring series to be compared with trs2. A rwl object is a data.frame with series or tree-ring widths as columns and years as rows. This object is created or read by using the dplR-package
+#' @param trs2 Optional second rwl object with second tree-ring series to be compared with trs1. Use this is you have two different datasets that you want to compare. Otherwise all series in trs1 are pair wise compared.
 #' @param min_overlap If the overlap of the compared series is longer or equal than this minimal value, the similarities will be calculated for the comparison
 #' @param last_digit_radius Set this to TRUE if the last digit of a series name is the radius of the tree-ring series
 #' @returns The resulting list includes the names of the compared series, overlap, correlation (both with and without Hollstein-transformation), t-value based on these correlations, SGC, SSGC and the related probability of exceedence.
