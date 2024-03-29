@@ -10,7 +10,7 @@
 #' data(hol_rom)
 #' wuchswerte(hol_rom)
 #' # to convert a rwl object into wuchwerte use:
-#' dplR::as.rwl(apply(holrom, 2, wuchswerte))
+#' dplR::as.rwl(apply(hol_rom, 2, wuchswerte))
 #'
 #' @export wuchswerte
 

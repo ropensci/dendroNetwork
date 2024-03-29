@@ -22,6 +22,6 @@ Published on pages 14-15 in Hollstein, E. 1980. Mitteleuropäische Eichenchronol
 data(hol_rom)
 wuchswerte(hol_rom)
 # to convert a rwl object into wuchwerte use:
-dplR::as.rwl(apply(holrom, 2, wuchswerte))
+dplR::as.rwl(apply(hol_rom, 2, wuchswerte))
 
 }

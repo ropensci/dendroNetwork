@@ -60,7 +60,7 @@ plot(g_hol, vertex.color="deepskyblue", vertex.size=15, vertex.frame.color="gray
      vertex.label.color="darkslategrey", vertex.label.cex=0.8, vertex.label.dist=2) 
 ```
 
-For large datasets of tree-ring series see also `vignette("large_datasets_communities")`
+For large datasets of tree-ring series see also `vignette("large_datasets_communities")` .
 
 ### Visualization in Cytoscape {#visualization_cytoscape}
 
@@ -75,7 +75,7 @@ After creating the network in R, it is possible to visualize the network using C
 
 ![The network of Roman sitechronologies with the Girvan-Newman communities visualized.](images/g_hol_GN.png){width="800"}
 
-A more complete description of using Cytoscape with this package can be found here: `vignette("large_datasets_communities")`
+A more complete description of using Cytoscape with this package can be found here: `vignette("large_datasets_communities")` .
 
 ## Citation
 

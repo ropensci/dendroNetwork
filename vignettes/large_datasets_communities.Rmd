@@ -24,11 +24,11 @@ When using larger datasets of tree-ring series, calculating the table with simil
 
 The workflow is similar as described in the `vignette("dendroNetwork")`, but with minor changes:
 
-1.  load network
+1.  load network.
 
-2.  compute similarities
+2.  compute similarities.
 
-3.  find the maximum clique size: `igraph::clique_num(network)`
+3.  find the maximum clique size: `igraph::clique_num(network)` .
 
 4.  detect communities for each clique size separately:
 
@@ -36,10 +36,10 @@ The workflow is similar as described in the `vignette("dendroNetwork")`, but wit
 
     -   `com_cpm_k4 <- clique_community_names_par(network, k=4, n_core = 6)`.
 
-    -   and so on until the maximum clique size
+    -   and so on until the maximum clique size.
 
-5.  merge these into a single `data frame` by `com_cpm_all <- rbind(com_cpm_k3,com_cpm_k4, com_cpm_k5,... )`
+5.  merge these into a single `data frame` by `com_cpm_all <- rbind(com_cpm_k3,com_cpm_k4, com_cpm_k5,... )` .
 
-6.  create table for use in cytoscape with all communities: `com_cpm_all <- com_cpm_all %>% dplyr::count(node, com_name) %>% tidyr::spread(com_name, n)`
+6.  create table for use in cytoscape with all communities: `com_cpm_all <- com_cpm_all %>% dplyr::count(node, com_name) %>% tidyr::spread(com_name, n)` .
 
-7.  Continue with the visualisation in Cytoscape, see the relevant section in the `vignette("dendroNetwork")`
+7.  Continue with the visualisation in Cytoscape, see the relevant section in the `vignette("dendroNetwork")` .
