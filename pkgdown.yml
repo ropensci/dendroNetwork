@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   cytoscape: cytoscape.html
   dendroNetwork_use: dendroNetwork_use.html
-last_built: 2024-03-01T13:53Z
+last_built: 2024-03-29T11:05Z
 urls:
   reference: https://ronaldvisser.github.io/dendroNetwork/reference
   article: https://ronaldvisser.github.io/dendroNetwork/articles
