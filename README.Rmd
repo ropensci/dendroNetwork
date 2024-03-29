@@ -48,7 +48,7 @@ devtools::install_github("RonaldVisser/dendroNetwork", build_vignettes = TRUE)
 
 The package aims to make the creation of dendrochronological (provenance) networks as easy as possible. To be able to make use of all options, it is assumed that Cytoscape [@shannon2003]is installed (<https://cytoscape.org/>). Some data is included in this package, namely the Roman data published by Hollstein [@hollstein1980].
 
-The first steps are visualized in the flowchart below, including community detection using either (or both) the Girvan-Newman algorithm [@girvan2002] and Clique Percolation Method [@palla2005] for all clique sizes.
+The first steps are visualized in the flowchart below, including community detection using either (or both) the Girvan-Newman algorithm [@girvan2002] and Clique Percolation Method [@palla2005] for all clique sizes. Both methods are explained very well in the papers, and on wikipedia for both [CPM](https://en.wikipedia.org/wiki/Clique_percolation_method) and the [Girvan-Newman algorithm](https://en.wikipedia.org/wiki/Girvan%E2%80%93Newman_algorithm).
 
 ```{r flowchart_workflow, echo=FALSE, fig.width=15}
 DiagrammeR::grViz("
@@ -114,7 +114,7 @@ citation("dendroNetwork")
 
 If you use this software, please cite this using:
 
-Visser, R. (2024). dendroNetwork: a R-package to create dendrochronological provenance networks (Version 0.5.1) [Computer software]. <https://zenodo.org/doi/10.5281/zenodo.10636310>
+Visser, R. (2024). dendroNetwork: a R-package to create dendrochronological provenance networks (Version 0.5.2) [Computer software]. <https://zenodo.org/doi/10.5281/zenodo.10636310>
 
 ## Acknowledgements
 

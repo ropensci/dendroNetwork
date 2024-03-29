@@ -67,7 +67,11 @@ namely the Roman data published by Hollstein (Hollstein 1980).
 The first steps are visualized in the flowchart below, including
 community detection using either (or both) the Girvan-Newman algorithm
 (Girvan and Newman 2002) and Clique Percolation Method (Palla et al.
-2005) for all clique sizes.
+2005) for all clique sizes. Both methods are explained very well in the
+papers, and on wikipedia for both
+[CPM](https://en.wikipedia.org/wiki/Clique_percolation_method) and the
+[Girvan-Newman
+algorithm](https://en.wikipedia.org/wiki/Girvan%E2%80%93Newman_algorithm).
 
 ![](man/figures/README-flowchart_workflow-1.png)<!-- -->
 
@@ -167,7 +171,7 @@ citation("dendroNetwork")
 If you use this software, please cite this using:
 
 Visser, R. (2024). dendroNetwork: a R-package to create
-dendrochronological provenance networks (Version 0.5.1) \[Computer
+dendrochronological provenance networks (Version 0.5.2) \[Computer
 software\]. <https://zenodo.org/doi/10.5281/zenodo.10636310>
 
 ## Acknowledgements
