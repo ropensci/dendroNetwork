@@ -46,7 +46,7 @@ You can install the development version of dendroNetwork from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("RonaldVisser/dendroNetwork")
+devtools::install_github("RonaldVisser/dendroNetwork", build_vignettes = TRUE)
 ```
 
 ## Usage

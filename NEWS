@@ -13,6 +13,8 @@ dendroNetwork 0.5.2 (development)
   * added pkgdown site: https://ronaldvisser.github.io/dendroNetwork/
   * moved some images to man/figures
   * added Vignette on Cytoscape use
+  * moved information for using big datasett to seperate vignette
+  * updated README: added more installion instructions
 ### CONTINUOUS INTEGRATION
 
 dendroNetwork 0.5.1 (2024-02-10)

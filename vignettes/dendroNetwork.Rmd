@@ -58,6 +58,8 @@ plot(g_hol, vertex.color="deepskyblue", vertex.size=15, vertex.frame.color="gray
      vertex.label.color="darkslategrey", vertex.label.cex=0.8, vertex.label.dist=2) 
 ```
 
+For large datasets of tree-ring series see also `vignette("large_datasets_communities")`
+
 ### Visualization in Cytoscape {#visualization_cytoscape}
 
 After creating the network in R, it is possible to visualize the network using Cytoscape. The main advantage is that visualisation in Cytoscape is more easy, intuitive and visual. In addition, it is very easy to automate workflows in Cytoscape with R (using [RCy3](https://bioconductor.org/packages/release/bioc/html/RCy3.html)). For this purpose we need to start Cytoscape firstly. After Cytoscape has completely loaded, the next steps can be taken.
@@ -71,31 +73,9 @@ After creating the network in R, it is possible to visualize the network using C
 
 ![The network of Roman sitechronologies with the Girvan-Newman communities visualized.](images/g_hol_GN.png){width="800"}
 
-## Usage for large datasets
+A more complete description of using Cytoscape with this package can be found here: `vignette("large_datasets_communities")`
 
-When using larger datasets calculating the table with similarities can take a lot of time, but finding communities even more. It is therefore recommended to use of parallel computing for Clique Percolation: `clique_community_names_par(network, k=3, n_core = 6)`. This reduces the amount of time significantly.
 
-The workflow is similar as above, but with minor changes:
-
-1.  load network
-
-2.  compute similarities
-
-3.  find the maximum clique size: `igraph::clique_num(network)`
-
-4.  detect communities for each clique size separately:
-
-    -   `com_cpm_k3 <- clique_community_names_par(network, k=3, n_core = 6)`.
-
-    -   `com_cpm_k4 <- clique_community_names_par(network, k=4, n_core = 6)`.
-
-    -   and so on until the maximum clique size
-
-5.  merge these into a single `data frame` by `com_cpm_all <- rbind(com_cpm_k3,com_cpm_k4, com_cpm_k5,... )`
-
-6.  create table for use in cytoscape with all communities: `com_cpm_all <- com_cpm_all %>% dplyr::count(node, com_name) %>% tidyr::spread(com_name, n)`
-
-7.  Continue with the visualisation in Cytoscape, see the previous [section on visualization in Cytoscape](#visualization_cytoscape)
 
 ## Citation
 
