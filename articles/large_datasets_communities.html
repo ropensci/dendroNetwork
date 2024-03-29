@@ -87,16 +87,22 @@
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/RonaldVisser/dendroNetwork" class="external-link">dendroNetwork</a></span><span class="op">)</span></span></code></pre></div>
 <div class="section level2">
-<h2 id="community-detection-in-large-datasets">Community detection in large datasets<a class="anchor" aria-label="anchor" href="#community-detection-in-large-datasets"></a>
+<h2 id="community-detection-in-very-large-datasets">Community detection in very large datasets<a class="anchor" aria-label="anchor" href="#community-detection-in-very-large-datasets"></a>
 </h2>
 <p>When using larger datasets of tree-ring series, calculating the table
 with similarities can take a lot of time, but finding communities even
 more. It is therefore recommended to use of parallel computing for
 Clique Percolation:
-<code>clique_community_names_par(network, k=3, n_core = 6)</code>. This
-reduces the amount of time significantly.</p>
+<code>clique_community_names_par(network, k=3, n_core = 4)</code>. This
+reduces the amount of time significantly. For most datasets
+<code><a href="../reference/clique_community_names.html">clique_community_names()</a></code> is sufficiently fast and for
+smaller datasets <code><a href="../reference/clique_community_names_par.html">clique_community_names_par()</a></code> can even be
+slower due to the parallelisation. Therefore, the funtion
+<code><a href="../reference/clique_community_names.html">clique_community_names()</a></code> should be used initially and if
+this is very slow, start using
+<code><a href="../reference/clique_community_names_par.html">clique_community_names_par()</a></code>.</p>
 <p>The workflow is similar as described in the
-<code>vignette("dendronetwork")</code>, but with minor changes:</p>
+<code><a href="../articles/dendroNetwork.html">vignette("dendroNetwork")</a></code>, but with minor changes:</p>
 <ol style="list-style-type: decimal">
 <li><p>load network</p></li>
 <li><p>compute similarities</p></li>
@@ -115,7 +121,7 @@ reduces the amount of time significantly.</p>
 <li><p>create table for use in cytoscape with all communities:
 <code>com_cpm_all &lt;- com_cpm_all %&gt;% dplyr::count(node, com_name) %&gt;% tidyr::spread(com_name, n)</code></p></li>
 <li><p>Continue with the visualisation in Cytoscape, see the relevant
-section in the <code>vignette("dendronetwork")</code></p></li>
+section in the <code><a href="../articles/dendroNetwork.html">vignette("dendroNetwork")</a></code></p></li>
 </ol>
 </div>
   </main>
