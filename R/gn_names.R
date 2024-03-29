@@ -18,6 +18,9 @@
 #' @importFrom magrittr %>%
 
 gn_names <- function(g) {
+  if (!igraph::is.igraph(g)) {
+    stop(paste0("Please use an igraph object as input. The current object is an ", class(g), "."))
+  }
   g_GN <- igraph::cluster_edge_betweenness(g,
     weights = igraph::E(g)$weight, directed = FALSE,
     edge.betweenness = TRUE, merges = TRUE, bridges = TRUE,

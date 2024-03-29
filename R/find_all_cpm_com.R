@@ -17,6 +17,9 @@
 
 
 find_all_cpm_com <- function(graph_input, n_core = 0) {
+  if (!igraph::is.igraph(graph_input)) {
+    stop(paste0("Please use an igraph object as input. The current object is an ", class(graph_input), "."))
+  }
   if (n_core > 1) {
     for (i in 3:igraph::clique_num(graph_input)) {
       com_cpm <- clique_community_names_par(graph_input, i, n_core)

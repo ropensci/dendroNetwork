@@ -30,6 +30,9 @@
 #' @importFrom foreach %dopar%
 
 clique_community_names_par <- function(g, k = 3, n_core = 4) {
+  if (!igraph::is.igraph(g)) {
+    stop(paste0("Please use an igraph object as input. The current object is an ", class(g), "."))
+  }
   doParallel::registerDoParallel(cores = n_core)
   if (k > igraph::clique_num(g)) {
     stop(paste0("The maximum clique size in the network is ", igraph::clique_num(g), ". Therefore k cannot exceed this number"))

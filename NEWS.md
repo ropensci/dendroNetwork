@@ -7,6 +7,8 @@
 ### Minor improvements
 
 -   added a CONTRIBUTING.md file for contribution guidelines
+-   added check to determine if input graph is an igraph object for all functions that need an igraph as input
+-   added check to determine if input tree-ring dataset is rwl object for `sim_table`
 
 ### Bug Fixes
 

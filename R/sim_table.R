@@ -33,6 +33,14 @@ sim_table <- function(trs1,
                       trs2 = NULL,
                       min_overlap = 50,
                       last_digit_radius = FALSE) {
+  if (!("rwl" %in% class(trs1))) {
+    stop(paste0("Please use an rwl object as input. The current first input object is a ", class(trs1), "."))
+  }
+  if (!is.null(trs2)) {
+    if (!"rwl" %in% class(trs2)) {
+      stop(paste0("Please use an rwl object as input. The current second input object is a ", class(trs2), "."))
+    }
+  }
   # nr of series in tree-ring series
   n1 <- dim(trs1)[2]
   if (is.null(trs2)) {

@@ -30,6 +30,9 @@ cyto_create_cpm_style <- function(graph_input, k = 3, com_k = NULL, style_name =
   if ("GreyNodesLabel" %in% RCy3::getVisualStyleNames() == FALSE) {
     RCy3::importVisualStyles(filename = system.file("extdata", "NetworkStyles.xml", package = "dendroNetwork"))
   }
+  if (!igraph::is.igraph(graph_input)) {
+    stop(paste0("Please use an igraph object as input. The current object is an ", class(graph_input), "."))
+  }
   if (is.numeric(k)) {
     if (style_name == "auto") {
       style_name <- paste0(substitute(graph_input), "_CPM(k=", k, ")")
