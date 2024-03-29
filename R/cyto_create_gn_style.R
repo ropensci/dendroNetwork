@@ -28,7 +28,7 @@ cyto_create_gn_style <- function(graph_input, gn_coms = NULL, style_name = "auto
   if ("GreyNodesLabel" %in% RCy3::getVisualStyleNames() == FALSE) {
     RCy3::importVisualStyles(filename = system.file("extdata", "NetworkStyles.xml", package = "dendroNetwork"))
   }
-  if (!igraph::is.igraph(graph_input)) {
+  if (!igraph::is_igraph(graph_input)) {
     stop(paste0("Please use an igraph object as input. The current object is an ", class(graph_input), "."))
   }
   if (style_name == "auto") {

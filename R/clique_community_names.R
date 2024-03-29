@@ -25,7 +25,7 @@
 #' @importFrom magrittr %>%
 
 clique_community_names <- function(g, k = 3) {
-  if (!igraph::is.igraph(g)) {
+  if (!igraph::is_igraph(g)) {
     stop(paste0("Please use an igraph object as input. The current object is an ", class(g), "."))
   }
   if (k > igraph::clique_num(g)) {

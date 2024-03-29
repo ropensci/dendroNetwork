@@ -33,7 +33,7 @@ cyto_create_graph <- function(graph_input,
     message("Cytoscape is not running, please start Cytoscape first")
     stop()
   }
-  if (!igraph::is.igraph(graph_input)) {
+  if (!igraph::is_igraph(graph_input)) {
     stop(paste0("Please use an igraph object as input. The current object is an ", class(graph_input), "."))
   }
   varnames <- all.vars(match.call())

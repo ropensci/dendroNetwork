@@ -30,7 +30,7 @@
 #' @importFrom foreach %dopar%
 
 clique_community_names_par <- function(g, k = 3, n_core = 4) {
-  if (!igraph::is.igraph(g)) {
+  if (!igraph::is_igraph(g)) {
     stop(paste0("Please use an igraph object as input. The current object is an ", class(g), "."))
   }
   doParallel::registerDoParallel(cores = n_core)

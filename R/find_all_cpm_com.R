@@ -17,7 +17,7 @@
 
 
 find_all_cpm_com <- function(graph_input, n_core = 0) {
-  if (!igraph::is.igraph(graph_input)) {
+  if (!igraph::is_igraph(graph_input)) {
     stop(paste0("Please use an igraph object as input. The current object is an ", class(graph_input), "."))
   }
   if (n_core > 1) {
