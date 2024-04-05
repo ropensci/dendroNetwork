@@ -3,7 +3,7 @@
 \docType{data}
 \name{RING_Visser_2021}
 \alias{RING_Visser_2021}
-\title{Roman tree-ring site chronologies from Hollstein}
+\title{Roman tree-ring site chronologies}
 \format{
 An object of class \code{"rwl"}.
 }

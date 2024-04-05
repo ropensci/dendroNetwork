@@ -1,0 +1,44 @@
+---
+title: "dendrochronological data"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{dendrochronological_data}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+bibliography: references.bib
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(dendroNetwork)
+```
+
+# Dendrochronological data (or tree-ring data)
+
+The package dendroNetwork is based on using dendrochronological (or tree-ring) data. This data is the input for creating networks and uses the same data format as used in dplR [@bunn2008]. The base format is rwl-format as described here: <https://www.ncei.noaa.gov/pub/data/paleo/treering/treeinfo.txt>. This data can be imported into R using `dplR::read.tucson("filename.rwl")` . The resulting dataframe has the series in columns and the years as rows, as shown below for a selection of data from one of the sample data sets in `dendroNetwork::hol_rom[400:410,1:4]` :
+
+```{r, echo=FALSE}
+knitr::kable(hol_rom[400:410,1:4])
+```
+
+The row names are the years to which the tree rings are dated, in this case the years -103 to -93, in other words 102 to 92 BCE (the year 0 does not exist, only mathematically). The column headers are the identification or names of the tree-ring series. The values represent the width of a tree ring in millimeters. While dendroNetwork is written based on measurements of tree-ring widths, other time series with a similar rwl-format can also be used as input.
+
+The packages comes with two sample data sets to try the package.
+
+## hol_rom: Roman tree-ring site chronologies from Hollstein
+
+These are dendrochronological site chronologies published by Ernst Hollstein in the 1970s and 1980s [@hollstein1972; @hollstein1980]. These 52 (pre) Roman site chronologies date between 502 BC and AD 550. This selection of (pre)Roman site-chronologies was also used in an earlier study.
+
+## RING_Visser_2021: Roman tree-ring site chronologies
+
+Dendrochronological site chronologies published earlier [@visser; @visser2021a]. These (pre) Roman site chronologies date between 520 BC and AD 663 and are based on the material from RING (full references to the source data can be found in the [supplementary data](https://github.com/RonaldVisser/ProvenanceNetworks/blob/master/SupplementaryTables/Supplementary_table_1a_DOI_data.csv) [@visser2021a].
+
+The series are named based on their location, species and type of standardisation For example: ABC_Q1M or ABC_Q1C consist of the same material from the site ABC (Abcoude), species Q(uercus), chronology 1 and standardisation C(ofecha) and M(eans). See Visser(2021) for more explanation.
+
+# References

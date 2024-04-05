@@ -13,6 +13,7 @@
 ### Documentation fixes
 
 -   added descriptions of Cytoscape in the readme and vignettes
+-   added vignette: dendrochronological_data which describes the data to be used.
 
 ### Continous integration
 

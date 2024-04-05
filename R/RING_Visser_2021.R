@@ -1,4 +1,4 @@
-#' Roman tree-ring site chronologies from Hollstein
+#' Roman tree-ring site chronologies
 #'
 #' Dendrochronological site chronologies published by Visser (2021, 2022). These (pre) Roman site chronologies date between 520 BC and AD 663 and are based on the material of RING (full references to the source data can be found in the supplementary data of Visser 2021)
 #' The series are named based on their location, species and type of standardisation
