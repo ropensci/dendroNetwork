@@ -22,10 +22,10 @@ statistical relations between tree ring curves. The code and the
 functions are based on several published papers (Visser 2021b, 2021a;
 Visser and Vorst 2022).
 
-The package is written for dendrochronologists and have a general
+The package is written for dendrochronologists who have a general
 knowledge on the discipline and used jargon. There is an excellent
 website for the introduction of using R in dendrochronology:
-<https://opendendro.org/r/>. The basics of dendrochronology can be found
+<https://opendendro.org/r/>. An overview of other packages for dendrochronology is given here: <https://ronaldvisser.github.io/Dendro_R/>. The basics of dendrochronology can be found
 in handbooks (Cook and Kariukstis 1990; Speer 2010) or on
 <https://www.dendrohub.com/>.
 
