@@ -19,7 +19,11 @@ Authors@R:
     person(given = "Kaija", 
             family = "Gahm", 
             role = "rev", 
-            comment = "Kaija reviewed the package for rOpenSci, see https://github.com/ropensci/software-review/issues/627#issuecomment-1993235710")
+            comment = "Kaija Gahm reviewed the package for rOpenSci, see https://github.com/ropensci/software-review/issues/627#issuecomment-1993235710")
+    person(given = "Zachary", 
+            family = "Gajewski", 
+            role = "rev", 
+            comment = "Zachary Gajewski reviewed the package for rOpenSci, see https://github.com/ropensci/software-review/issues/627#issuecomment-2037644081")
             )
 Maintainer: Ronald Visser <r.m.visser@saxion.nl>
 Depends: R (>= 3.5.0)
