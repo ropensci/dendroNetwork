@@ -1,6 +1,20 @@
 # dendroNetwork: news {#dendroNetwork}
 
-## dendroNetwork 0.5.3 (development)
+## dendroNetwork 0.5.4 (development)
+
+### New features
+
+### Minor improvements
+
+### Bug Fixes
+
+### Deprecated and defunct
+
+### Documentation fixes
+
+### Continous integration
+
+## dendroNetwork 0.5.3 (05-04-2024)
 
 ### New features
 
@@ -14,10 +28,11 @@
 
 -   added descriptions of Cytoscape in the readme and vignettes
 -   added vignette: dendrochronological_data which describes the data to be used.
+-   minor corrections
 
 ### Continous integration
 
-## dendroNetwork 0.5.2
+## dendroNetwork 0.5.2 (29-03-2024)
 
 ### New features
 
@@ -51,7 +66,7 @@
 
 ### Continous integration
 
-# dendroNetwork 0.5.1 (2024-02-10)
+## dendroNetwork 0.5.1 (10-02-2024)
 
 ### New features
 
@@ -81,7 +96,7 @@
 -   added more tests
 -   excluded Cytoscape-functions from testing
 
-# dendroNetwork 0.5.0 (2024-02-08)
+## dendroNetwork 0.5.0 (08-02-2024)
 
 ### New features
 
