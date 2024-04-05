@@ -20,7 +20,7 @@ library(dendroNetwork)
 
 # Required Software
 
-dendroNetwork uses RCy3 (<https://www.bioconductor.org/packages/release/bioc/html/RCy3.html>) to connect with Cytoscape and visualize networks. You will need to install and launch Cytoscape:
+dendroNetwork uses RCy3 (<https://www.bioconductor.org/packages/release/bioc/html/RCy3.html>) to connect with Cytoscape and visualize networks. Cytoscape is open source software and platform independent and provides easy visual access to complex networks, including the attributes of both nodes and edges in a network (see the [Cytoscape-website](https://cytoscape.org/what_is_cytoscape.html) for more information). You will need to install and launch Cytoscape:
 
 -   Download the latest Cytoscape from <http://www.cytoscape.org/download.php>
 

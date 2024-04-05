@@ -12,6 +12,8 @@
 
 ### Documentation fixes
 
+-   added descriptions of Cytoscape in the readme and vignettes
+
 ### Continous integration
 
 ## dendroNetwork 0.5.2

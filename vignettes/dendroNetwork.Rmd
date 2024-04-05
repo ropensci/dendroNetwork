@@ -15,7 +15,7 @@ The package is written for dendrochronologists and have a general knowledge on t
 
 ## Usage {#usage}
 
-The package aims to make the creation of dendrochronological (provenance) networks as easy as possible. To be able to make use of all options, it is assumed that Cytoscape [@shannon2003] is installed (<https://cytoscape.org/>). Some data is included in this package, namely the Roman data published by Hollstein [@hollstein1980].
+The package aims to make the creation of dendrochronological (provenance) networks as easy as possible. To be able to make use of all options, it is assumed that Cytoscape [@shannon2003] is installed (<https://cytoscape.org/>). Cytoscape is open source software and platform independent and provides easy visual access to complex networks, including the attributes of both nodes and edges in a network (see the [Cytoscape-website](https://cytoscape.org/what_is_cytoscape.html) for more information). Some data is included in this package, namely the Roman data published by Hollstein [@hollstein1980].
 
 The first steps are visualized in the flowchart below, including community detection using either (or both) the Girvan-Newman algorithm [@girvan2002] and Clique Percolation Method [@palla2005] for all clique sizes. Both methods are explained very well in the papers, and on wikipedia for both [CPM](https://en.wikipedia.org/wiki/Clique_percolation_method) and the [Girvan-Newman algorithm](https://en.wikipedia.org/wiki/Girvan%E2%80%93Newman_algorithm).
 
