@@ -152,27 +152,6 @@ for that.
 
 ## Citation
 
-``` r
-citation("dendroNetwork")
-#> Warning in citation("dendroNetwork"): could not determine year for
-#> 'dendroNetwork' from package DESCRIPTION file
-#> To cite package 'dendroNetwork' in publications use:
-#> 
-#>   Visser R (????). _dendroNetwork: Create networks of
-#>   dendrochronological series using pairwise similarity_. R package
-#>   version 0.5.2, https://ronaldvisser.github.io/dendroNetwork/,
-#>   <https://github.com/RonaldVisser/dendroNetwork>.
-#> 
-#> A BibTeX entry for LaTeX users is
-#> 
-#>   @Manual{,
-#>     title = {dendroNetwork: Create networks of dendrochronological series using pairwise similarity},
-#>     author = {Ronald Visser},
-#>     note = {R package version 0.5.2, https://ronaldvisser.github.io/dendroNetwork/},
-#>     url = {https://github.com/RonaldVisser/dendroNetwork},
-#>   }
-```
-
 If you use this software, please cite this using:
 
 Visser, R. (2024). dendroNetwork: a R-package to create
