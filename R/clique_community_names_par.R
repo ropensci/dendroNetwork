@@ -26,7 +26,6 @@
 #'
 #' @export clique_community_names_par
 #'
-#' @importFrom magrittr %>%
 #' @importFrom foreach %dopar%
 
 clique_community_names_par <- function(g, k = 3, n_core = 4) {
@@ -38,7 +37,7 @@ clique_community_names_par <- function(g, k = 3, n_core = 4) {
     stop(paste0("The maximum clique size in the network is ", igraph::clique_num(g), ". Therefore k cannot exceed this number"))
   }
   # find cliques
-  clq <- igraph::cliques(g, min = k, max = k) %>% lapply(as.vector)
+  clq <- igraph::cliques(g, min = k, max = k) |> lapply(as.vector)
   if(length(clq)<2) {
     stop(paste0("The network has only ", length(clq), " cliques and this function is for larger networks. Please use the clique_community_names() function"))
 
@@ -46,7 +45,7 @@ clique_community_names_par <- function(g, k = 3, n_core = 4) {
   # get node names
   node <- (igraph::V(g)$name)
   node <- as.data.frame(node)
-  node <- node %>% dplyr::mutate(id = dplyr::row_number())
+  node <- node |> dplyr::mutate(id = dplyr::row_number())
   # find edges
   # find edges between cliques
   edges <- c()
@@ -61,7 +60,7 @@ clique_community_names_par <- function(g, k = 3, n_core = 4) {
   }
 
   # Create an empty graph and then adding edges
-  clq.graph <- igraph::make_empty_graph(n = length(clq)) %>% igraph::add_edges(unlist(edges))
+  clq.graph <- igraph::make_empty_graph(n = length(clq)) |> igraph::add_edges(unlist(edges))
   if (!igraph::is_simple(clq.graph)) {
     clq.graph <- igraph::simplify(clq.graph)
   }
@@ -79,8 +78,8 @@ clique_community_names_par <- function(g, k = 3, n_core = 4) {
   colnames(commu) <- c("com", "id")
   com_all <- merge(commu, node, by = "id")
   leading_zeroes <- nchar(length(comp_n))
-  com_all <- com_all %>% dplyr::mutate(com_name = paste0("CPM_K", k, "_", formatC(com, width = leading_zeroes, flag = "0")))
-  com_all <- com_all %>% dplyr::select(node, com_name)
-  com_all <- com_all %>% dplyr::arrange(com_name, node)
+  com_all <- com_all |> dplyr::mutate(com_name = paste0("CPM_K", k, "_", formatC(com, width = leading_zeroes, flag = "0")))
+  com_all <- com_all |> dplyr::select(node, com_name)
+  com_all <- com_all |> dplyr::arrange(com_name, node)
   com_all
 }

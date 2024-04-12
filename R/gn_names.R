@@ -15,7 +15,6 @@
 #'
 #' @export gn_names
 #'
-#' @importFrom magrittr %>%
 
 gn_names <- function(g) {
   if (!igraph::is_igraph(g)) {
@@ -29,9 +28,9 @@ gn_names <- function(g) {
   com_all <- cbind(igraph::V(g)$name, g_GN$membership)
   colnames(com_all) <- c("node", "GN_com")
   leading_zeroes <- max(nchar(com_all[, 2]))
-  com_all <- as.data.frame(com_all) %>% dplyr::mutate(com_name = paste0("GN_", formatC(as.numeric(GN_com), width = leading_zeroes, flag = "0")))
-  com_all <- com_all %>% dplyr::select(node, com_name)
-  com_all <- com_all %>% dplyr::select(node, com_name)
-  com_all <- com_all %>% dplyr::arrange(com_name, node)
+  com_all <- as.data.frame(com_all) |> dplyr::mutate(com_name = paste0("GN_", formatC(as.numeric(GN_com), width = leading_zeroes, flag = "0")))
+  com_all <- com_all |> dplyr::select(node, com_name)
+  com_all <- com_all |> dplyr::select(node, com_name)
+  com_all <- com_all |> dplyr::arrange(com_name, node)
   com_all
 }

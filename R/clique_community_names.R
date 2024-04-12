@@ -22,7 +22,6 @@
 #'
 #' @export clique_community_names
 #'
-#' @importFrom magrittr %>%
 
 clique_community_names <- function(g, k = 3) {
   if (!igraph::is_igraph(g)) {
@@ -31,11 +30,11 @@ clique_community_names <- function(g, k = 3) {
   if (k > igraph::clique_num(g)) {
     stop(paste0("The maximum clique size in the network is ", igraph::clique_num(g), ". Therefore k cannot exceed this number"))
   }
-  clq <- igraph::cliques(g, min = k, max = k) %>% lapply(as.vector)
+  clq <- igraph::cliques(g, min = k, max = k) |> lapply(as.vector)
   # get node names
   node <- (igraph::V(g)$name)
   node <- as.data.frame(node)
-  node <- node %>% dplyr::mutate(id = dplyr::row_number())
+  node <- node |> dplyr::mutate(id = dplyr::row_number())
   # find edges
   edges <- c()
   for (i in seq_along(clq)) {
@@ -46,7 +45,7 @@ clique_community_names <- function(g, k = 3) {
     }
   }
   # Create an empty graph and then adding edges
-  clq.graph <- igraph::make_empty_graph(n = length(clq)) %>% igraph::add_edges(unlist(edges))
+  clq.graph <- igraph::make_empty_graph(n = length(clq)) |> igraph::add_edges(unlist(edges))
   if (!igraph::is_simple(clq.graph)) {
     clq.graph <- igraph::simplify(clq.graph)
   }
@@ -64,8 +63,8 @@ clique_community_names <- function(g, k = 3) {
   colnames(commu) <- c("com", "id")
   com_all <- merge(commu, node, by = "id")
   leading_zeroes <- nchar(length(comp_n))
-  com_all <- com_all %>% dplyr::mutate(com_name = paste0("CPM_K", k, "_", formatC(com, width = leading_zeroes, flag = "0")))
-  com_all <- com_all %>% dplyr::select(node, com_name)
-  com_all <- com_all %>% dplyr::arrange(com_name, node)
+  com_all <- com_all |> dplyr::mutate(com_name = paste0("CPM_K", k, "_", formatC(com, width = leading_zeroes, flag = "0")))
+  com_all <- com_all |> dplyr::select(node, com_name)
+  com_all <- com_all |> dplyr::arrange(com_name, node)
   com_all
 }

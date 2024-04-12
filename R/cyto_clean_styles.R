@@ -8,7 +8,6 @@
 #'
 #' @export cyto_clean_styles
 #'
-#' @importFrom magrittr %>%
 
 cyto_clean_styles <- function() { # nocov start
   if (length(RCy3::cytoscapeVersionInfo()) != 2) {

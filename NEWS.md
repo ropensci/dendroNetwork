@@ -4,7 +4,17 @@
 
 ### New features
 
+-   replaced magrittr-pipe %\>% by native R pipe \|\>
+
+    -   dependency of magrittr was removed
+
+    -   dependency on R-version changed to \>= 4.1.0
+
+-   .
+
 ### Minor improvements
+
+-   Tested with latest version of Cytoscape: 3.10.2 (<https://cytoscape.org/download.html>) and all works fine
 
 ### Bug Fixes
 

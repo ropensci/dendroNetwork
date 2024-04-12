@@ -139,7 +139,7 @@ The main advantage is that visualisation in Cytoscape is more easy, intuitive an
 3.  To visualize the styles for CPM with only k=3: `cyto_create_cpm_style(g_hol, k=3, com_k = g_hol_cpm)`
     -   This can be repeated for all possible clique sizes. To find the maximum clique size in a network, please use: `igraph::clique_num(g_hol)`.
     -   To automate this: `for (i in 3:igraph::clique_num(g_hol)) { cyto_create_cpm_style(g_hol, k=i, com_k = g_hol_cpm)}`.
-4.  To visualize the styles using the Girvan-Newman algorithm (GN): `cyto_create_gn_style(g_hol)` This would look something like this in Cytoscape (see Figure \@ref(fig:cytoscape-network)).
+4.  To visualize the styles using the Girvan-Newman algorithm (GN): This would look something like this in Cytoscape (see Figure \@ref(fig:cytoscape-network)).
 
 ```{r, cytoscape-network, echo=FALSE, fig.cap="The network of Roman sitechronologies with the Girvan-Newman communities visualized using Cytoscape.", out.width = "75%"}
 knitr::include_graphics("g_hol_GN.png")

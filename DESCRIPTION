@@ -1,7 +1,7 @@
 Package: dendroNetwork
 Type: Package
 Title: Create networks of dendrochronological series using pairwise similarity
-Version: 0.5.3
+Version: 0.5.4
 Authors@R: 
     c(person(given = "Ronald", 
             family = "Visser", 
@@ -26,7 +26,7 @@ Authors@R:
             comment = "Zachary Gajewski reviewed the package for rOpenSci, see https://github.com/ropensci/software-review/issues/627#issuecomment-2037644081")
             )
 Maintainer: Ronald Visser <r.m.visser@saxion.nl>
-Depends: R (>= 3.5.0)
+Depends: R (>= 4.1.0)
 Imports: 
     dplR (>= 1.7.2),
     igraph,
@@ -37,7 +37,6 @@ Imports:
     RColorBrewer,
     tidyr,
     foreach,
-    magrittr,
     lifecycle,
     doParallel,
     stats,

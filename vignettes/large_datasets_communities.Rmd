@@ -40,6 +40,6 @@ The workflow is similar as described in the `vignette("dendroNetwork")`, but wit
 
 5.  merge these into a single `data frame` by `com_cpm_all <- rbind(com_cpm_k3,com_cpm_k4, com_cpm_k5,... )` .
 
-6.  create table for use in cytoscape with all communities: `com_cpm_all <- com_cpm_all %>% dplyr::count(node, com_name) %>% tidyr::spread(com_name, n)` .
+6.  create table for use in cytoscape with all communities: `com_cpm_all <- com_cpm_all |> dplyr::count(node, com_name) |> tidyr::spread(com_name, n)` .
 
 7.  Continue with the visualisation in Cytoscape, see the relevant section in the `vignette("dendroNetwork")` .

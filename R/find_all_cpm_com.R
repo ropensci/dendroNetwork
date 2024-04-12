@@ -13,7 +13,6 @@
 #'
 #' @export find_all_cpm_com
 #'
-#' @importFrom magrittr %>%
 
 
 find_all_cpm_com <- function(graph_input, n_core = 0) {
@@ -39,8 +38,8 @@ find_all_cpm_com <- function(graph_input, n_core = 0) {
       }
     }
   }
-  com_cpm_all <- com_cpm_all %>%
-    dplyr::count(node, com_name) %>%
+  com_cpm_all <- com_cpm_all |>
+    dplyr::count(node, com_name) |>
     tidyr::spread(com_name, n)
   com_cpm_all
 }

@@ -46,8 +46,8 @@ cyto_create_cpm_style <- function(graph_input, k = 3, com_k = NULL, style_name =
     RCy3::copyVisualStyle("WhiteNodesLabel", style_name)
     # com_k <- clique_community_names(graph_input, k)
     com_count <- length(unique(com_k$com_name))
-    com_k_spread <- com_k %>%
-      dplyr::count(node, com_name) %>%
+    com_k_spread <- com_k |>
+      dplyr::count(node, com_name) |>
       tidyr::spread(com_name, n)
     RCy3::loadTableData(com_k_spread, data.key.column = "node")
     if (com_count == 1) {
