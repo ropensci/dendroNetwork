@@ -22,7 +22,7 @@
 
 ### Documentation fixes
 
-### Continous integration
+### Continuous integration
 
 ## dendroNetwork 0.5.3 (05-04-2024)
 
@@ -40,7 +40,7 @@
 -   added vignette: dendrochronological_data which describes the data to be used.
 -   minor corrections
 
-### Continous integration
+### Continuous integration
 
 ## dendroNetwork 0.5.2 (29-03-2024)
 
@@ -74,7 +74,7 @@
 -   updated README: added more installion instructions
 -   corrected examples in `cyto_create_gn_style` and `cyto_create_cpm_style`
 
-### Continous integration
+### Continuous integration
 
 ## dendroNetwork 0.5.1 (10-02-2024)
 
@@ -100,7 +100,7 @@
 -   correction in clique_community_names(\_par) functions, due to [k] seen as link
 -   added \dontrun{} to cytoscape functions
 
-### Continous integration
+### Continuous integration
 
 -   added GitHub Action for BiocMananager (<https://lcolladotor.github.io/biocthis/index.html>)
 -   added more tests
@@ -110,4 +110,14 @@
 
 ### New features
 
--   First public release \### Minor improvements \### Bug Fixes \### Deprecated and defunct \### Documentation fixes \### Continous integration
+First public release
+
+### Minor improvements
+
+### Bug Fixes
+
+## Deprecated and defunct
+
+### Documentation fixes
+
+### Continuous integration
