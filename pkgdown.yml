@@ -6,7 +6,7 @@ articles:
   dendrochronological_data: dendrochronological_data.html
   dendroNetwork: dendroNetwork.html
   large_datasets_communities: large_datasets_communities.html
-last_built: 2024-04-26T10:16Z
+last_built: 2024-04-26T10:18Z
 urls:
   reference: https://docs.ropensci.org/dendroNetwork/reference
   article: https://docs.ropensci.org/dendroNetwork/articles
