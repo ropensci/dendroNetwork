@@ -12,6 +12,8 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 [![R-CMD-check](https://github.com/ropensci/dendroNetwork/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/dendroNetwork/actions/workflows/R-CMD-check.yaml)
 [![Status at rOpenSci Software Peer
 Review](https://badges.ropensci.org/627_status.svg)](https://github.com/ropensci/software-review/issues/627)
+[![dynamite status
+badge](https://ropensci.r-universe.dev/badges/dendroNetwork)](https://ropensci.r-universe.dev)
 [![DOI](https://zenodo.org/badge/582742098.svg)](https://zenodo.org/doi/10.5281/zenodo.10636310)
 
 <!-- badges: end -->
