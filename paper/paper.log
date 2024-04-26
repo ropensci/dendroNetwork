@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.26)  26 APR 2024 20:39
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.26)  26 APR 2024 21:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1017,12 +1017,12 @@ Package fancyhdr Warning: \headheight is too small (62.59596pt):
 File: g_hol_GN.png Graphic file (type bmp)
 <g_hol_GN.png>
 
-Overfull \hbox (7.1103pt too wide) in paragraph at lines 516--525
+Overfull \hbox (7.1103pt too wide) in paragraph at lines 516--527
 [][][][][][][][][][][][][][][][][][][][][][][][][][]$[][]\TU/lmr/m/n/10 . I want to thank Andy Bunn for the function cor.with.limit.R()
  []
 
 
-Underfull \hbox (badness 1342) in paragraph at lines 516--525
+Underfull \hbox (badness 1342) in paragraph at lines 516--527
 \TU/lmr/m/n/10 which I adapted for use in this package as cor_mat_overlap() (source: [][]$[][][][][] []
  []
 
@@ -1036,12 +1036,12 @@ Package fancyhdr Warning: \headheight is too small (62.59596pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.95425pt}.
 
 [5]
-Underfull \hbox (badness 2443) in paragraph at lines 567--572
+Underfull \hbox (badness 2443) in paragraph at lines 569--574
 []\TU/lmr/m/n/10 Campelo, F., Nabais, C., Carvalho, A., & Vieira, J. (2016). tracheideR—
  []
 
 
-Underfull \hbox (badness 1533) in paragraph at lines 567--572
+Underfull \hbox (badness 1533) in paragraph at lines 569--574
 \TU/lmr/m/n/10 an r package to standardize tracheidograms. \TU/lmr/m/it/10 Dendrochronologia\TU/lmr/m/n/10 , \TU/lmr/m/it/10 37\TU/lmr/m/n/10 , 64–68.
  []
 
@@ -1055,22 +1055,22 @@ Package fancyhdr Warning: \headheight is too small (62.59596pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.95425pt}.
 
 [6]
-Underfull \hbox (badness 1675) in paragraph at lines 602--607
+Underfull \hbox (badness 1675) in paragraph at lines 604--609
 []\TU/lmr/m/n/10 Lara, W., Bogino, S., & Bravo, F. (2018). Multilevel analysis of dendrocli-
  []
 
 
-Underfull \hbox (badness 3209) in paragraph at lines 602--607
+Underfull \hbox (badness 3209) in paragraph at lines 604--609
 \TU/lmr/m/n/10 matic series with the R-package BIOdry. \TU/lmr/m/it/10 PLOS ONE\TU/lmr/m/n/10 , \TU/lmr/m/it/10 13\TU/lmr/m/n/10 (5), e0196923.
  []
 
 
-Underfull \hbox (badness 1189) in paragraph at lines 650--655
+Underfull \hbox (badness 1189) in paragraph at lines 652--657
 []\TU/lmr/m/n/10 Reynolds, D. J., Edge, D. C., & Black, B. A. (2021). RingdateR: A statis-
  []
 
 
-Underfull \hbox (badness 4001) in paragraph at lines 650--655
+Underfull \hbox (badness 4001) in paragraph at lines 652--657
 \TU/lmr/m/n/10 tical and graphical tool for crossdating. \TU/lmr/m/it/10 Dendrochronologia\TU/lmr/m/n/10 , \TU/lmr/m/it/10 65\TU/lmr/m/n/10 , 125797.
  []
 

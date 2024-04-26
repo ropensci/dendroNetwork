@@ -105,6 +105,6 @@ The new R package dendroNetwork has been developed based on earlier research by 
 
 # Acknowledgements
 
-This package was mostly created in my spare time and I'd like to thank my family for bearing with me. I want to thank Angelino Salentino for creating the orginal function for clique_community_names() and lique_community_names_par(), which I adapted for use in this package (source: <https://github.com/angelosalatino/CliquePercolationMethod-R>. I want to thank Andy Bunn for the function cor.with.limit.R() which I adapted for use in this package as cor_mat_overlap() (source: <https://github.com/AndyBunn/dplR/blob/master/R/rwi.stats.running.R>).
+This package was mostly created in my spare time and I'd like to thank my family for bearing with me. I want to thank Angelino Salentino for creating the orginal function for clique_community_names() and lique_community_names_par(), which I adapted for use in this package (source: <https://github.com/angelosalatino/CliquePercolationMethod-R>. I want to thank Andy Bunn for the function cor.with.limit.R() which I adapted for use in this package as cor_mat_overlap() (source: <https://github.com/AndyBunn/dplR/blob/master/R/rwi.stats.running.R>). The software and documentation were improved after peer-review at ROpenSci, thanks to reviewers Kaija Gahm and Zachary Gajewski.
 
 # References
