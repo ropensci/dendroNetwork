@@ -45,13 +45,13 @@ if (!require("BiocManager", quietly = TRUE))
 BiocManager::install("RCy3")
 ```
 
-The functionaliy of RCy3 depends on the installation of Cytoscape.
+The functionality of RCy3 depends on the installation of Cytoscape.
 Cytoscape is needed for visualising the networks. This open source
 software is platform independent and provides easy visual access to
 complex networks and the attributes of both nodes and edges in a network
 (see the
 [Cytoscape-website](https://cytoscape.org/what_is_cytoscape.html) for
-more information). It is therefore recommended to install Cyscape as
+more information). It is therefore recommended to install Cytoscape as
 well. Please follow the download and installation instructions for your
 operating system: <https://cytoscape.org/>.
 
@@ -145,7 +145,7 @@ Clique Percolation:
 amount of time significantly. For most datasets
 `clique_community_names()` is sufficiently fast and for smaller datasets
 `clique_community_names_par()` can even be slower due to the
-parallelisation. Therefore, the funtion `clique_community_names()`
+parallelisation. Therefore, the function `clique_community_names()`
 should be used initially and if this is very slow, start using
 `clique_community_names_par()`. See the separate
 [vignette](docs.ropensci.org/dendroNetwork/articles/large_datasets_communities.html)
@@ -162,8 +162,8 @@ software\]. <https://zenodo.org/doi/10.5281/zenodo.10636310>
 ## Acknowledgements
 
 This package reuses and adapts the CliquePercolationMethod-R package
-developed by Angelo Salatino (The Open University). Source
-code: [https://github.com/angelosalatino/CliquePercolationMethod-R](https://eur05.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgithub.com%2Fangelosalatino%2FCliquePercolationMethod-R&data=05%7C02%7Cr.m.visser%40saxion.nl%7C98bf86e9d8de4bec4aff08dc2c74ce15%7Ca77b0754fdc14a62972c8425ffbfcbd2%7C0%7C0%7C638434127387203622%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=14k0ITGo4Z%2FhQZv28AF0rCIbxu23PVvmxsC95Iu4ZFo%3D&reserved=0 "Original URL: https://github.com/angelosalatino/CliquePercolationMethod-R. Click or tap if you trust this link.")
+developed by Angelo Salatino (The Open University). Source code:
+<https://github.com/angelosalatino/CliquePercolationMethod-R>
 
 This package reuses and adapts the function cor.with.limit.R() developed
 by Andy Bunn (Western Washington University), but the new function is

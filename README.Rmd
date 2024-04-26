@@ -8,14 +8,7 @@ csl: journal-of-computer-applications-in-archaeology.csl
 
 <!-- badges: start -->
 
-[![Project Status: Active -- The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) 
-[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable) 
-[![pkgcheck](https://github.com/ropensci/dendroNetwork/actions/workflows/pkgcheck.yaml/badge.svg)](https://github.com/ropensci/dendroNetwork/actions/workflows/pkgcheck.yaml) 
-[![R-CMD-check](https://github.com/ropensci/dendroNetwork/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/dendroNetwork/actions/workflows/R-CMD-check.yaml) 
-[![Status at rOpenSci Software Peer Review](https://badges.ropensci.org/627_status.svg)](https://github.com/ropensci/software-review/issues/627) 
-[![dynamite status badge](https://ropensci.r-universe.dev/badges/dendroNetwork)](https://ropensci.r-universe.dev)
-[![DOI](https://zenodo.org/badge/582742098.svg)](https://zenodo.org/doi/10.5281/zenodo.10636310)
-
+[![Project Status: Active -- The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable) [![pkgcheck](https://github.com/ropensci/dendroNetwork/actions/workflows/pkgcheck.yaml/badge.svg)](https://github.com/ropensci/dendroNetwork/actions/workflows/pkgcheck.yaml) [![R-CMD-check](https://github.com/ropensci/dendroNetwork/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/dendroNetwork/actions/workflows/R-CMD-check.yaml) [![Status at rOpenSci Software Peer Review](https://badges.ropensci.org/627_status.svg)](https://github.com/ropensci/software-review/issues/627) [![dynamite status badge](https://ropensci.r-universe.dev/badges/dendroNetwork)](https://ropensci.r-universe.dev) [![DOI](https://zenodo.org/badge/582742098.svg)](https://zenodo.org/doi/10.5281/zenodo.10636310)
 
 <!-- badges: end -->
 
@@ -42,7 +35,7 @@ if (!require("BiocManager", quietly = TRUE))
 BiocManager::install("RCy3")
 ```
 
-The functionaliy of RCy3 depends on the installation of Cytoscape. Cytoscape is needed for visualising the networks. This open source software is platform independent and provides easy visual access to complex networks and the attributes of both nodes and edges in a network (see the [Cytoscape-website](https://cytoscape.org/what_is_cytoscape.html) for more information). It is therefore recommended to install Cyscape as well. Please follow the download and installation instructions for your operating system: <https://cytoscape.org/>.
+The functionality of RCy3 depends on the installation of Cytoscape. Cytoscape is needed for visualising the networks. This open source software is platform independent and provides easy visual access to complex networks and the attributes of both nodes and edges in a network (see the [Cytoscape-website](https://cytoscape.org/what_is_cytoscape.html) for more information). It is therefore recommended to install Cytoscape as well. Please follow the download and installation instructions for your operating system: <https://cytoscape.org/>.
 
 You can install the development version of dendroNetwork from [GitHub](https://github.com/ropensci/dendroNetwork) with:
 
@@ -110,7 +103,7 @@ After creating the network in R, it is possible to visualize the network using C
 
 ## Usage for large datasets
 
-When using larger datasets of tree-ring series, calculating the table with similarities can take a lot of time, but finding communities even more. It is therefore recommended to use of parallel computing for Clique Percolation: `clique_community_names_par(network, k=3, n_core = 4)`. This reduces the amount of time significantly. For most datasets `clique_community_names()` is sufficiently fast and for smaller datasets `clique_community_names_par()` can even be slower due to the parallelisation. Therefore, the funtion `clique_community_names()` should be used initially and if this is very slow, start using `clique_community_names_par()`. See the separate [vignette](docs.ropensci.org/dendroNetwork/articles/large_datasets_communities.html) for that.
+When using larger datasets of tree-ring series, calculating the table with similarities can take a lot of time, but finding communities even more. It is therefore recommended to use of parallel computing for Clique Percolation: `clique_community_names_par(network, k=3, n_core = 4)`. This reduces the amount of time significantly. For most datasets `clique_community_names()` is sufficiently fast and for smaller datasets `clique_community_names_par()` can even be slower due to the parallelisation. Therefore, the function `clique_community_names()` should be used initially and if this is very slow, start using `clique_community_names_par()`. See the separate [vignette](docs.ropensci.org/dendroNetwork/articles/large_datasets_communities.html) for that.
 
 ## Citation
 
@@ -120,7 +113,7 @@ Visser, R. (2024). dendroNetwork: a R-package to create dendrochronological prov
 
 ## Acknowledgements
 
-This package reuses and adapts the CliquePercolationMethod-R package developed by Angelo Salatino (The Open University). Source code: [https://github.com/angelosalatino/CliquePercolationMethod-R](https://eur05.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgithub.com%2Fangelosalatino%2FCliquePercolationMethod-R&data=05%7C02%7Cr.m.visser%40saxion.nl%7C98bf86e9d8de4bec4aff08dc2c74ce15%7Ca77b0754fdc14a62972c8425ffbfcbd2%7C0%7C0%7C638434127387203622%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=14k0ITGo4Z%2FhQZv28AF0rCIbxu23PVvmxsC95Iu4ZFo%3D&reserved=0 "Original URL: https://github.com/angelosalatino/CliquePercolationMethod-R. Click or tap if you trust this link.")
+This package reuses and adapts the CliquePercolationMethod-R package developed by Angelo Salatino (The Open University). Source code: <https://github.com/angelosalatino/CliquePercolationMethod-R>
 
 This package reuses and adapts the function cor.with.limit.R() developed by Andy Bunn (Western Washington University), but the new function is optimized and also outputs the number of overlapping rings. Source code: <https://github.com/AndyBunn/dplR/blob/master/R/rwi.stats.running.R>.
 

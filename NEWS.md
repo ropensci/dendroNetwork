@@ -10,7 +10,7 @@
 
     -   dependency on R-version changed to \>= 4.1.0
 
--   transferred to ROpenSci: https://github.com/ropensci/dendroNetwork
+-   transferred to ROpenSci: <https://github.com/ropensci/dendroNetwork>
 
 ### Minor improvements
 
@@ -22,12 +22,13 @@
 
 ### Documentation fixes
 
-- updated all links to https://github.com/ropensci/dendroNetwork or https://docs.ropensci.org/dendroNetwork/
-- updated installation instruction
+-   updated all links to <https://github.com/ropensci/dendroNetwork> or <https://docs.ropensci.org/dendroNetwork/>
+-   updated installation instruction
+-   minor language corrections
 
 ### Continuous integration
 
-- removed pkgdown deployment, and now relying on ROpenSci: https://devguide.ropensci.org/pkg_ci.html
+-   removed pkgdown deployment, and now relying on ROpenSci: <https://devguide.ropensci.org/pkg_ci.html>
 
 ## dendroNetwork 0.5.3 (05-04-2024)
 
@@ -75,8 +76,8 @@
 -   added pkgdown site: <https://ronaldvisser.github.io/dendroNetwork/>
 -   moved some images to man/figures
 -   added Vignette on Cytoscape use
--   moved information for using big datasett to seperate vignette
--   updated README: added more installion instructions
+-   moved information for using big dataset to separate vignette
+-   updated README: added more installation instructions
 -   corrected examples in `cyto_create_gn_style` and `cyto_create_cpm_style`
 
 ### Continuous integration
