@@ -55,5 +55,5 @@ Suggests:
 Config/testthat/edition: 3
 Roxygen: list(markdown = TRUE)
 VignetteBuilder: knitr
-URL: https://github.com/RonaldVisser/dendroNetwork, https://ronaldvisser.github.io/dendroNetwork/
-BugReports: https://github.com/RonaldVisser/dendroNetwork/issues
+URL: https://github.com/ropensci/dendroNetwork, https://ropensci.github.io/dendroNetwork/
+BugReports: https://github.com/ropensci/dendroNetwork/issues

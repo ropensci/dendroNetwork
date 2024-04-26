@@ -1,6 +1,6 @@
 # dendroNetwork: news {#dendroNetwork}
 
-## dendroNetwork 0.5.4 (development)
+## dendroNetwork 0.5.4
 
 ### New features
 
@@ -10,7 +10,7 @@
 
     -   dependency on R-version changed to \>= 4.1.0
 
--   .
+-   transferred to ROpenSci: https://github.com/ropensci/dendroNetwork
 
 ### Minor improvements
 
@@ -22,7 +22,12 @@
 
 ### Documentation fixes
 
+- updated all links to https://github.com/ropensci/dendroNetwork or https://docs.ropensci.org/dendroNetwork/
+- updated installation instruction
+
 ### Continuous integration
+
+- removed pkgdown deployment, and now relying on ROpenSci: https://devguide.ropensci.org/pkg_ci.html
 
 ## dendroNetwork 0.5.3 (05-04-2024)
 
@@ -116,7 +121,7 @@ First public release
 
 ### Bug Fixes
 
-## Deprecated and defunct
+### Deprecated and defunct
 
 ### Documentation fixes
 

@@ -4,10 +4,11 @@
   "identifier": "dendroNetwork",
   "description": "This package makes it easy to create dendrochronological networks based on the similarity between tree-ring series or chronologies. It includes various functions to compare tree-ring curves building upon dplR. The networks can be used to visualise and understand the relations between tree-ring curves. These networks are also very useful to estimate the provenance or wood-use within a structure/context/site.",
   "name": "dendroNetwork: Create networks of dendrochronological series using pairwise similarity",
-  "codeRepository": "https://github.com/RonaldVisser/dendroNetwork",
-  "issueTracker": "https://github.com/RonaldVisser/dendroNetwork/issues",
+  "relatedLink": "https://ropensci.github.io/dendroNetwork/",
+  "codeRepository": "https://github.com/ropensci/dendroNetwork",
+  "issueTracker": "https://github.com/ropensci/dendroNetwork/issues",
   "license": "https://spdx.org/licenses/GPL-3.0",
-  "version": "0.5.0",
+  "version": "0.5.4",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
@@ -86,18 +87,6 @@
     },
     {
       "@type": "SoftwareApplication",
-      "identifier": "lifecycle",
-      "name": "lifecycle",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=lifecycle"
-    },
-    {
-      "@type": "SoftwareApplication",
       "identifier": "DiagrammeR",
       "name": "DiagrammeR",
       "provider": {
@@ -114,7 +103,7 @@
       "@type": "SoftwareApplication",
       "identifier": "R",
       "name": "R",
-      "version": ">= 3.5.0"
+      "version": ">= 4.1.0"
     },
     "2": {
       "@type": "SoftwareApplication",
@@ -227,15 +216,15 @@
     },
     "11": {
       "@type": "SoftwareApplication",
-      "identifier": "magrittr",
-      "name": "magrittr",
+      "identifier": "lifecycle",
+      "name": "lifecycle",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
         "name": "Comprehensive R Archive Network (CRAN)",
         "url": "https://cran.r-project.org"
       },
-      "sameAs": "https://CRAN.R-project.org/package=magrittr"
+      "sameAs": "https://CRAN.R-project.org/package=lifecycle"
     },
     "12": {
       "@type": "SoftwareApplication",
@@ -261,9 +250,15 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "5075.988KB",
-  "releaseNotes": "https://github.com/RonaldVisser/dendroNetwork/blob/master/NEWS",
-  "readme": "https://github.com/RonaldVisser/dendroNetwork/blob/main/README.md",
-  "contIntegration": "https://github.com/RonaldVisser/dendroNetwork/actions/workflows/pkgcheck.yaml",
-  "developmentStatus": ["https://www.repostatus.org/#active", "https://lifecycle.r-lib.org/articles/stages.html#stable"]
+  "fileSize": "9565.26KB",
+  "releaseNotes": "https://github.com/ropensci/dendroNetwork/blob/master/NEWS.md",
+  "readme": "https://github.com/ropensci/dendroNetwork/blob/main/README.md",
+  "contIntegration": ["https://github.com/ropensci/dendroNetwork/actions/workflows/pkgcheck.yaml", "https://github.com/ropensci/dendroNetwork/actions/workflows/R-CMD-check.yaml"],
+  "developmentStatus": ["https://www.repostatus.org/#active", "https://lifecycle.r-lib.org/articles/stages.html#stable"],
+  "review": {
+    "@type": "Review",
+    "url": "https://github.com/ropensci/software-review/issues/627",
+    "provider": "https://ropensci.org"
+  },
+  "keywords": ["archaeology", "dendrochronology", "dendroprovenance", "network-analysis", "tree-rings"]
 }

@@ -8,7 +8,7 @@ csl: journal-of-computer-applications-in-archaeology.csl
 
 <!-- badges: start -->
 
-[![Project Status: Active -- The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable) [![pkgcheck](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/pkgcheck.yaml/badge.svg)](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/pkgcheck.yaml) [![R-CMD-check](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/R-CMD-check.yaml) [![Status at rOpenSci Software Peer Review](https://badges.ropensci.org/627_status.svg)](https://github.com/ropensci/software-review/issues/627) [![DOI](https://zenodo.org/badge/582742098.svg)](https://zenodo.org/doi/10.5281/zenodo.10636310)
+[![Project Status: Active -- The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable) [![pkgcheck](https://github.com/ropensci/dendroNetwork/actions/workflows/pkgcheck.yaml/badge.svg)](https://github.com/ropensci/dendroNetwork/actions/workflows/pkgcheck.yaml) [![R-CMD-check](https://github.com/ropensci/dendroNetwork/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/dendroNetwork/actions/workflows/R-CMD-check.yaml) [![Status at rOpenSci Software Peer Review](https://badges.ropensci.org/627_status.svg)](https://github.com/ropensci/software-review/issues/627) [![DOI](https://zenodo.org/badge/582742098.svg)](https://zenodo.org/doi/10.5281/zenodo.10636310)
 
 <!-- badges: end -->
 
@@ -37,11 +37,10 @@ BiocManager::install("RCy3")
 
 The functionaliy of RCy3 depends on the installation of Cytoscape. Cytoscape is needed for visualising the networks. This open source software is platform independent and provides easy visual access to complex networks and the attributes of both nodes and edges in a network (see the [Cytoscape-website](https://cytoscape.org/what_is_cytoscape.html) for more information). It is therefore recommended to install Cyscape as well. Please follow the download and installation instructions for your operating system: <https://cytoscape.org/>.
 
-You can install the development version of dendroNetwork from [GitHub](https://github.com/RonaldVisser/DendroNetwork) with:
+You can install the development version of dendroNetwork from [GitHub](https://github.com/ropensci/dendroNetwork) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("RonaldVisser/dendroNetwork", build_vignettes = TRUE)
+install.packages("dendroNetwork", repos = "https://ropensci.r-universe.dev")
 ```
 
 ## Usage {#usage}
@@ -104,13 +103,13 @@ After creating the network in R, it is possible to visualize the network using C
 
 ## Usage for large datasets
 
-When using larger datasets of tree-ring series, calculating the table with similarities can take a lot of time, but finding communities even more. It is therefore recommended to use of parallel computing for Clique Percolation: `clique_community_names_par(network, k=3, n_core = 4)`. This reduces the amount of time significantly. For most datasets `clique_community_names()` is sufficiently fast and for smaller datasets `clique_community_names_par()` can even be slower due to the parallelisation. Therefore, the funtion `clique_community_names()` should be used initially and if this is very slow, start using `clique_community_names_par()`. See the separate [vignette](https://ronaldvisser.github.io/dendroNetwork/articles/large_datasets_communities.html) for that.
+When using larger datasets of tree-ring series, calculating the table with similarities can take a lot of time, but finding communities even more. It is therefore recommended to use of parallel computing for Clique Percolation: `clique_community_names_par(network, k=3, n_core = 4)`. This reduces the amount of time significantly. For most datasets `clique_community_names()` is sufficiently fast and for smaller datasets `clique_community_names_par()` can even be slower due to the parallelisation. Therefore, the funtion `clique_community_names()` should be used initially and if this is very slow, start using `clique_community_names_par()`. See the separate [vignette](docs.ropensci.org/dendroNetwork/articles/large_datasets_communities.html) for that.
 
 ## Citation
 
 If you use this software, please cite this using:
 
-Visser, R. (2024). dendroNetwork: a R-package to create dendrochronological provenance networks (Version 0.5.3) [Computer software]. <https://zenodo.org/doi/10.5281/zenodo.10636310>
+Visser, R. (2024). dendroNetwork: a R-package to create dendrochronological provenance networks (Version 0.5.4) [Computer software]. <https://zenodo.org/doi/10.5281/zenodo.10636310>
 
 ## Acknowledgements
 

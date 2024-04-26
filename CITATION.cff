@@ -5,7 +5,7 @@ authors:
     given-names: Ronald
     orcid: https://orcid.org/0000-0001-6966-1729
 title: "dendroNetwork: a R-package to create dendrochronological networks"
-version: 0.5.3
+version: 0.5.4
 doi: https://zenodo.org/doi/10.5281/zenodo.10636310
-date-released: "2024-04-05"
-url: "https://github.com/RonaldVisser/DendroNetwork"
+date-released: "2024-04-26"
+url: "https://github.com/ropensci/DendroNetwork"

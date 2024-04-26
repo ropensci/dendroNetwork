@@ -8,8 +8,8 @@ state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
-[![pkgcheck](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/pkgcheck.yaml/badge.svg)](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/pkgcheck.yaml)
-[![R-CMD-check](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/RonaldVisser/dendroNetwork/actions/workflows/R-CMD-check.yaml)
+[![pkgcheck](https://github.com/ropensci/dendroNetwork/actions/workflows/pkgcheck.yaml/badge.svg)](https://github.com/ropensci/dendroNetwork/actions/workflows/pkgcheck.yaml)
+[![R-CMD-check](https://github.com/ropensci/dendroNetwork/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/dendroNetwork/actions/workflows/R-CMD-check.yaml)
 [![Status at rOpenSci Software Peer
 Review](https://badges.ropensci.org/627_status.svg)](https://github.com/ropensci/software-review/issues/627)
 [![DOI](https://zenodo.org/badge/582742098.svg)](https://zenodo.org/doi/10.5281/zenodo.10636310)
@@ -54,11 +54,10 @@ well. Please follow the download and installation instructions for your
 operating system: <https://cytoscape.org/>.
 
 You can install the development version of dendroNetwork from
-[GitHub](https://github.com/RonaldVisser/DendroNetwork) with:
+[GitHub](https://github.com/ropensci/dendroNetwork) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("RonaldVisser/dendroNetwork", build_vignettes = TRUE)
+install.packages("dendroNetwork", repos = "https://ropensci.r-universe.dev")
 ```
 
 ## Usage
@@ -147,7 +146,7 @@ amount of time significantly. For most datasets
 parallelisation. Therefore, the funtion `clique_community_names()`
 should be used initially and if this is very slow, start using
 `clique_community_names_par()`. See the separate
-[vignette](https://ronaldvisser.github.io/dendroNetwork/articles/large_datasets_communities.html)
+[vignette](docs.ropensci.org/dendroNetwork/articles/large_datasets_communities.html)
 for that.
 
 ## Citation
@@ -155,7 +154,7 @@ for that.
 If you use this software, please cite this using:
 
 Visser, R. (2024). dendroNetwork: a R-package to create
-dendrochronological provenance networks (Version 0.5.3) \[Computer
+dendrochronological provenance networks (Version 0.5.4) \[Computer
 software\]. <https://zenodo.org/doi/10.5281/zenodo.10636310>
 
 ## Acknowledgements

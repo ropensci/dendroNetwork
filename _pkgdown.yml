@@ -1,5 +1,3 @@
-url: https://ronaldvisser.github.io/dendroNetwork/
+url: https://docs.ropensci.org/dendroNetwork/
 template:
   bootstrap: 5
-  theme: haddock
-

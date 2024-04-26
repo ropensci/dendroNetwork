@@ -11,9 +11,9 @@ This package makes it easy to create dendrochronological networks based on the s
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/RonaldVisser/dendroNetwork}
-  \item \url{https://ronaldvisser.github.io/dendroNetwork/}
-  \item Report bugs at \url{https://github.com/RonaldVisser/dendroNetwork/issues}
+  \item \url{https://github.com/ropensci/dendroNetwork}
+  \item \url{https://ropensci.github.io/dendroNetwork/}
+  \item Report bugs at \url{https://github.com/ropensci/dendroNetwork/issues}
 }
 
 }
