@@ -1,5 +1,5 @@
 ---
-title: "dendroNetwork: a R-package to create networks of dendrochronological data"
+title: 'dendroNetwork: a R-package to create networks of dendrochronological data'
 tags:
   - R
   - dendrochronology
@@ -7,52 +7,45 @@ tags:
   - cytoscape
   - tree ring
   - archaeology
-author:
-  - Ronald M. Visser:
-    orcid: 0000-0001-6966-1729
+authors:
+  - name: Ronald M. Visser 
+    orcidlink: 0000-0001-6966-1729
     affiliation: 1
-affiliation:
- - name: Saxion University of Applied Sciences, Deventer
-   index: 1
-date: "20 February 2024"
+affiliations:
+  - name: Saxion University of Applied Sciences, Deventer
+    index: 1
+citation_author: Visser
+date: "26 April 2024"
+year: 2024
 bibliography: paper.bib
-csl: apa.csl
-abstract: "The R-package dendroNetwork aims to make network analyses of dendrochronological data accessible for researchers. dendroNetwork enables researchers to easily construct a network of dendrochronological series based on the similarity and find patterns of matching tree-ring material. The detection of patterns is assisted by the easy application of community detection and subsequent (automated) visualization using Cytoscape. This enables dendrochronologists and other researchers to apply networks analyses to understand patterns of similarity between tree-ring series."
 output: rticles::joss_article
-knit: (function(inputFile, encoding) {
-  rmarkdown::render(inputFile, encoding = encoding, output_format = "all") })
-
+csl: apa.csl
+journal: JOSS
 ---
 
-```{=html}
-<style>
-body {
-text-align: justify}
-</style>
-```
 # Introduction
 
-Dendrochronological analyses are often based on the comparison of tree-ring series with other tree-ring series. These comparions are often visualised as tabular data. However, to analyse the complex system of relations between tree-ring curves other methods are necessary. The author has developed a method to analyse patterns of similarity between tree-ring series using network analysis [@visser2021; @visser2022]. The analyses of these papers was mostly based on scripts that are shared with the papers [@visser; @visser]. For others to apply the developed method with these scripts is possible, but cumbersome and various things need to be changed. In addition, to try the network approach on dendrochronological data for the first time can be overwhelming an seemingly difficult. To make this more easy and accessible a new package for R has been designed to help users to apply this method to their data. The package dendroNetwork enables researchers to create tables with the similarity using various measures and visualize these using R [@rcoreteam2022] and Cytoscape [@otasek2019; @shannon2003a].
+Dendrochronological analyses are often based on the comparison of tree-ring series with other tree-ring series. These comparisons are often visualised as tabular data. However, to analyse the complex system of relations between tree-ring curves other methods are necessary. The author has developed a method to analyse patterns of similarity between tree-ring series using network analysis [@visser2021; @visser2022]. The analyses of these papers was mostly based on scripts that are shared with the papers [@visservorst, @visser]. For others to apply the developed method with these scripts is possible, but cumbersome and various things need to be changed. In addition, to try the network approach on dendrochronological data for the first time can be overwhelming an seemingly difficult. To make this more easy and accessible a new package for R has been designed to help users to apply this method to their data. The package dendroNetwork enables researchers to create tables with the similarity using various measures and visualize these using R [@rcoreteam2022] and Cytoscape [@otasek2019; @shannon2003a]. Cytoscape is an open source and platform independent tool for network analysis and visualization. The software provides easy visual access to complex networks and the attributes of both nodes and edges in a network. The dendroNetwork package has been reviewed on ROpenSci (<https://github.com/ropensci/dendroNetwork> and <https://docs.ropensci.org/dendroNetwork/>).
 
 # Statement of need
 
-There are several packages available in R for dendrochronological research [@guiterman2020; @jevsenak2018; @campelo2012; @bunn2008; @shi2019; @vandermaaten-theunissen2015; @reynolds2021; @altman2014; @rademacher; @campelo2019; @haneca2023; @alday2018]. An overview with links to these packages can be found online (<https://ronaldvisser.github.io/Dendro_R/>). Some packages are specifically creates to obtain measurements [@campelo2019; @shi2019], while others are written for crossdating [@reynolds2021]. There are also various for analysing tree-ring data [@alday2018; @alday2018; @altman2014; @bunn2008; @campelo2012; @guiterman2020]. These R-packages in dendrochronology all fill different needs, but the nice thing is that these are all interconnected in some way in depending on each other, or that they build further into different avenues. Apart from depending on dendrochronological packages, various packages from the Tidyverse [@wickham2019] are often also needed. The various relations can easily be visualised using a network, with the edges based on the dependency of two packages on each other, and and arrow indicating the direction of the dependency.
+There are several packages available in R for dendrochronological research [@guiterman2020; @jevsenak2018; @campelo2012; @bunn2008; @shi2019; @vandermaaten-theunissen2015; @reynolds2021; @altman2014; @malevich2018; @rademacher; @campelo2019; @haneca2023; @alday2018]. An overview with links to these packages can be found online (<https://ronaldvisser.github.io/Dendro_R/>). Some packages are specifically creates to obtain measurements [@campelo2019; @shi2019], while others are written for crossdating [@reynolds2021]. There are also various for analysing tree-ring data [@alday2018; @alday2018; @altman2014; @bunn2008; @campelo2012; @zang2015; @guiterman2020]. These R-packages in dendrochronology all fill different needs, but the nice thing is that these are all interconnected in some way in depending on each other, or that they build further into different avenues. Apart from depending on dendrochronological packages, various packages from the Tidyverse [@wickham2019] are often also needed. The various relations can easily be visualised using a network, with the edges based on the dependency of two packages on each other, and and arrow indicating the direction of the dependency. Some R-package for dendrochronology or tree-ring studies have no relation with others, but fill specific needs [@peters2018; @lara2018; @campelo2016; @aryal2020]. These are left out of the network (see Figure \@ref(fig:packages-network)).
 
 \begin{figure}
-\includegraphics[width=0.5\linewidth]{paper_files/figure-latex/unnamed-chunk-1-1} \caption{The interdependent relations between existing R-packages related to dendrochronology}\label{fig:unnamed-chunk-1}
+\includegraphics[width=0.5\linewidth]{paper_files/figure-latex/packages-network-1} \caption{The interdependent relations between existing R-packages related to dendrochronology}\label{fig:packages-network}
 \end{figure}
 
-The network shows that nearly all packages depend on dplR [@bunn2008]. The newly created package dendroNetwork fits in this ecosystem of depending packages, since it depends on both dplR and the Tidyverse. In addition, it adds a whole new world by adding network analyses through igraph [@csardi2006] to the ecosystem of dendrochronological packages. The igraph library has close connections to the tidyverse, creating a full circle and filling a gap as shown in the networks below.
+The network shows that nearly all packages depend on dplR [@bunn2008]. The newly created package dendroNetwork fits in this ecosystem of depending packages, since it depends on both dplR and the Tidyverse. In addition, it adds a whole new world by adding network analyses through igraph [@csardi2006] to the ecosystem of dendrochronological packages. The igraph library has close connections to the tidyverse, creating a full circle and filling a gap as shown in the networks below (see Figure \@ref(fig:dendroNetwork-packages)).
 
 \begin{figure}
-\includegraphics[width=0.5\linewidth]{paper_files/figure-latex/unnamed-chunk-2-1} \includegraphics[width=0.5\linewidth]{paper_files/figure-latex/unnamed-chunk-2-2} \caption{The interdependent relations between R-packages including dendroNetwork. On the left only the dependencies for dendroNetwork, on the right all dendrochronological R-packages, including dendroNetwork}\label{fig:unnamed-chunk-2}
+\includegraphics[width=0.5\linewidth]{paper_files/figure-latex/dendroNetwork-packages-1} \includegraphics[width=0.5\linewidth]{paper_files/figure-latex/dendroNetwork-packages-2} \caption{The interdependent relations between R-packages including dendroNetwork. On the left only the dependencies for dendroNetwork, on the right all dendrochronological R-packages, including dendroNetwork}\label{fig:dendroNetwork-packages}
 \end{figure}
 
 # Workflow using dendroNetwork
 
-The typical workflow when using the package consists of a number of successive steps. The result of each step is input for the next step.
+The typical workflow when using the package consists of a number of successive steps (see Figure \@ref(fig:workflow)). The result of each step is input for the next step.
 
-![The typcial workflow when using dendroNetwork to visualise a network](paper_files/figure-latex/unnamed-chunk-3-1.pdf) 
+![The typcial workflow when using dendroNetwork to visualise a network](paper_files/figure-latex/workflow-1.pdf) 
 
 This first step is to load the package and subsequently the dendrochronological data into the R environment using dplR:
 
@@ -85,15 +78,9 @@ g_hol_cpm <- clique_community_names(g_hol, k=3)
 hol_com_cpm_all <- find_all_cpm_com(g_hol)
 ```
 
-The next step is to visualize and explore the networks using Cytoscape or using R. Various functions are available to create visual styles for the communities in Cytoscape from R.
+The next step is to visualize and explore the networks using Cytoscape or using R (see Figure \@ref(fig:network-holrom)). Various functions are available to create visual styles for the communities in Cytoscape from R.
 
-
-```r
-plot(g_hol, vertex.color="deepskyblue", vertex.size=15, vertex.frame.color="gray",
-     vertex.label.color="darkslategrey", vertex.label.cex=0.8, vertex.label.dist=2)
-```
-
-![Network of the dendrochronological site chronologies in hol_rom](paper_files/figure-latex/unnamed-chunk-8-1.pdf) 
+![Network of the dendrochronological site chronologies in hol_rom](paper_files/figure-latex/network-holrom-1.pdf) 
 
 The main advantage is that visualisation in Cytoscape is more easy, intuitive and visual. In addition, it is very easy to automate workflows in Cytoscape with R (using [RCy3](https://bioconductor.org/packages/release/bioc/html/RCy3.html)). For this purpose we need to start Cytoscape firstly. After Cytoscape has completely loaded, the next steps can be taken.
 
@@ -102,10 +89,10 @@ The main advantage is that visualisation in Cytoscape is more easy, intuitive an
 3.  To visualize the styles for CPM with only k=3: `cyto_create_cpm_style(g_hol, k=3, com_k = g_hol_cpm)`
     -   This can be repeated for all possible clique sizes. To find the maximum clique size in a network, please use: `igraph::clique_num(g_hol)`.
     -   To automate this: `for (i in 3:igraph::clique_num(g_hol)) { cyto_create_cpm_style(g_hol, k=i, com_k = g_hol_cpm)}`.
-4.  To visualize the styles using the Girvan-Newman algorithm (GN): `cyto_create_gn_style(g_hol)` This would look something like this in Cytoscape:
+4.  To visualize the styles using the Girvan-Newman algorithm (GN): This would look something like this in Cytoscape (see Figure \@ref(fig:cytoscape-network)).
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{g_hol_GN} \caption{The network of Roman sitechronologies with the Girvan-Newman communities visualized using Cytoscape.}\label{fig:unnamed-chunk-9}
+\includegraphics[width=0.75\linewidth]{g_hol_GN} \caption{The network of Roman sitechronologies with the Girvan-Newman communities visualized using Cytoscape.}\label{fig:cytoscape-network}
 \end{figure}
 
 # Conclusion

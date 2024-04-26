@@ -8,8 +8,6 @@
 
 ### Bug Fixes
 
--   added global variables to prevent notes
-
 ### Deprecated and defunct
 
 ### Documentation fixes
@@ -36,6 +34,10 @@
 
 ### Bug Fixes
 
+-   added global variables to prevent notes
+
+-   added various files to build ignore
+
 ### Deprecated and defunct
 
 ### Documentation fixes
@@ -43,6 +45,7 @@
 -   updated all links to <https://github.com/ropensci/dendroNetwork> or <https://docs.ropensci.org/dendroNetwork/>
 -   updated installation instruction
 -   minor language corrections
+-   description corrections
 
 ### Continuous integration
 
