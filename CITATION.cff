@@ -8,4 +8,4 @@ title: "dendroNetwork: a R-package to create dendrochronological networks"
 version: 0.5.4
 doi: https://zenodo.org/doi/10.5281/zenodo.10636310
 date-released: "2024-04-26"
-url: "https://github.com/ropensci/DendroNetwork"
+url: "https://github.com/ropensci/dendroNetwork"

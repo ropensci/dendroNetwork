@@ -1,0 +1,38 @@
+citHeader("To cite dendroNetwork in publications use:")
+
+bibentry(
+  bibtype  = "Manual",
+  title    = "dendroNetwork: a R-package to create dendrochronological networks",
+  author   = "Ronald M. Visser",
+  year     = "2024",
+  note     = "R package, version 0.5.4",
+  url      = "https://github.com/ropensci/dendroNetwork",
+  doi      = "https://zenodo.org/doi/10.5281/zenodo.10636310"
+)
+
+
+bibentry(bibtype = "Article",
+         title = " Dendrochronological Provenance Patterns. Network Analysis of Tree-Ring Material Reveals Spatial and Economic Relations of Roman Timber in the Continental North-Western Provinces",
+         journal = "Journal of Computer Applications in Archaeology",
+         volume = "4",
+         pages = "230-253",
+         year = "2021",
+         doi = "10.5334/jcaa.79",
+         author = "Ronald M. Visser",
+         keywords = "network analysis, dendrochronology, dendroprovenance, Roman archaeology, Roman timber economy",
+         key = "Visser2021")
+
+bibentry(bibtype = "Article",
+         title = " Connecting Ships: Using Dendrochronological Network Analysis to Determine the Wood Provenance of Roman-Period River Barges Found in the Lower Rhine Region and Visualise Wood Use Patterns",
+         journal = "International Journal of Wood Culture",
+         volume = "3",
+         pages = "123-151",
+         year = "2022",
+         doi = "10.1163/27723194-bja10014",
+         author = "Ronald M. Visser, Yardeni Vorst",
+         keywords = "dendrochronology, dendroprovenance, network science, river transport, shipbuilding, spatial analysis, timber conversion",
+         key = "VisserVorst2022")
+
+
+
+
