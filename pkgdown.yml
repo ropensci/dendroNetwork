@@ -1,13 +1,13 @@
 pandoc: 3.1.11
-pkgdown: 2.0.8
+pkgdown: 2.0.9
 pkgdown_sha: ~
 articles:
   cytoscape: cytoscape.html
   dendrochronological_data: dendrochronological_data.html
   dendroNetwork: dendroNetwork.html
   large_datasets_communities: large_datasets_communities.html
-last_built: 2024-04-12T18:44Z
+last_built: 2024-04-26T08:23Z
 urls:
-  reference: https://ronaldvisser.github.io/dendroNetwork/reference
-  article: https://ronaldvisser.github.io/dendroNetwork/articles
+  reference: https://docs.ropensci.org/dendroNetwork/reference
+  article: https://docs.ropensci.org/dendroNetwork/articles
 

@@ -1,87 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/404.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/404.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/CONTRIBUTING.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/CONTRIBUTING.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/LICENSE-text.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/articles/cytoscape.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/articles/cytoscape.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/articles/dendroNetwork.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/articles/dendroNetwork.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/articles/dendrochronological_data.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/articles/dendrochronological_data.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/articles/index.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/articles/index.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/articles/large_datasets_communities.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/articles/large_datasets_communities.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/authors.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/authors.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/index.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/index.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/news/index.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/news/index.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/reference/RING_Visser_2021.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/reference/RING_Visser_2021.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/reference/clique_community_names.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/reference/clique_community_names.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/reference/clique_community_names_par.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/reference/clique_community_names_par.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/reference/cor_mat_overlap.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/reference/cor_mat_overlap.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/reference/cyto_clean_styles.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/reference/cyto_clean_styles.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/reference/cyto_create_cpm_style.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/reference/cyto_create_cpm_style.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/reference/cyto_create_gn_style.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/reference/cyto_create_gn_style.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/reference/cyto_create_graph.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/reference/cyto_create_graph.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/reference/dendroNetwork-package.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/reference/dendroNetwork-package.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/reference/dendro_network.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/reference/dendro_network.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/reference/find_all_cpm_com.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/reference/find_all_cpm_com.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/reference/gn_names.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/reference/gn_names.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/reference/hol_rom.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/reference/hol_rom.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/reference/index.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/reference/sim_table.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/reference/sim_table.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/reference/t_value.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/reference/t_value.html</loc>
   </url>
   <url>
-    <loc>https://ronaldvisser.github.io/dendroNetwork/reference/wuchswerte.html</loc>
+    <loc>https://docs.ropensci.org/dendroNetwork/reference/wuchswerte.html</loc>
   </url>
 </urlset>
