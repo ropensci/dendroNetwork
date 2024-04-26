@@ -1,6 +1,6 @@
 # dendroNetwork: news {#dendroNetwork}
 
-## dendroNetwork 0.5.5
+## dendroNetwork 0.5.5 (development)
 
 ### New features
 
