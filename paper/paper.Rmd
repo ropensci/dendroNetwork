@@ -14,17 +14,11 @@ date: "`r format(Sys.time(), '%d %B %Y')`"
 bibliography: paper.bib
 csl: apa.csl
 abstract: "The R-package dendroNetwork aims to make network analyses of dendrochronological data accessible for researchers. dendroNetwork enables researchers to easily construct a network of dendrochronological series based on the similarity and find patterns of matching tree-ring material. The detection of patterns is assisted by the easy application of community detection and subsequent (automated) visualization using Cytoscape. This enables dendrochronologists and other researchers to apply networks analyses to understand patterns of similarity between tree-ring series."
-repository: https://github.com/RonaldVisser/dendroNetwork
+repository: https://github.com/ropensci/dendroNetwork/
 archive_doi: https://zenodo.org/doi/10.5281/zenodo.10636310
-output: 
-  bookdown::html_document2:
-    number_sections: false
-    global_numbering: true
-  bookdown::pdf_document2:
-    number_sections: false
-    global_numbering: true
-knit: (function(inputFile, encoding) {
-  rmarkdown::render(inputFile, encoding = encoding, output_format = "all") })
+output: rticles::joss_article
+csl: apa.csl
+journal: JOSS
 ---
 
 ```{=html}

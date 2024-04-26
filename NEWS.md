@@ -1,5 +1,23 @@
 # dendroNetwork: news {#dendroNetwork}
 
+## dendroNetwork 0.5.5
+
+### New features
+
+### Minor improvements
+
+### Bug Fixes
+
+-   added global variables to prevent notes
+
+### Deprecated and defunct
+
+### Documentation fixes
+
+### Continuous integration
+
+# dendroNetwork: news
+
 ## dendroNetwork 0.5.4
 
 ### New features
