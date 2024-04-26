@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.26)  26 APR 2024 16:18
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.4.26)  26 APR 2024 20:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -948,7 +948,7 @@ Package fancyhdr Warning: \headheight is too small (62.59596pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.95425pt}.
 
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <8> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 355.
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 369.
 [1
 
 ]
@@ -959,12 +959,14 @@ File: paper_files/figure-latex/dendroNetwork-packages-1.pdf Graphic file (type p
 File: paper_files/figure-latex/dendroNetwork-packages-2.pdf Graphic file (type pdf)
 <use paper_files/figure-latex/dendroNetwork-packages-2.pdf>
 
-Overfull \hbox (2.21901pt too wide) in paragraph at lines 370--370
+Overfull \hbox (2.21901pt too wide) in paragraph at lines 384--384
 [][] [] 
  []
 
 File: paper_files/figure-latex/workflow-1.pdf Graphic file (type pdf)
 <use paper_files/figure-latex/workflow-1.pdf>
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 407.
 File: C:/Users/rvi04/AppData/Local/R/win-library/4.3/rticles/rmarkdown/templates/joss/resources/JOSS-logo.png Graphic file (type bmp)
 <C:/Users/rvi04/AppData/Local/R/win-library/4.3/rticles/rmarkdown/templates/joss/resources/JOSS-logo.png>
 
@@ -975,6 +977,23 @@ Package fancyhdr Warning: \headheight is too small (62.59596pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.95425pt}.
 
 [2]
+File: paper_files/figure-latex/network-holrom-1.pdf Graphic file (type pdf)
+<use paper_files/figure-latex/network-holrom-1.pdf>
+
+Underfull \hbox (badness 3250) in paragraph at lines 468--471
+[]\TU/lmr/m/n/10 The network can now be loaded in Cytoscape for further visualisation:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 468--471
+\TU/lmtt/m/n/10 cyto_create_graph(g_hol, CPM_table = hol_com_cpm_all, GN_table =
+ []
+
+
+Overfull \hbox (101.68637pt too wide) in paragraph at lines 486--488
+[]\TU/lmr/m/n/10 To automate this: \TU/lmtt/m/n/10 for (i in 3:igraph::clique_num(g_hol)) { cyto_create_cpm_style(g_hol,
+ []
+
 File: C:/Users/rvi04/AppData/Local/R/win-library/4.3/rticles/rmarkdown/templates/joss/resources/JOSS-logo.png Graphic file (type bmp)
 <C:/Users/rvi04/AppData/Local/R/win-library/4.3/rticles/rmarkdown/templates/joss/resources/JOSS-logo.png>
 
@@ -985,10 +1004,6 @@ Package fancyhdr Warning: \headheight is too small (62.59596pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.95425pt}.
 
 [3]
-LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 393.
-File: paper_files/figure-latex/network-holrom-1.pdf Graphic file (type pdf)
-<use paper_files/figure-latex/network-holrom-1.pdf>
 File: C:/Users/rvi04/AppData/Local/R/win-library/4.3/rticles/rmarkdown/templates/joss/resources/JOSS-logo.png Graphic file (type bmp)
 <C:/Users/rvi04/AppData/Local/R/win-library/4.3/rticles/rmarkdown/templates/joss/resources/JOSS-logo.png>
 
@@ -999,29 +1014,15 @@ Package fancyhdr Warning: \headheight is too small (62.59596pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.95425pt}.
 
 [4]
-Underfull \hbox (badness 3250) in paragraph at lines 454--457
-[]\TU/lmr/m/n/10 The network can now be loaded in Cytoscape for further visualisation:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 454--457
-\TU/lmtt/m/n/10 cyto_create_graph(g_hol, CPM_table = hol_com_cpm_all, GN_table =
- []
-
-
-Overfull \hbox (101.68637pt too wide) in paragraph at lines 472--474
-[]\TU/lmr/m/n/10 To automate this: \TU/lmtt/m/n/10 for (i in 3:igraph::clique_num(g_hol)) { cyto_create_cpm_style(g_hol,
- []
-
 File: g_hol_GN.png Graphic file (type bmp)
 <g_hol_GN.png>
 
-Overfull \hbox (7.1103pt too wide) in paragraph at lines 502--511
+Overfull \hbox (7.1103pt too wide) in paragraph at lines 516--525
 [][][][][][][][][][][][][][][][][][][][][][][][][][]$[][]\TU/lmr/m/n/10 . I want to thank Andy Bunn for the function cor.with.limit.R()
  []
 
 
-Underfull \hbox (badness 1342) in paragraph at lines 502--511
+Underfull \hbox (badness 1342) in paragraph at lines 516--525
 \TU/lmr/m/n/10 which I adapted for use in this package as cor_mat_overlap() (source: [][]$[][][][][] []
  []
 
@@ -1035,23 +1036,13 @@ Package fancyhdr Warning: \headheight is too small (62.59596pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.95425pt}.
 
 [5]
-Underfull \hbox (badness 2443) in paragraph at lines 553--558
+Underfull \hbox (badness 2443) in paragraph at lines 567--572
 []\TU/lmr/m/n/10 Campelo, F., Nabais, C., Carvalho, A., & Vieira, J. (2016). tracheideR—
  []
 
 
-Underfull \hbox (badness 1533) in paragraph at lines 553--558
+Underfull \hbox (badness 1533) in paragraph at lines 567--572
 \TU/lmr/m/n/10 an r package to standardize tracheidograms. \TU/lmr/m/it/10 Dendrochronologia\TU/lmr/m/n/10 , \TU/lmr/m/it/10 37\TU/lmr/m/n/10 , 64–68.
- []
-
-
-Underfull \hbox (badness 1675) in paragraph at lines 588--593
-[]\TU/lmr/m/n/10 Lara, W., Bogino, S., & Bravo, F. (2018). Multilevel analysis of dendrocli-
- []
-
-
-Underfull \hbox (badness 3209) in paragraph at lines 588--593
-\TU/lmr/m/n/10 matic series with the R-package BIOdry. \TU/lmr/m/it/10 PLOS ONE\TU/lmr/m/n/10 , \TU/lmr/m/it/10 13\TU/lmr/m/n/10 (5), e0196923.
  []
 
 File: C:/Users/rvi04/AppData/Local/R/win-library/4.3/rticles/rmarkdown/templates/joss/resources/JOSS-logo.png Graphic file (type bmp)
@@ -1064,12 +1055,22 @@ Package fancyhdr Warning: \headheight is too small (62.59596pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.95425pt}.
 
 [6]
-Underfull \hbox (badness 1189) in paragraph at lines 636--641
+Underfull \hbox (badness 1675) in paragraph at lines 602--607
+[]\TU/lmr/m/n/10 Lara, W., Bogino, S., & Bravo, F. (2018). Multilevel analysis of dendrocli-
+ []
+
+
+Underfull \hbox (badness 3209) in paragraph at lines 602--607
+\TU/lmr/m/n/10 matic series with the R-package BIOdry. \TU/lmr/m/it/10 PLOS ONE\TU/lmr/m/n/10 , \TU/lmr/m/it/10 13\TU/lmr/m/n/10 (5), e0196923.
+ []
+
+
+Underfull \hbox (badness 1189) in paragraph at lines 650--655
 []\TU/lmr/m/n/10 Reynolds, D. J., Edge, D. C., & Black, B. A. (2021). RingdateR: A statis-
  []
 
 
-Underfull \hbox (badness 4001) in paragraph at lines 636--641
+Underfull \hbox (badness 4001) in paragraph at lines 650--655
 \TU/lmr/m/n/10 tical and graphical tool for crossdating. \TU/lmr/m/it/10 Dendrochronologia\TU/lmr/m/n/10 , \TU/lmr/m/it/10 65\TU/lmr/m/n/10 , 125797.
  []
 
@@ -1082,24 +1083,34 @@ Package fancyhdr Warning: \headheight is too small (62.59596pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-0.95425pt}.
 
-[7] (./paper.aux)
+[7]
+File: C:/Users/rvi04/AppData/Local/R/win-library/4.3/rticles/rmarkdown/templates/joss/resources/JOSS-logo.png Graphic file (type bmp)
+<C:/Users/rvi04/AppData/Local/R/win-library/4.3/rticles/rmarkdown/templates/joss/resources/JOSS-logo.png>
+
+Package fancyhdr Warning: \headheight is too small (62.59596pt): 
+(fancyhdr)                Make it at least 63.55022pt, for example:
+(fancyhdr)                \setlength{\headheight}{63.55022pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-0.95425pt}.
+
+[8] (./paper.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: 303410F7750ED6FCD06E4433FF4A1CB5;743.
+(rerunfilecheck)             Checksum: 970ADB469C768B465AB8F9C8A8890CD2;823.
 Package logreq Info: Writing requests to 'paper.run.xml'.
 \openout1 = `paper.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34985 strings out of 476758
- 723083 string characters out of 5800756
+ 34986 strings out of 476758
+ 723092 string characters out of 5800756
  1949148 words of memory out of 5000000
- 56515 multiletter control sequences out of 15000+600000
+ 56516 multiletter control sequences out of 15000+600000
  564933 words of font info for 83 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  84i,12n,87p,678b,850s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on paper.pdf (7 pages).
+Output written on paper.pdf (8 pages).
