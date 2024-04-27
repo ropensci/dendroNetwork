@@ -12,8 +12,9 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 [![R-CMD-check](https://github.com/ropensci/dendroNetwork/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/dendroNetwork/actions/workflows/R-CMD-check.yaml)
 [![Status at rOpenSci Software Peer
 Review](https://badges.ropensci.org/627_status.svg)](https://github.com/ropensci/software-review/issues/627)
-[![dynamite status
+[![dendroNetwork status
 badge](https://ropensci.r-universe.dev/badges/dendroNetwork)](https://ropensci.r-universe.dev)
+[![status](https://joss.theoj.org/papers/e7f03167c08483e6a3214a6747306256/status.svg)](https://joss.theoj.org/papers/e7f03167c08483e6a3214a6747306256)
 [![DOI](https://zenodo.org/badge/582742098.svg)](https://zenodo.org/doi/10.5281/zenodo.10636310)
 
 <!-- badges: end -->
@@ -243,7 +244,7 @@ Visser, RM. 2021b On the similarity of tree-ring patterns: Assessing the
 influence of semi-synchronous growth changes on the
 Gleichläufigkeitskoeffizient for big tree-ring data sets. *Archaeometry*
 63(1): 204–215. DOI:
-https://doi.org/<https://doi.org/10.1111/arcm.12600>.
+https://doi.org/[10.1111/arcm.12600](https://doi.org/10.1111/arcm.12600).
 
 </div>
 
