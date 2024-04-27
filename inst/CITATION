@@ -7,7 +7,7 @@ bibentry(
   year     = "2024",
   note     = "R package, version 0.5.4",
   url      = "https://github.com/ropensci/dendroNetwork",
-  doi      = "https://zenodo.org/doi/10.5281/zenodo.10636310"
+  doi      = "10.5281/zenodo.10636310"
 )
 
 
