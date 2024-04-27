@@ -110,7 +110,7 @@ After creating the network in R, it is possible to visualize the network using C
 
 ## Usage for large datasets
 
-When using larger datasets of tree-ring series, calculating the table with similarities can take a lot of time, but finding communities even more. It is therefore recommended to use of parallel computing for Clique Percolation: `clique_community_names_par(network, k=3, n_core = 4)`. This reduces the amount of time significantly. For most datasets `clique_community_names()` is sufficiently fast and for smaller datasets `clique_community_names_par()` can even be slower due to the parallelisation. Therefore, the function `clique_community_names()` should be used initially and if this is very slow, start using `clique_community_names_par()`. See the separate [vignette](docs.ropensci.org/dendroNetwork/articles/large_datasets_communities.html) for that.
+When using larger datasets of tree-ring series, calculating the table with similarities can take a lot of time, but finding communities even more. It is therefore recommended to use of parallel computing for Clique Percolation: `clique_community_names_par(network, k=3, n_core = 4)`. This reduces the amount of time significantly. For most datasets `clique_community_names()` is sufficiently fast and for smaller datasets `clique_community_names_par()` can even be slower due to the parallelisation. Therefore, the function `clique_community_names()` should be used initially and if this is very slow, start using `clique_community_names_par()`. See the separate [vignette](https://docs.ropensci.org/dendroNetwork/articles/large_datasets_communities.html) for that.
 
 ## Citation
 

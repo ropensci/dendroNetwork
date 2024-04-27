@@ -36,7 +36,7 @@ cytoscapePing()
 
 # Creation of networks
 
-The creation of dendrochronological networks is done in R using the dendroNetwork package (see readme or the vignette [dendroNetwork: how to use it](dendroNetwork_use.html).
+The creation of dendrochronological networks is done in R using the dendroNetwork package (see readme or the vignette [dendroNetwork: how to use it](dendroNetwork.html).
 
 ```{r}
 library(dendroNetwork)

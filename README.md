@@ -149,7 +149,7 @@ amount of time significantly. For most datasets
 parallelisation. Therefore, the function `clique_community_names()`
 should be used initially and if this is very slow, start using
 `clique_community_names_par()`. See the separate
-[vignette](docs.ropensci.org/dendroNetwork/articles/large_datasets_communities.html)
+[vignette](https://docs.ropensci.org/dendroNetwork/articles/large_datasets_communities.html)
 for that.
 
 ## Citation

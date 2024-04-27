@@ -46,6 +46,7 @@
 -   updated installation instruction
 -   minor language corrections
 -   description corrections
+-   corrected links
 
 ### Continuous integration
 
@@ -148,3 +149,4 @@ First public release
 ### Documentation fixes
 
 ### Continuous integration
+
