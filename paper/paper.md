@@ -15,7 +15,7 @@ affiliations:
   - name: Saxion University of Applied Sciences, Deventer
     index: 1
 citation_author: Visser
-date: "26 April 2024"
+date: "27 April 2024"
 year: 2024
 bibliography: paper.bib
 output: rticles::joss_article
