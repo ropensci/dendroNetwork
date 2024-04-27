@@ -21,7 +21,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' #' data(RING_Visser_2021)
+#' data(RING_Visser_2021)
 #' sim_table(RING_Visser_2021, last_digit_radius = TRUE)
 #' }
 #'

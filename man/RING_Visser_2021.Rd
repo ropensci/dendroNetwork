@@ -17,7 +17,7 @@ For example: ABC_Q1M or ABC_Q1C consist of the same material from the site ABC (
 }
 \examples{
 \dontrun{
-#' data(RING_Visser_2021)
+data(RING_Visser_2021)
 sim_table(RING_Visser_2021, last_digit_radius = TRUE)
 }
 

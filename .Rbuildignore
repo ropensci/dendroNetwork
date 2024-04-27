@@ -17,3 +17,4 @@
 ^paper$
 ^references\.bib$
 ^revdep$
+^vignettes/articles$
