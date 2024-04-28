@@ -16,7 +16,7 @@ The series are named based on their location, species and type of standardisatio
 For example: ABC_Q1M or ABC_Q1C consist of the same material from the site ABC (Abcoude), species Q(uercus), chronology 1 and standardisation C(ofecha) and M(eans). See Visser(2021) for more explanation.
 }
 \examples{
-\dontrun{
+\donttest{
 data(RING_Visser_2021)
 sim_table(RING_Visser_2021, last_digit_radius = TRUE)
 }

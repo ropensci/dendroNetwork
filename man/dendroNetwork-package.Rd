@@ -6,7 +6,7 @@
 \alias{dendroNetwork-package}
 \title{dendroNetwork: Create Networks of Dendrochronological Series using Pairwise Similarity}
 \description{
-Creating dendrochronological networks based on the similarity between tree-ring series or chronologies. The package includes various functions to compare tree-ring curves building upon dplR. The networks can be used to visualise and understand the relations between tree-ring curves. These networks are also very useful to estimate the provenance or wood-use within a structure/context/site.
+Creating dendrochronological networks based on the similarity between tree-ring series or chronologies. The package includes various functions to compare tree-ring curves building upon the 'dplR' package. The networks can be used to visualise and understand the relations between tree-ring curves. These networks are also very useful to estimate the provenance of wood as described in Visser (2021) \doi{10.5334/jcaa.79} or wood-use within a structure/context/site as described in Visser and Vorst (2022) \doi{10.1163/27723194-bja10014}.
 }
 \seealso{
 Useful links:

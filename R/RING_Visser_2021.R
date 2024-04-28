@@ -20,7 +20,7 @@
 #'
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' data(RING_Visser_2021)
 #' sim_table(RING_Visser_2021, last_digit_radius = TRUE)
 #' }

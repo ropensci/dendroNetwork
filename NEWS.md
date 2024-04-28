@@ -47,6 +47,8 @@
 -   minor language corrections
 -   description corrections
 -   corrected links
+-   updated DESCRIPTION file for CRAN
+-    `donttest{}` was added to RING_Visser_2021.R because testing takes to long for CRAN.
 
 ### Continuous integration
 
@@ -149,4 +151,3 @@ First public release
 ### Documentation fixes
 
 ### Continuous integration
-
