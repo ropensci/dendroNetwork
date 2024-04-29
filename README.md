@@ -8,7 +8,6 @@ state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
-[![pkgcheck](https://github.com/ropensci/dendroNetwork/actions/workflows/pkgcheck.yaml/badge.svg)](https://github.com/ropensci/dendroNetwork/actions/workflows/pkgcheck.yaml)
 [![R-CMD-check](https://github.com/ropensci/dendroNetwork/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/dendroNetwork/actions/workflows/R-CMD-check.yaml)
 [![Status at rOpenSci Software Peer
 Review](https://badges.ropensci.org/627_status.svg)](https://github.com/ropensci/software-review/issues/627)
