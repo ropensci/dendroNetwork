@@ -15,6 +15,8 @@ Review](https://badges.ropensci.org/627_status.svg)](https://github.com/ropensci
 badge](https://ropensci.r-universe.dev/badges/dendroNetwork)](https://ropensci.r-universe.dev)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/dendroNetwork)](https://CRAN.R-project.org/package=dendroNetwork)
+[![Total CRAN
+Downloads](https://cranlogs.r-pkg.org/badges/grand-total/dendroNetwork)](https://cranlogs.r-pkg.org/badges/grand-total/dendroNetwork)
 [![status
 joss](https://joss.theoj.org/papers/e7f03167c08483e6a3214a6747306256/status.svg)](https://joss.theoj.org/papers/e7f03167c08483e6a3214a6747306256)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10636310.svg)](https://zenodo.org/doi/10.5281/zenodo.10636310)
