@@ -13,7 +13,10 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 Review](https://badges.ropensci.org/627_status.svg)](https://github.com/ropensci/software-review/issues/627)
 [![dendroNetwork status
 badge](https://ropensci.r-universe.dev/badges/dendroNetwork)](https://ropensci.r-universe.dev)
-[![status](https://joss.theoj.org/papers/e7f03167c08483e6a3214a6747306256/status.svg)](https://joss.theoj.org/papers/e7f03167c08483e6a3214a6747306256)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/dendroNetwork)](https://CRAN.R-project.org/package=dendroNetwork)
+[![status
+joss](https://joss.theoj.org/papers/e7f03167c08483e6a3214a6747306256/status.svg)](https://joss.theoj.org/papers/e7f03167c08483e6a3214a6747306256)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10636310.svg)](https://zenodo.org/doi/10.5281/zenodo.10636310)
 
 <!-- badges: end -->
@@ -55,10 +58,16 @@ more information). It is therefore recommended to install Cytoscape as
 well. Please follow the download and installation instructions for your
 operating system: <https://cytoscape.org/>.
 
-You can install the development version of dendroNetwork from
-[GitHub](https://github.com/ropensci/dendroNetwork) with:
+You can install the latest version of dendroNetwork from
+[CRAN](https://cran.r-project.org/web/packages/dendroNetwork) or the
+development version from
+[R-universe](https://ropensci.r-universe.dev/dendroNetwork) by running
+one of the commands below:
 
 ``` r
+# CRAN
+install.packages("dendroNetwork")
+# R-Universe
 install.packages("dendroNetwork", repos = "https://ropensci.r-universe.dev")
 ```
 
