@@ -28,7 +28,7 @@ knitr::opts_chunk$set(
 
 dendroNetwork is a package to create dendrochronological networks for gaining insight into provenance or other patterns based on the statistical relations between tree ring curves. The code and the functions are based on several published papers [@visser2021a; @visser2021b; @visser2022].
 
-The package is written for dendrochronologists and have a general knowledge on the discipline and used jargon. There is an excellent website for the introduction of using R in dendrochronology: <https://opendendro.org/r/>. The basics of dendrochronology can be found in handbooks [@speer2010; @cook1990] or on <https://www.dendrohub.com/>.
+The package is written for dendrochronologists and have a general knowledge on the discipline and used jargon. There is an excellent website for the introduction of using R in dendrochronology: <https://opendendro.org/r/>. The basics of dendrochronology can be found in handbooks [@speer2010; @cook1990] or on <https://www.dendrohub.com/>. A list of R-packages for dendrochronology can be found here: <https://ronaldvisser.github.io/Dendro_R/>.
 
 ## Installation
 

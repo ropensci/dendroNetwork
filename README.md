@@ -32,7 +32,8 @@ knowledge on the discipline and used jargon. There is an excellent
 website for the introduction of using R in dendrochronology:
 <https://opendendro.org/r/>. The basics of dendrochronology can be found
 in handbooks (Cook and Kariukstis 1990; Speer 2010) or on
-<https://www.dendrohub.com/>.
+<https://www.dendrohub.com/>. A list of R-packages for dendrochronology
+can be found here: <https://ronaldvisser.github.io/Dendro_R/>.
 
 ## Installation
 
@@ -87,6 +88,8 @@ papers, and on wikipedia for both
 [CPM](https://en.wikipedia.org/wiki/Clique_percolation_method) and the
 [Girvan-Newman
 algorithm](https://en.wikipedia.org/wiki/Girvan%E2%80%93Newman_algorithm).
+
+    #> file:///C:\Users\rvi04\AppData\Local\Temp\RtmpuCIsf3\file27c4d837e7c\widget27c47a541574.html screenshot completed
 
 ![](man/figures/README-flowchart_workflow-1.png)<!-- -->
 
