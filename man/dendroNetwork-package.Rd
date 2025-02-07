@@ -12,7 +12,7 @@ Creating dendrochronological networks based on the similarity between tree-ring 
 Useful links:
 \itemize{
   \item \url{https://github.com/ropensci/dendroNetwork}
-  \item \url{https://ropensci.github.io/dendroNetwork/}
+  \item \url{https://docs.ropensci.org/dendroNetwork/}
   \item Report bugs at \url{https://github.com/ropensci/dendroNetwork/issues}
 }
 

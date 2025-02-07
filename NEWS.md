@@ -6,6 +6,8 @@
 
 ### Minor improvements
 
+-   dendronetwork: it is now possible to choose which correlation to use for creating network(s): using the correlation after the Hollstein(1980) transformation r_hol or the correlation without any transformation (r). The default is now r_hol.
+
 ### Bug Fixes
 
 ### Deprecated and defunct

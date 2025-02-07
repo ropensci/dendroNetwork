@@ -8,7 +8,8 @@ dendro_network(
   sim_table,
   r_threshold = 0.5,
   sgc_threshold = 0.7,
-  p_threshold = 1e-04
+  p_threshold = 1e-04,
+  corr_type = "r_hol"
 )
 }
 \arguments{
@@ -19,6 +20,8 @@ dendro_network(
 \item{sgc_threshold}{all sgc-values equal or above this value are taken into account for the creation of edges.}
 
 \item{p_threshold}{all probabilities of exceedence equal or below this value are taken into account for the creation of edges.}
+
+\item{corr_type}{choose between the correlation based on wuchswerte (r_hol: Hollstein 1980) or the correlation without extra transformation (r)}
 }
 \value{
 A simplified network of tree-ring material with the edges defined by the similarity.
@@ -29,8 +32,10 @@ Function to create dendrochronological networks based on the similarity. The inp
 \examples{
 data(hol_rom)
 sim_table_hol <- sim_table(hol_rom)
-dendro_network(sim_table_hol)
-dendro_network(sim_table_hol, r_threshold = 0.4, sgc_threshold = 0.6)
+g_hol <- dendro_network(sim_table_hol)
+plot(g_hol)
+g_hol_r_low <- dendro_network(sim_table_hol, r_threshold = 0.3, sgc_threshold = 0.6, corr_type = "r")
+plot(g_hol_r_low)
 
 }
 \references{
