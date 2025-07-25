@@ -6,3 +6,4 @@ inst/doc
 *.Rproj
 docs
 DendroNetwork.Rproj
+revdep
