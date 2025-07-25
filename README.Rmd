@@ -120,6 +120,7 @@ If you use this software, please cite this using:
 
 Visser, R. (2024). dendroNetwork: a R-package to create dendrochronological provenance networks (Version 0.5.4) [Computer software]. <https://zenodo.org/doi/10.5281/zenodo.10636310>
 
+
 ## Acknowledgements
 
 This package reuses and adapts the CliquePercolationMethod-R package developed by Angelo Salatino (The Open University). Source code: <https://github.com/angelosalatino/CliquePercolationMethod-R>
