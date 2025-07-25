@@ -43,7 +43,7 @@ BiocManager::install("RCy3")
 
 The functionality of RCy3 depends on the installation of Cytoscape. Cytoscape is needed for visualising the networks. This open source software is platform independent and provides easy visual access to complex networks and the attributes of both nodes and edges in a network (see the [Cytoscape-website](https://cytoscape.org/what_is_cytoscape.html) for more information). It is therefore recommended to install Cytoscape as well. Please follow the download and installation instructions for your operating system: <https://cytoscape.org/>.
 
-You can install the latest version of dendroNetwork from [CRAN](https://cran.r-project.org/web/packages/dendroNetwork) or the development version from [R-universe](https://ropensci.r-universe.dev/dendroNetwork) by running one of the commands below:
+You can install the latest version of dendroNetwork from [CRAN](https://cran.r-project.org/package=dendroNetwork) or the development version from [R-universe](https://ropensci.r-universe.dev/dendroNetwork) by running one of the commands below:
 
 ``` r
 # CRAN

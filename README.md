@@ -60,7 +60,7 @@ well. Please follow the download and installation instructions for your
 operating system: <https://cytoscape.org/>.
 
 You can install the latest version of dendroNetwork from
-[CRAN](https://cran.r-project.org/web/packages/dendroNetwork) or the
+[CRAN](https://cran.r-project.org/package=dendroNetwork) or the
 development version from
 [R-universe](https://ropensci.r-universe.dev/dendroNetwork) by running
 one of the commands below:
@@ -89,7 +89,7 @@ papers, and on wikipedia for both
 [Girvan-Newman
 algorithm](https://en.wikipedia.org/wiki/Girvan%E2%80%93Newman_algorithm).
 
-    #> file:///C:\Users\rvi04\AppData\Local\Temp\RtmpuCIsf3\file27c4d837e7c\widget27c47a541574.html screenshot completed
+    #> file:///C:/Users/rvi04/AppData/Local/Temp/RtmpmIFhgC/file5c6c151542d8/widget5c6c3f7a6507.html screenshot completed
 
 ![](man/figures/README-flowchart_workflow-1.png)<!-- -->
 
