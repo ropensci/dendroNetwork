@@ -1,7 +1,7 @@
 Package: dendroNetwork
 Type: Package
 Title: Create Networks of Dendrochronological Series using Pairwise Similarity
-Version: 0.5.6
+Version: 0.5.5
 Authors@R: 
     c(person(given = "Ronald", 
             family = "Visser", 
