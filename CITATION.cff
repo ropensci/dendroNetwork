@@ -1,11 +1,20 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+message: "If you use this software, please cite it using the metadata from this file."
 authors:
   - family-names: Visser
-    given-names: Ronald
+    given-names: Ronald M.
     orcid: https://orcid.org/0000-0001-6966-1729
 title: "dendroNetwork: a R-package to create dendrochronological networks"
-version: 0.5.4
-doi: https://zenodo.org/doi/10.5281/zenodo.10636310
-date-released: "2024-04-26"
-url: "https://github.com/ropensci/dendroNetwork"
+version: 0.5.5
+doi: 10.5281/zenodo.16421665
+date-released: "2025-07-25"
+repository-code: "https://github.com/ropensci/dendroNetwork"
+url: "https://docs.ropensci.org/dendroNetwork/"
+license: GPL-3.0
+keywords:
+  - network-analysis
+  - archaeology
+  - dendrochronology
+  - tree-rings
+  - dendroprovenance
+type: software

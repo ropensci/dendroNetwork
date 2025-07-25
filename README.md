@@ -89,7 +89,7 @@ papers, and on wikipedia for both
 [Girvan-Newman
 algorithm](https://en.wikipedia.org/wiki/Girvan%E2%80%93Newman_algorithm).
 
-    #> file:///C:/Users/rvi04/AppData/Local/Temp/RtmpI5Xi6K/file3f1469fd54cd/widget3f14a366b20.html screenshot completed
+    #> file:///C:/Users/rvi04/AppData/Local/Temp/RtmpEhBr4Z/file359418f77d07/widget35947d3c6d5f.html screenshot completed
 
 ![](man/figures/README-flowchart_workflow-1.png)<!-- -->
 
@@ -167,8 +167,8 @@ for that.
 
 If you use this software, please cite this using:
 
-Visser, R. (2024). dendroNetwork: a R-package to create
-dendrochronological provenance networks (Version 0.5.4) \[Computer
+Visser, R.M. (2025). dendroNetwork: a R-package to create
+dendrochronological provenance networks (Version 0.5.5) \[Computer
 software\]. <https://zenodo.org/doi/10.5281/zenodo.10636310>
 
 ## Acknowledgements
