@@ -14,7 +14,8 @@
 #' sim_table_hol <- sim_table(hol_rom)
 #' g_hol <- dendro_network(sim_table_hol)
 #' plot(g_hol)
-#' g_hol_r_low <- dendro_network(sim_table_hol, r_threshold = 0.3, sgc_threshold = 0.6, corr_type = "r")
+#' g_hol_r_low <- dendro_network(sim_table_hol, r_threshold = 0.3,
+#'                                 sgc_threshold = 0.6, corr_type = "r")
 #' plot(g_hol_r_low)
 #'
 #' @references
