@@ -1,8 +1,10 @@
 #' Wuchswerte (Hollstein 1980)
 #'
-#' Function to normalize tree-ring values according to Hollsteins transformation to Wuchswerte
+#' Function to normalize tree-ring values according to Hollsteins transformation to Wuchswerte (Hollstein 1980, 14-15).
 #'
-#' Published on pages 14-15 in Hollstein, E. 1980. Mitteleuropäische Eichenchronologie. Trierer Dendrochronologische Forschungen zur Archäologie und Kunstgeschichte. Trierer Grabungen und Forschungen 11. Mainz am Rhein: Verlag Philipp von Zabern.
+#' @references
+#'
+#' Hollstein, E. 1980. Mitteleuropäische Eichenchronologie. Trierer Dendrochronologische Forschungen zur Archäologie und Kunstgeschichte. Trierer Grabungen und Forschungen 11. Mainz am Rhein: Verlag Philipp von Zabern.
 #'
 #' @param x tree-ring series
 #' @returns tree-ring series normalized according to Hollstein (1980, 14-15)

@@ -16,13 +16,16 @@ the names of the nodes in the various communities
 Function to determine the communities in a network using the Girvan-Newman algorithm. This function uses the cluster_edge_betweenness() function from the iGraph package, but creates a more user-friendly output that includes the names of the nodes.
 }
 \details{
-References
-Girvan, M and Newman, MEJ. 2002 Community structure in social and biological networks. Proceedings of the National Academy of Sciences of the United States of America 99(12): 7821–7826. DOI: https://doi.org/10.1073/pnas.122653799.
-Newman, MEJ and Girvan, M. 2004 Finding and evaluating community structure in networks. Physical Review E 69(2): 026113. DOI: https://doi.org/10.1103/PhysRevE.69.026113.
+The GN-algorithm uses the edge betweenness to determine communities. Edge betweenness is the number of shortest paths between pairs of nodes running over that edge. The higher the edge betweenness, the more communities an edge connects. Therefore these are removed in this algorithm to detect communities.
 }
 \examples{
 hol_sim <- sim_table(hol_rom)
 g_hol <- dendro_network(hol_sim)
 gn_names(g_hol)
 
+}
+\references{
+Girvan, M and Newman, MEJ. 2002 Community structure in social and biological networks. Proceedings of the National Academy of Sciences of the United States of America 99(12): 7821–7826. DOI: https://doi.org/10.1073/pnas.122653799.
+
+Newman, MEJ and Girvan, M. 2004 Finding and evaluating community structure in networks. Physical Review E 69(2): 026113. DOI: https://doi.org/10.1103/PhysRevE.69.026113.
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/cyto_clean_styles.R
 \name{cyto_clean_styles}
 \alias{cyto_clean_styles}
-\title{Cleaning nearly all styles in cytoscape session and import simple styles}
+\title{Cleaning nearly all styles in cytoscape session and import simple styles.}
 \usage{
 cyto_clean_styles()
 }
@@ -10,7 +10,7 @@ cyto_clean_styles()
 Cytoscape cleaned of styles and only styles with white and grey nodes.
 }
 \description{
-Cleaning nearly all styles in cytoscape session and import simple styles
+Cleaning nearly all styles in cytoscape session and import simple styles.
 }
 \examples{
 \dontrun{

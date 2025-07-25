@@ -31,7 +31,7 @@ a graph in Cytoscape
 }
 \description{
 Function to create a network in cytoscape (https://cytoscape.org/)
-Cytoscape must be running before executing this function
+Cytoscape must be running before executing this function.
 }
 \examples{
 \dontrun{

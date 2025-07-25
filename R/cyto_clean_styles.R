@@ -1,4 +1,4 @@
-#' Cleaning nearly all styles in cytoscape session and import simple styles
+#' Cleaning nearly all styles in cytoscape session and import simple styles.
 #'
 #' @returns Cytoscape cleaned of styles and only styles with white and grey nodes.
 #' @examples

@@ -17,7 +17,7 @@ cor_mat_overlap(x, y, minoverlap)
 a list with two matrices: one with the correlation values and one with the number of overlapping tree rings for each correlation value. The matrices have row names and column names of the compared tree-ring curves
 }
 \description{
-Function that creates a Pearson correlation matrix of two rwl objects compared. If the same rwl-object is passed to the function, the correlation between all series is calculated. In addition, the number of overlapping tree-rings is part of the output. The results can be used to calculate the Students' t value
+Function that creates a Pearson correlation matrix of two rwl objects compared. If the same rwl-object is passed to the function, the correlation between all series is calculated. In addition, the number of overlapping tree-rings is part of the output. The results can be used to calculate the Students' t value.
 }
 \details{
 The function is an adaptation of the function cor.with.limit.R() from https://github.com/AndyBunn/dplR/blob/master/R/rwi.stats.running.R. The new function is optimized and also outputs the number of overlapping rings.

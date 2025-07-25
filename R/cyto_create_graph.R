@@ -1,7 +1,7 @@
 #' Create networks in Cytoscape
 #'
 #' Function to create a network in cytoscape (https://cytoscape.org/)
-#' Cytoscape must be running before executing this function
+#' Cytoscape must be running before executing this function.
 #'
 #' @param graph_input igraph network used to create network in Cytoscape
 #' @param network_name name of the network in Cytoscape, defaults to the name of variable that is the network in R

@@ -1,6 +1,11 @@
 #' Finding all CPM communities in a network/graph
+#
+#' Function to determine all CPM-communities in a network (or graph) using the clique percolation method (Palla et al 2005).
 #'
-#' Function to determine all CPM-communities in a network (or graph)
+#' The CPM makes use of complete graphs or cliques in the network. A clique is a group of nodes were all of them are connected. A clique of 3 nodes has 3 edges, while a clique of 4 nodes has already 6 edges. Communities in CPM consist of a large group of connected cliques.
+#'
+#' @references
+#' Palla, G, Derenyi, I, Farkas, I and Vicsek, T. 2005 Uncovering the overlapping community structure of complex networks in nature and society. Nature 435(7043): 814–818. DOI: https://doi.org/10.1038/nature03607.
 #'
 #' @param graph_input the graph for find all CPM communities in
 #' @param n_core this defaults to 0, if a number larger than 1 is given the community detection is performed using parallel computing
