@@ -6,7 +6,7 @@ authors:
     orcid: https://orcid.org/0000-0001-6966-1729
 title: "dendroNetwork: a R-package to create dendrochronological networks"
 version: 0.5.5
-doi: 10.5281/zenodo.16421665
+doi: 10.5281/zenodo.10636310
 date-released: "2025-07-25"
 repository-code: "https://github.com/ropensci/dendroNetwork"
 url: "https://docs.ropensci.org/dendroNetwork/"
