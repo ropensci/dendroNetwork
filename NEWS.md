@@ -1,6 +1,5 @@
-# dendroNetwork: news {#dendroNetwork}
-
-## dendroNetwork 0.5.5
+dendroNetwork 0.5.5
+===========
 
 ### New features
 
@@ -22,9 +21,8 @@
 
 ### Continuous integration
 
-# dendroNetwork: news
-
-## dendroNetwork 0.5.4
+dendroNetwork 0.5.4
+===========
 
 ### New features
 
@@ -62,7 +60,8 @@
 
 -   removed pkgdown deployment, and now relying on ROpenSci: <https://devguide.ropensci.org/pkg_ci.html>
 
-## dendroNetwork 0.5.3 (05-04-2024)
+dendroNetwork 0.5.3
+===========
 
 ### New features
 
@@ -80,7 +79,8 @@
 
 ### Continuous integration
 
-## dendroNetwork 0.5.2 (29-03-2024)
+dendroNetwork 0.5.2
+===========
 
 ### New features
 
@@ -114,7 +114,8 @@
 
 ### Continuous integration
 
-## dendroNetwork 0.5.1 (10-02-2024)
+dendroNetwork 0.5.1
+===========
 
 ### New features
 
@@ -144,7 +145,8 @@
 -   added more tests
 -   excluded Cytoscape-functions from testing
 
-## dendroNetwork 0.5.0 (08-02-2024)
+dendroNetwork 0.5.0
+===========
 
 ### New features
 
