@@ -89,7 +89,6 @@ papers, and on wikipedia for both
 [Girvan-Newman
 algorithm](https://en.wikipedia.org/wiki/Girvan%E2%80%93Newman_algorithm).
 
-    #> file:///C:/Users/rvi04/AppData/Local/Temp/RtmpEhBr4Z/file359418f77d07/widget35947d3c6d5f.html screenshot completed
 
 ![](man/figures/README-flowchart_workflow-1.png)<!-- -->
 
